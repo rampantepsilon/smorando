@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html height="98%">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title>The Gaming Saloon Network Hub 2.0.0-alpha</title>-->
+    <script src="scripts/moonlist.js"></script>
+    <script src="scripts/any.js"></script>
+    <style>
+      #seed {
+        position: fixed;
+        top: 0;
+        width: 460px;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body height="98%" onload="clear()">
+    <table width="100%" height="100%">
+      <div id="seed">
+        Seed: <input id="seedHash" size="45"><br>
+        <button type="button" onclick="generateSeed()">Randomize</button>
+        <button type="button" onclick="copySeed()">Copy Seed</button>
+        <button type="button" onclick="pasteSeed()">Paste Copied Seed</button>
+        <button type="button" onclick="location.reload()">Clear Seed</button>
+      </div>
+      <tr width="100%" height="100%">
+        <td width="100%">
+          <div id="moons"></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

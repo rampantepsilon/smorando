@@ -1,0 +1,14 @@
+{
+  "name": "smo-rando",
+  "version": "1.0.0-alpha",
+  "description": "Any% Moon Randomizer for Super Mario Odyssey",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Tom \"RampantEpsilon\" Ware",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.1"
+  }
+}
