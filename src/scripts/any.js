@@ -5,6 +5,8 @@
   var check = "<input type='checkbox'>";
   var verSeedHash = "101B";
 
+  var Base64 = require('js-base64').Base64;
+
   function clear(){
     document.getElementById("seedHash").value = "";
   };
@@ -181,13 +183,18 @@
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
 
+        //Encode seed
+        var encodedSeed = Base64.encode(seed.join(""));
+
         document.getElementById("moons").innerHTML = moonlist + "<br><br>";
         //document.getElementById('seed').innerHTML = hash;
-        document.getElementById('seedHash').value = seed.join("").toUpperCase();
+        document.getElementById('seedHash').value = /*seed.join("").toUpperCase()*/encodedSeed;
       }
       else{
         //Decode Hash
-        var moons = hash.split("");
+        var decodedSeed = Base64.decode(hash);
+
+        var moons = decodedSeed.split("");
         for (i = 0; i < moons.length - 4; i++){
           moons[i] = parseInt(moons[i], 36);
         }
