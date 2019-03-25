@@ -1,5 +1,6 @@
 const {BrowserWindow, Menu, app, shell, dialog2} = require('electron')
 
+
 //App Info
 const label = 'SMO Any% Moon Randomizer'
 const build = '2019.3.23'
