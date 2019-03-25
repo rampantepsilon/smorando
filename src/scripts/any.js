@@ -3,7 +3,10 @@
   var moonlist = "";
   var hash = "null";
   var check = "<input type='checkbox'>";
-  var verSeedHash = "101B";
+
+  //Seed Comparision Variables
+  var verSeedHash = "110f";
+  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.0.1-beta seed.";
 
   var Base64 = require('js-base64').Base64;
 
@@ -202,7 +205,7 @@
         var versionCheck = moons[96] + moons[97] + moons[98] + moons[99]
 
         //Version Check
-        if (versionCheck == '101B'){
+        if (versionCheck == verSeedHash){
           //Add Moons to Lists
           cascadeList += check + myObj.cascade[moons[0]] + "<br>";
           for (az = 1; az < 17; az++){
@@ -237,7 +240,7 @@
           moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
         }
         else {
-          moonlist = "<br><br>Invalid Seed<br>Please use a proper v1.0.1-beta seed.";
+          moonlist = wrongSeed;
         }
 
         document.getElementById("moons").innerHTML = moonlist + "<br><br>";
