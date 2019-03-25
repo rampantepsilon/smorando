@@ -10,7 +10,7 @@ As time progresses and feedback comes in from the randomizer, more stipulations 
 <li>Adding a short/long race mode. This would enable moons that may make races longer or shorter.</li>
 <li>Update Notifications to let players know when a new release is live. (Completed as of 3/24/19)</li>
 <li>Simpler seed sharing (Current seed count is a 100-character hash)</li>
-<li>Web-based Randomizer (in production Release Date Pending v1.1.0 release)</li>
+<li><a href="https://smorando.rampantepsilon.site">Web-based Randomizer</a> (Completed as of 3/25/19)</li>
 <li>Support for other run styles (Festival%, Dark Side, Darker Side, World Peace)</li>
 </ul>
 </p>
