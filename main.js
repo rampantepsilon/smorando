@@ -3,9 +3,9 @@ const {BrowserWindow, Menu, app, shell, dialog2} = require('electron')
 
 //App Info
 const label = 'SMO Any% Moon Randomizer'
-const build = '2019.3.23'
+const build = '2019.3.25'
 const version = app.getVersion()
-const title = "SMO Any% Moon Randomizer v1.0.0-beta"
+const title = "SMO Any% Moon Randomizer v1.1.0"
 
 //Application Menu
 let template = [{
