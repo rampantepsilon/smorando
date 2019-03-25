@@ -221,7 +221,7 @@
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
 
-        document.getElementById("moons").innerHTML = moonlist + "<br>";
+        document.getElementById("moons").innerHTML = moonlist + "<br><br>";
         document.getElementById('seedHash').innerHTML = hash;
         //document.getElementById('seed').innerHTML = seed.join("").toUpperCase();
       }
