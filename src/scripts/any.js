@@ -3,6 +3,7 @@
   var moonlist = "";
   var hash = "null";
   var check = "<input type='checkbox'>";
+  var verSeedHash = "101B";
 
   function clear(){
     document.getElementById("seedHash").value = "";
@@ -174,6 +175,9 @@
           seed[jd] = (bowserArr[jc]).toString(36);
         }
 
+        //Add Version Keyy
+        seed[96] = verSeedHash;
+
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
 
@@ -184,42 +188,50 @@
       else{
         //Decode Hash
         var moons = hash.split("");
-        for (i = 0; i < moons.length; i++){
+        for (i = 0; i < moons.length - 4; i++){
           moons[i] = parseInt(moons[i], 36);
         }
 
-        //Add Moons to Lists
-        cascadeList += check + myObj.cascade[moons[0]] + "<br>";
-        for (az = 1; az < 17; az++){
-          sandList += check + myObj.sand[moons[az]] + "<br>";
-        }
-        for (bz = 17; bz < 22; bz++){
-          lakeList += check + myObj.lake[moons[bz]] + "<br>";
-        }
-        for (cz = 22; cz < 34; cz++){
-          woodList += check + myObj.wooded[moons[cz]] + "<br>";
-        }
-        for (dz = 34; dz < 44; dz++){
-          lostList += check + myObj.lost[moons[dz]] + "<br>";
-        }
-        for (ez = 44; ez < 61; ez++){
-          metroList += check + myObj.metro[moons[ez]] + "<br>";
-        }
-        for (fz = 61; fz < 71; fz++){
-          snowList += check + myObj.snow[moons[fz]] + "<br>";
-        }
-        for (gz = 71; gz < 81; gz++){
-          seasideList += check + myObj.seaside[moons[gz]] + "<br>";
-        }
-        for (hz = 81; hz < 94; hz++){
-          luncheonList += check + myObj.luncheon[moons[hz]] + "<br>";
-        }
-        for (iz = 94; iz < 96; iz++){
-          bowserList += check + myObj.bowser[moons[iz]] + "<br>";
-        }
+        var versionCheck = moons[96] + moons[97] + moons[98] + moons[99]
 
-        //Add Lists to moonlist
-        moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
+        //Version Check
+        if (versionCheck == '101B'){
+          //Add Moons to Lists
+          cascadeList += check + myObj.cascade[moons[0]] + "<br>";
+          for (az = 1; az < 17; az++){
+            sandList += check + myObj.sand[moons[az]] + "<br>";
+          }
+          for (bz = 17; bz < 22; bz++){
+            lakeList += check + myObj.lake[moons[bz]] + "<br>";
+          }
+          for (cz = 22; cz < 34; cz++){
+            woodList += check + myObj.wooded[moons[cz]] + "<br>";
+          }
+          for (dz = 34; dz < 44; dz++){
+            lostList += check + myObj.lost[moons[dz]] + "<br>";
+          }
+          for (ez = 44; ez < 61; ez++){
+            metroList += check + myObj.metro[moons[ez]] + "<br>";
+          }
+          for (fz = 61; fz < 71; fz++){
+            snowList += check + myObj.snow[moons[fz]] + "<br>";
+          }
+          for (gz = 71; gz < 81; gz++){
+            seasideList += check + myObj.seaside[moons[gz]] + "<br>";
+          }
+          for (hz = 81; hz < 94; hz++){
+            luncheonList += check + myObj.luncheon[moons[hz]] + "<br>";
+          }
+          for (iz = 94; iz < 96; iz++){
+            bowserList += check + myObj.bowser[moons[iz]] + "<br>";
+          }
+
+          //Add Lists to moonlist
+          moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
+        }
+        else {
+          moonlist = "<br><br>Invalid Seed<br>Please use a proper v1.0.1-beta seed.";
+        }
 
         document.getElementById("moons").innerHTML = moonlist + "<br><br>";
         document.getElementById('seedHash').innerHTML = hash;
