@@ -6,7 +6,7 @@
 
   //Seed Comparision Variables
   var verSeedHash = "110f";
-  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.0.1-beta seed.";
+  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.1.0 seed.";
 
   var Base64 = require('js-base64').Base64;
 
