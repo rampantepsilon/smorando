@@ -62,7 +62,7 @@
   	$(document).ready(function(){
   		$.getJSON("https://api.github.com/repos/rampantepsilon/smoanyrando/releases", function(result){
   			var commit = result[0].tag_name;
-  			if (commit != '1.1.0-beta'){
+  			if (commit != '1.1.0'){
   				$("#updateCheck").append("New Version (v"+commit+") available! <a href='https://github.com/rampantepsilon/smoanyrando/releases' target='_blank'>Click Here to Download</a>");
   			}
   		});
