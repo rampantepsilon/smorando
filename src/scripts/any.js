@@ -169,7 +169,7 @@
         //Bowser Randomizer
         var bowserArr = [];
         while(bowserArr.length < 2){
-          var ja = Math.floor(Math.random() * 27);
+          var ja = Math.floor(Math.random() * 23);
           if (bowserArr.indexOf(ja) === -1) bowserArr.push(ja);
         }
         for (j = 0; j < 2; j++){
