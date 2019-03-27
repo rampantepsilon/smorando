@@ -20,7 +20,6 @@ myObj = {
     'Multi Moon Atop the Falls (+3)'
   ],
   'sand':[
-    'Atop the Highest Tower',
     'Overlooking the Desert Town',
     'Alcove in the Ruins',
     'On the Leaning Pillar',
@@ -36,20 +35,16 @@ myObj = {
     'Bird Traveling the Desert',
     'The Treasure of Jaxi Ruins',
     'Taking Notes: Jump on the Palm',
-    'Among the Five Cactuses',
     'Wandering Cactus',
     'Sand Quiz: Wonderful!',
     'Shopping in Tostarena',
     'Employees Only',
     'Sand Kingdom Slots',
     'Walking the Desert!',
-    'Ice Cave Treasure',
     "Sphynx's Treasure Vault",
     'A Rumble from the Sandy Floor',
     'The Invisible Maze',
     'Skull Sign in the Transparent Maze',
-    'The Bullet Bill Maze: Break Through!',
-    'The Bullet Bill Maze: Side Path',
     'Jaxi Driver',
     'Jaxi Stunt Driving'
   ],

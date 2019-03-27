@@ -57,7 +57,7 @@
         //Sand Randomizer
         var sandArr = [];
         while(sandArr.length < 16){
-          var ba = Math.floor(Math.random() * 32);
+          var ba = Math.floor(Math.random() * 27);
           if (sandArr.indexOf(ba) === -1) sandArr.push(ba);
         }
         for (bb=0; bb < 16; bb++){
