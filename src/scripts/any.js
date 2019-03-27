@@ -5,8 +5,8 @@
   var check = "<input type='checkbox'>";
 
   //Seed Comparision Variables
-  var verSeedHash = "110f";
-  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.1.0/v1.1.1 seed.";
+  var verSeedHash = "112f";
+  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.1.2 seed.";
 
   var Base64 = require('js-base64').Base64;
 
