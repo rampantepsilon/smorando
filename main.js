@@ -199,7 +199,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 480,
     height: 720,
-    icon: __dirname + '/Icon.png',
+    icon: __dirname + '/logo.jpg',
     title: title,
     webPreferences: {
       nativeWindowOpen: true
