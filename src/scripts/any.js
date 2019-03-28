@@ -34,7 +34,7 @@
       //Setup Lists
       var cascadeList = "<br><b><u>Cascade Kingdom</u></b><br><input type='checkbox'>" + myObj.cascade[15] + "<br><input type='checkbox'>" + myObj.cascade[16] + "<br>";
       var sandList = "<br><b><u>Sand Kingdom</u></b><br>";
-      var lakeList = "<br><b><u>Lake Kingdom</u></b><br><input type='checkbox'>" + myObj.lake[17] + "<br>";
+      var lakeList = "<br><b><u>Lake Kingdom</u></b><br><input type='checkbox'>" + myObj.lake[16] + "<br>";
       var woodList = "<br><b><u>Wooded Kingdom</u></b><br><input type='checkbox'>" + myObj.wooded[15] + "<br><input type='checkbox'>" + myObj.wooded[16] + "<br>";
       var lostList = "<br><b><u>Lost Kingdom</u></b><br>";
       var metroList = "<br><b><u>Metro Kingdom</u></b><br><input type='checkbox'>" + myObj.metro[35] + "<br>";
@@ -71,7 +71,7 @@
         //Lake Randomizer
         var lakeArr = [];
         while(lakeArr.length < 5){
-          var ca = Math.floor(Math.random() * 17);
+          var ca = Math.floor(Math.random() * 16);
           if (lakeArr.indexOf(ca) === -1) lakeArr.push(ca);
         }
         for (c = 0; c < 5; c++){

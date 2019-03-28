@@ -62,7 +62,6 @@ myObj = {
     'Our Secret Little Room',
     "Let's Go Swimming, Captain Toad!",
     'Shopping in Lake Lamode',
-    'I Feel Underdressed',
     'Super-Secret Zipper',
     'Jump, Grab, Cling, and Climb',
     'Jump, Grab, and Climb Some More',
