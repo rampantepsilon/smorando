@@ -141,7 +141,7 @@
         //Seaside Randomizer
         var seasideArr = [];
         while(seasideArr.length < 10){
-          var ha = Math.floor(Math.random() * 36);
+          var ha = Math.floor(Math.random() * 26);
           if (seasideArr.indexOf(ha) === -1) seasideArr.push(ha);
         }
         for (h = 0; h < 10; h++){
