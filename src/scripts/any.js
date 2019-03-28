@@ -37,7 +37,7 @@
       var lakeList = "<br><b><u>Lake Kingdom</u></b><br><input type='checkbox'>" + myObj.lake[16] + "<br>";
       var woodList = "<br><b><u>Wooded Kingdom</u></b><br><input type='checkbox'>" + myObj.wooded[15] + "<br><input type='checkbox'>" + myObj.wooded[16] + "<br>";
       var lostList = "<br><b><u>Lost Kingdom</u></b><br>";
-      var metroList = "<br><b><u>Metro Kingdom</u></b><br><input type='checkbox'>" + myObj.metro[35] + "<br>";
+      var metroList = "<br><b><u>Metro Kingdom</u></b><br><input type='checkbox'>" + myObj.metro[32] + "<br>";
       var snowList = "<br><b><u>Snow Kingdom</u></b><br>";
       var seasideList = "<br><b><u>Seaside Kingdom</u></b><br>";
       var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br>" + check + myObj.luncheon[29] + "<br>" + check + myObj.luncheon[30] + "<br>" + check + myObj.luncheon[31] + "<br>";
@@ -113,7 +113,7 @@
         //Metro Randomizer
         var metroArr = [];
         while(metroArr.length < 17){
-          var fa = Math.floor(Math.random() * 35);
+          var fa = Math.floor(Math.random() * 32);
           if (metroArr.indexOf(fa) === -1) metroArr.push(fa);
         }
         for (f = 0; f < 17; f++){
