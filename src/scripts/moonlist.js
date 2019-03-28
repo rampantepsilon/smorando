@@ -197,7 +197,6 @@ myObj = {
     'Light the Lantern on the Small Island',
     'Golden Turnip Recipe 1',
     'Golden Turnip Recipe 2',
-    'Golden Turnip Recipe 3',
     'Luncheon Kingdom Timer Challenge 1',
     'Beneath the Rolling Vegetables',
     'All the Cracks Are Fixed',
@@ -211,10 +210,6 @@ myObj = {
     'Crossing to the Magma',
     "Fork Flickin' to the Summit",
     "Fork Flickin' Detour",
-    "Excavate 'n' Search the Cheese Rocks",
-    'Climb the Cheese Rocks',
-    'Spinning Athletics End Goal',
-    'Taking Notes: Spinning Atheletics',
     "The Broodals Are After Some Cookin'",
     'Under the Cheese Rocks',
     'Big Pot on the Volcano: Dive In! (+3)'

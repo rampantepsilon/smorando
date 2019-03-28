@@ -40,7 +40,7 @@
       var metroList = "<br><b><u>Metro Kingdom</u></b><br><input type='checkbox'>" + myObj.metro[32] + "<br>";
       var snowList = "<br><b><u>Snow Kingdom</u></b><br>";
       var seasideList = "<br><b><u>Seaside Kingdom</u></b><br>";
-      var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br>" + check + myObj.luncheon[29] + "<br>" + check + myObj.luncheon[30] + "<br>" + check + myObj.luncheon[31] + "<br>";
+      var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br>" + check + myObj.luncheon[24] + "<br>" + check + myObj.luncheon[25] + "<br>" + check + myObj.luncheon[26] + "<br>";
       var ruinedList = "<br><b><u>Ruined Kingdom</u></b></br>" + check + myObj.ruined[0] + "<br>";
       var bowserList = "<br><b><u>Bowser's Kingdom</u></b><br>" + check + myObj.bowser[23] + "<br>" + check + myObj.bowser[24] + "<br>" + check + myObj.bowser[25] + "<br>" + check + myObj.bowser[26] + "<br>";
 
@@ -155,7 +155,7 @@
         //Luncheon Randomizer
         var luncheonArr = [];
         while(luncheonArr.length < 13){
-          var ia = Math.floor(Math.random() * 29);
+          var ia = Math.floor(Math.random() * 24);
           if (luncheonArr.indexOf(ia) === -1) luncheonArr.push(ia);
         }
         for (i = 0; i < 13; i++){
