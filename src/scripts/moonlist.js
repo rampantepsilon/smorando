@@ -147,7 +147,6 @@ myObj = {
     'The Icicle Barrier',
     'The Ice Wall Barrier',
     'The Gusty Barrier',
-    'The Snowy Mountain Barrier',
     'Entrance to Shiveria',
     'Behind Snowy Mountain',
     'Shining in the Snow in Town',

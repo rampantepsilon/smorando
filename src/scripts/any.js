@@ -127,7 +127,7 @@
         //Snow Randomizer
         var snowArr = [];
         while(snowArr.length < 10){
-          var ga = Math.floor(Math.random() * 13);
+          var ga = Math.floor(Math.random() * 12);
           if (snowArr.indexOf(ga) === -1) snowArr.push(ga);
         }
         for (g = 0; g < 10; g++){
