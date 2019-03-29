@@ -12,7 +12,7 @@ As time progresses and feedback comes in from the randomizer, more stipulations 
 <li>Simpler seed sharing (Current seed count is a 100-character hash) [Planned for v2.0.0 release]</li>
 <li><a href="https://smorando.rampantepsilon.site">Web-based Randomizer</a> (Completed as of 3/25/19)</li>
 <li>Add Support for sharing seeds via URL & allowing URLs to be inputted into the app (TBC by v2.0.0 release)</li>
-<li>Support for other run styles (Festival% [v1.3.0], Dark Side[v2.x.x], Darker Side[v2.x.x], World Peace[v2.0.0])</li>
+<li>Support for other run styles (Festival% [v1.3.0], Dark Side [v2.x.x], Darker Side [v2.x.x], World Peace [v1.4.0])</li>
 </ul>
 </p>
 <p>Source Installation</p>
