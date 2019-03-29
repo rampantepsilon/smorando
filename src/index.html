@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script src="scripts/moonlist.js"></script>
     <script src="scripts/any.js"></script>
+    <script src="scripts/updateCheck.js"></script>
     <style>
       html {
         background: url(background.jpg) no-repeat center center fixed;
@@ -57,15 +58,4 @@
       </tr>
     </table>
   </body>
-  <script>
-    window.$ = window.jQuery = require('jquery');
-  	$(document).ready(function(){
-  		$.getJSON("https://api.github.com/repos/rampantepsilon/smoanyrando/releases", function(result){
-  			var commit = result[0].tag_name;
-  			if (commit != '1.2.0'){
-  				$("#updateCheck").append("New Version (v"+commit+") available! <a href='https://github.com/rampantepsilon/smoanyrando/releases' target='_blank'>Click Here to Download</a>");
-  			}
-  		});
-  	});
-  </script>
 </html>
