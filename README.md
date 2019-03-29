@@ -5,7 +5,7 @@
 <li>The amount of moons needed per kingdom will be the same as in the Any% route. Meaning if the kingdom needs 5 moons, the randomizer will only produce 5 moons to obtain.</li>
 </ul>
 As time progresses and feedback comes in from the randomizer, more stipulations may occur for selection of moons.</p>
-<p>Future Plans for the Randomizer
+<p>Future Plans for the Randomizer (Note all versions listed are planned not actual releases)
 <ul>
 <li>Adding a short/long race mode. This would enable moons that may make races longer or shorter. [Beta run in v1.4.0]</li>
 <li>Update Notifications to let players know when a new release is live. (Completed as of 3/24/19)</li>
