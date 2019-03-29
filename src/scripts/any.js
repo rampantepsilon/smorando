@@ -42,7 +42,7 @@
       var seasideList = "<br><b><u>Seaside Kingdom</u></b><br>";
       var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br>" + check + myObj.luncheon[24] + "<br>" + check + myObj.luncheon[25] + "<br>" + check + myObj.luncheon[26] + "<br>";
       var ruinedList = "<br><b><u>Ruined Kingdom</u></b></br>" + check + myObj.ruined[0] + "<br>";
-      var bowserList = "<br><b><u>Bowser's Kingdom</u></b><br>" + check + myObj.bowser[23] + "<br>" + check + myObj.bowser[24] + "<br>" + check + myObj.bowser[25] + "<br>" + check + myObj.bowser[26] + "<br>";
+      var bowserList = "<br><b><u>Bowser's Kingdom</u></b><br>" + check + myObj.bowser[18] + "<br>" + check + myObj.bowser[19] + "<br>" + check + myObj.bowser[20] + "<br>" + check + myObj.bowser[21] + "<br>";
 
       //Determine Moons Based On Hash/Randomize
       if (hash == ''){
@@ -169,7 +169,7 @@
         //Bowser Randomizer
         var bowserArr = [];
         while(bowserArr.length < 2){
-          var ja = Math.floor(Math.random() * 23);
+          var ja = Math.floor(Math.random() * 18);
           if (bowserArr.indexOf(ja) === -1) bowserArr.push(ja);
         }
         for (j = 0; j < 2; j++){
