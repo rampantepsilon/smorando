@@ -197,7 +197,7 @@ let win
 
 function createWindow () {
   const mainWindow = new BrowserWindow({
-    width: 480,
+    width: 800,
     height: 720,
     icon: __dirname + '/logo.jpg',
     title: title,

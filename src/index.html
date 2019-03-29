@@ -34,15 +34,20 @@
       #updateCheck a, a:visited {
         color:white;
       }
-      #moons {
+      #moontbl {
         background:rgba(255,255,255,0.75);
+      }
+      #lists {
+        vertical-align: top;
+        border-width: 1px;
+        border-style: solid;
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--For Electron-->
   </head>
   <body height="100%" onload="clear()">
-    <table width="100%" height="100%">
+    <table width="100%" height="100%" id='moontbl'>
       <div id="seed">
         Seed: <input id="seedHash" size="45"><br>
         <button type="button" onclick="generateSeed()">Randomize</button>
@@ -51,9 +56,20 @@
         <button type="button" onclick="location.reload()">Clear Seed</button>
       </div>
       <div id="updateCheck"></div>
-      <tr width="100%" height="100%">
-        <td width="100%">
+      <tr width="100%">
+        <td width="50%" id='lists'>
           <div id="moons"></div>
+        </td>
+        <td width='50%' id='lists'>
+          <div id='moons2'></div>
+        </td>
+      </tr>
+      <tr width='100%'>
+        <td width='50%' id='lists'>
+          <div id='moons3'></div>
+        </td>
+        <td width='50%' id='lists'>
+          <div id='moons4'></div>
         </td>
       </tr>
     </table>

@@ -1,6 +1,9 @@
 
   var seed = [];
   var moonlist = "";
+  var moonlist2 = "";
+  var moonlist3 = "";
+  var moonlist4 = "";
   var hash = "null";
   var check = "<input type='checkbox'>";
 
@@ -28,7 +31,10 @@
   }
 
   function generateSeed(){
-      moonlist = "<br>"
+      moonlist = "<br>";
+      moonlist2 = "<br>";
+      moonlist3 = "";
+      moonlist4 = "";
       hash = document.getElementById("seedHash").value;
 
       //Setup Lists
@@ -37,9 +43,9 @@
       var lakeList = "<br><b><u>Lake Kingdom</u></b><br><input type='checkbox'>" + myObj.lake[16] + "<br>";
       var woodList = "<br><b><u>Wooded Kingdom</u></b><br><input type='checkbox'>" + myObj.wooded[15] + "<br><input type='checkbox'>" + myObj.wooded[16] + "<br>";
       var lostList = "<br><b><u>Lost Kingdom</u></b><br>";
-      var metroList = "<br><b><u>Metro Kingdom</u></b><br><input type='checkbox'>" + myObj.metro[32] + "<br>";
+      var metroList = "<b><u>Metro Kingdom</u></b><br><input type='checkbox'>" + myObj.metro[32] + "<br>";
       var snowList = "<br><b><u>Snow Kingdom</u></b><br>";
-      var seasideList = "<br><b><u>Seaside Kingdom</u></b><br>";
+      var seasideList = "<b><u>Seaside Kingdom</u></b><br>";
       var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br>" + check + myObj.luncheon[24] + "<br>" + check + myObj.luncheon[25] + "<br>" + check + myObj.luncheon[26] + "<br>";
       var ruinedList = "<br><b><u>Ruined Kingdom</u></b></br>" + check + myObj.ruined[0] + "<br>";
       var bowserList = "<br><b><u>Bowser's Kingdom</u></b><br>" + check + myObj.bowser[18] + "<br>" + check + myObj.bowser[19] + "<br>" + check + myObj.bowser[20] + "<br>" + check + myObj.bowser[21] + "<br>";
@@ -184,12 +190,18 @@
         seed[96] = verSeedHash;
 
         //Add Lists to moonlist
-        moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
+        moonlist += cascadeList + sandList + lakeList;
+        moonlist2 += woodList + lostList;
+        moonlist3 += metroList + snowList;
+        moonlist4 += seasideList + luncheonList + ruinedList + bowserList;
 
         //Encode seed
         var encodedSeed = Base64.encode(seed.join(""));
 
-        document.getElementById("moons").innerHTML = moonlist + "<br><br>";
+        document.getElementById("moons").innerHTML = moonlist;
+        document.getElementById("moons2").innerHTML = moonlist2;
+        document.getElementById("moons3").innerHTML = moonlist3 + "<br><br>";
+        document.getElementById("moons4").innerHTML = moonlist4 + "<br><br>";
         //document.getElementById('seed').innerHTML = hash;
         document.getElementById('seedHash').value = /*seed.join("").toUpperCase()*/encodedSeed;
       }
