@@ -249,13 +249,19 @@
           }
 
           //Add Lists to moonlist
-          moonlist += cascadeList + sandList + lakeList + woodList + lostList + metroList + snowList + seasideList + luncheonList + ruinedList + bowserList;
+          moonlist += cascadeList + sandList + lakeList;
+          moonlist2 += woodList + lostList;
+          moonlist3 += metroList + snowList;
+          moonlist4 += seasideList + luncheonList + ruinedList + bowserList;
         }
         else {
           moonlist = wrongSeed;
         }
 
-        document.getElementById("moons").innerHTML = moonlist + "<br><br>";
+        document.getElementById("moons").innerHTML = moonlist;
+        document.getElementById("moons2").innerHTML = moonlist2;
+        document.getElementById("moons3").innerHTML = moonlist3 + "<br><br>";
+        document.getElementById("moons4").innerHTML = moonlist4 + "<br><br>";
         document.getElementById('seedHash').innerHTML = hash;
         //document.getElementById('seed').innerHTML = seed.join("").toUpperCase();
       }
