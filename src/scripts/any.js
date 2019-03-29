@@ -31,8 +31,8 @@
   }
 
   function generateSeed(){
-      moonlist = "<br>";
-      moonlist2 = "<br>";
+      moonlist = "";
+      moonlist2 = "";
       moonlist3 = "";
       moonlist4 = "";
       hash = document.getElementById("seedHash").value;
