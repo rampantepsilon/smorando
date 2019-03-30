@@ -25,6 +25,9 @@ let template = [{
         focusedWindow.reload()
       }
     }
+  /*}, {
+    label: 'Toggle DevTools',
+    role: 'toggledevtools',*/
   }, {
     label: 'Toggle Full Screen',
     accelerator: (() => {
