@@ -215,7 +215,7 @@ myObj = {
     'Big Pot on the Volcano: Dive In! (+3)'
   ],
   'ruined':[
-    "Battle with the Lord of Lightning"
+    "Battle with the Lord of Lightning (+3)"
   ],
   'bowser':[
     'Behind the Big Wall',
