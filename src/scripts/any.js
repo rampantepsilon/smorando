@@ -6,12 +6,33 @@
   var moonlist4 = "";
   var hash = "null";
   var check = "<input type='checkbox'>";
+  var moonCount = 0;
 
   //Seed Comparision Variables
   var verSeedHash = "120f";
   var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.2.0 seed.";
 
   var Base64 = require('js-base64').Base64;
+
+  function moonTotal(id){
+    var checkBox = document.getElementById(id);
+    var count = document.getElementById('moonCount');
+    if (checkBox.checked == true){
+      if (id == 'ckm2' || id == 'lakm1' || id == 'wkm2' || id == 'mkm1' || id == 'lukm3' || id == 'rkm1' || id == 'bkm4'){
+        moonCount += 3;
+      } else {
+        moonCount += 1;
+      }
+      count.innerHTML = moonCount + " out of 124 moons";
+    } else {
+      if (id == 'ckm2' || id == 'lakm1' || id == 'wkm2' || id == 'mkm1' || id == 'lukm3' || id == 'rmk1' || id == 'bkm4'){
+        moonCount -= 3;
+      } else {
+        moonCount -= 1;
+      }
+      count.innerHTML = moonCount + " out of 124 moons";
+    }
+  }
 
   function clear(){
     document.getElementById("seedHash").value = "";
@@ -38,24 +59,24 @@
       hash = document.getElementById("seedHash").value;
 
       //Setup Lists
-      var cascadeList = "<br><b><u>Cascade Kingdom</u></b><br><input type='checkbox'>" + myObj.cascade[15] + "<br><input type='checkbox'>" + myObj.cascade[16] + "<br>";
+      var cascadeList = "<br><b><u>Cascade Kingdom</u></b><br><input type='checkbox' id='ckm1' onclick='moonTotal(this.id)'>" + myObj.cascade[15] + "<br><input type='checkbox' id='ckm2' onclick='moonTotal(this.id)'>" + myObj.cascade[16] + "<br>";
       var sandList = "<br><b><u>Sand Kingdom</u></b><br>";
-      var lakeList = "<br><b><u>Lake Kingdom</u></b><br><input type='checkbox'>" + myObj.lake[16] + "<br>";
-      var woodList = "<br><b><u>Wooded Kingdom</u></b><br><input type='checkbox'>" + myObj.wooded[15] + "<br><input type='checkbox'>" + myObj.wooded[16] + "<br>";
+      var lakeList = "<br><b><u>Lake Kingdom</u></b><br><input type='checkbox' id='lakm1' onclick='moonTotal(this.id)'>" + myObj.lake[16] + "<br>";
+      var woodList = "<br><b><u>Wooded Kingdom</u></b><br><input type='checkbox' id='wkm1' onclick='moonTotal(this.id)'>" + myObj.wooded[15] + "<br><input type='checkbox' id='wkm2' onclick='moonTotal(this.id)'>" + myObj.wooded[16] + "<br>";
       var lostList = "<br><b><u>Lost Kingdom</u></b><br>";
-      var metroList = "<b><u>Metro Kingdom</u></b><br><input type='checkbox'>" + myObj.metro[32] + "<br>";
+      var metroList = "<b><u>Metro Kingdom</u></b><br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[32] + "<br>";
       var snowList = "<br><b><u>Snow Kingdom</u></b><br>";
       var seasideList = "<b><u>Seaside Kingdom</u></b><br>";
-      var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br>" + check + myObj.luncheon[24] + "<br>" + check + myObj.luncheon[25] + "<br>" + check + myObj.luncheon[26] + "<br>";
-      var ruinedList = "<br><b><u>Ruined Kingdom</u></b></br>" + check + myObj.ruined[0] + "<br>";
-      var bowserList = "<br><b><u>Bowser's Kingdom</u></b><br>" + check + myObj.bowser[18] + "<br>" + check + myObj.bowser[19] + "<br>" + check + myObj.bowser[20] + "<br>" + check + myObj.bowser[21] + "<br>";
+      var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br><input type='checkbox' id='lukm1' onclick='moonTotal(this.id)'>" + myObj.luncheon[24] + "<br><input type='checkbox' id='lukm2' onclick='moonTotal(this.id)'>" + myObj.luncheon[25] + "<br><input type='checkbox' id='lukm3' onclick='moonTotal(this.id)'>" + myObj.luncheon[26] + "<br>";
+      var ruinedList = "<br><b><u>Ruined Kingdom</u></b></br><input type='checkbox' id='rkm1' onclick='moonTotal(this.id)'>" + myObj.ruined[0] + "<br>";
+      var bowserList = "<br><b><u>Bowser's Kingdom</u></b><br><input type='checkbox' id='bkm1' onclick='moonTotal(this.id)'>" + myObj.bowser[18] + "<br><input type='checkbox' id='bkm2' onclick='moonTotal(this.id)'>" + myObj.bowser[19] + "<br><input type='checkbox' id='bkm3' onclick='moonTotal(this.id)'>" + myObj.bowser[20] + "<br><input type='checkbox' id='bkm4' onclick='moonTotal(this.id)'>" + myObj.bowser[21] + "<br>";
 
       //Determine Moons Based On Hash/Randomize
       if (hash == ''){
         //Cascade Randomizer
         for (a=0; a < 1; a++){
           var aa = Math.floor(Math.random() * 15);
-          cascadeList = cascadeList + check + myObj.cascade[aa] + "<br>";
+          cascadeList = cascadeList + "<input type='checkbox' id='ckm3' onclick='moonTotal(this.id)'>" + myObj.cascade[aa] + "<br>";
           var aSeed = aa;
           seed[0] = aSeed.toString(36);
         }
@@ -67,7 +88,9 @@
           if (sandArr.indexOf(ba) === -1) sandArr.push(ba);
         }
         for (bb=0; bb < 16; bb++){
-          sandList = sandList + check + myObj.sand[sandArr[bb]] + "<br>";
+          var sandVal = bb+1;
+          var sandCheck = "<input type='checkbox' id='skm" + sandVal +"' onclick='moonTotal(this.id)'>";
+          sandList = sandList + sandCheck + myObj.sand[sandArr[bb]] + "<br>";
         }
         for (bc=0; bc < 16; bc++){
           var bd = bc+1;
@@ -81,7 +104,9 @@
           if (lakeArr.indexOf(ca) === -1) lakeArr.push(ca);
         }
         for (c = 0; c < 5; c++){
-          lakeList = lakeList + check + myObj.lake[lakeArr[c]] + "<br>";
+          var lakeVal = c+2;
+          var lakeCheck = "<input type='checkbox' id='lakm" + lakeVal + "' onclick='moonTotal(this.id)'>";
+          lakeList = lakeList + lakeCheck + myObj.lake[lakeArr[c]] + "<br>";
         }
         for (cc = 0; cc < 5; cc++){
           var cd = cc+17;
@@ -95,7 +120,9 @@
           if (woodArr.indexOf(da) === -1) woodArr.push(da);
         }
         for (d = 0; d < 12; d++){
-          woodList = woodList + check + myObj.wooded[woodArr[d]] + "<br>";
+          var woodVal = d+3;
+          var woodCheck = "<input type='checkbox' id='wkm" + woodVal + "' onclick='moonTotal(this.id)'>";
+          woodList = woodList + woodCheck + myObj.wooded[woodArr[d]] + "<br>";
         }
         for (dc = 0; dc < 12; dc++){
           var dd = dc+22;
@@ -109,7 +136,9 @@
           if (lostArr.indexOf(ea) === -1) lostArr.push(ea);
         }
         for (e = 0; e < 10; e++){
-          lostList = lostList + check + myObj.lost[lostArr[e]] + "<br>";
+          var lostval = e+1;
+          var lostCheck = "<input type='checkbox' id='lkm" + lostval +"' onclick='moonTotal(this.id)'>";
+          lostList = lostList + lostCheck + myObj.lost[lostArr[e]] + "<br>";
         }
         for (ec = 0; ec < 10; ec++){
           var ed = ec+34;
@@ -123,7 +152,9 @@
           if (metroArr.indexOf(fa) === -1) metroArr.push(fa);
         }
         for (f = 0; f < 17; f++){
-          metroList = metroList + check + myObj.metro[metroArr[f]] + "<br>";
+          var metroVal = f+2;
+          var metroCheck = "<input type='checkbox' id='mkm" + metroVal +"' onclick='moonTotal(this.id)'>";
+          metroList = metroList + metroCheck + myObj.metro[metroArr[f]] + "<br>";
         }
         for (fc = 0; fc < 17; fc++){
           var fd = fc+44;
@@ -137,7 +168,9 @@
           if (snowArr.indexOf(ga) === -1) snowArr.push(ga);
         }
         for (g = 0; g < 10; g++){
-          snowList += check + myObj.snow[snowArr[g]] + "<br>";
+          var snowVal = g+1;
+          var snowCheck = "<input type='checkbox' id='snkm" + snowVal +"' onclick='moonTotal(this.id)'>";
+          snowList += snowCheck + myObj.snow[snowArr[g]] + "<br>";
         }
         for (gc = 0; gc < 10; gc++){
           var gd = gc+61;
@@ -151,7 +184,9 @@
           if (seasideArr.indexOf(ha) === -1) seasideArr.push(ha);
         }
         for (h = 0; h < 10; h++){
-          seasideList += check + myObj.seaside[seasideArr[h]] + "<br>";
+          var seasideVal = h+1;
+          var seasideCheck = "<input type='checkbox' id='sekm" + seasideVal +"' onclick='moonTotal(this.id)'>";
+          seasideList += seasideCheck + myObj.seaside[seasideArr[h]] + "<br>";
         }
         for (hc = 0; hc < 10; hc++){
           var hd = hc+71;
@@ -165,7 +200,9 @@
           if (luncheonArr.indexOf(ia) === -1) luncheonArr.push(ia);
         }
         for (i = 0; i < 13; i++){
-          luncheonList += check + myObj.luncheon[luncheonArr[i]] + "<br>";
+          var luncheonVal = i+4;
+          var luncheonCheck = "<input type='checkbox' id='lukm" + luncheonVal +"' onclick='moonTotal(this.id)'>";
+          luncheonList += luncheonCheck + myObj.luncheon[luncheonArr[i]] + "<br>";
         }
         for (ic = 0; ic < 13; ic++){
           var id = ic+81;
@@ -179,14 +216,16 @@
           if (bowserArr.indexOf(ja) === -1) bowserArr.push(ja);
         }
         for (j = 0; j < 2; j++){
-          bowserList += check + myObj.bowser[bowserArr[j]] + "<br>";
+          var bowserVal = j+5;
+          var bowserCheck = "<input type='checkbox' id='bkm" + bowserVal +"' onclick='moonTotal(this.id)'>";
+          bowserList += bowserCheck + myObj.bowser[bowserArr[j]] + "<br>";
         }
         for (jc = 0; jc < 2; jc++){
           var jd = jc + 94;
           seed[jd] = (bowserArr[jc]).toString(36);
         }
 
-        //Add Version Keyy
+        //Add Version Key
         seed[96] = verSeedHash;
 
         //Add Lists to moonlist
@@ -202,6 +241,7 @@
         document.getElementById("moons2").innerHTML = moonlist2;
         document.getElementById("moons3").innerHTML = moonlist3 + "<br><br>";
         document.getElementById("moons4").innerHTML = moonlist4 + "<br><br>";
+        document.getElementById('moonCount').innerHTML = '0 out of 124 moons';
         //document.getElementById('seed').innerHTML = hash;
         document.getElementById('seedHash').value = /*seed.join("").toUpperCase()*/encodedSeed;
       }
@@ -216,36 +256,39 @@
 
         var versionCheck = moons[96] + moons[97] + moons[98] + moons[99]
 
+        var cs = "<input type='checkbox' id='";
+        var ce = "' onclick='moonTotal(this.id)'>";
+
         //Version Check
         if (versionCheck == verSeedHash){
           //Add Moons to Lists
-          cascadeList += check + myObj.cascade[moons[0]] + "<br>";
+          cascadeList += cs + 0 + ce + myObj.cascade[moons[0]] + "<br>";
           for (az = 1; az < 17; az++){
-            sandList += check + myObj.sand[moons[az]] + "<br>";
+            sandList += cs + az + ce + myObj.sand[moons[az]] + "<br>";
           }
           for (bz = 17; bz < 22; bz++){
-            lakeList += check + myObj.lake[moons[bz]] + "<br>";
+            lakeList += cs + bz + ce + myObj.lake[moons[bz]] + "<br>";
           }
           for (cz = 22; cz < 34; cz++){
-            woodList += check + myObj.wooded[moons[cz]] + "<br>";
+            woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "<br>";
           }
           for (dz = 34; dz < 44; dz++){
-            lostList += check + myObj.lost[moons[dz]] + "<br>";
+            lostList += cs + dz + ce + myObj.lost[moons[dz]] + "<br>";
           }
           for (ez = 44; ez < 61; ez++){
-            metroList += check + myObj.metro[moons[ez]] + "<br>";
+            metroList += cs + ez + ce + myObj.metro[moons[ez]] + "<br>";
           }
           for (fz = 61; fz < 71; fz++){
-            snowList += check + myObj.snow[moons[fz]] + "<br>";
+            snowList += cs + fz + ce + myObj.snow[moons[fz]] + "<br>";
           }
           for (gz = 71; gz < 81; gz++){
-            seasideList += check + myObj.seaside[moons[gz]] + "<br>";
+            seasideList += cs + gz + ce + myObj.seaside[moons[gz]] + "<br>";
           }
           for (hz = 81; hz < 94; hz++){
-            luncheonList += check + myObj.luncheon[moons[hz]] + "<br>";
+            luncheonList += cs + hz + ce + myObj.luncheon[moons[hz]] + "<br>";
           }
           for (iz = 94; iz < 96; iz++){
-            bowserList += check + myObj.bowser[moons[iz]] + "<br>";
+            bowserList += cs + iz + ce + myObj.bowser[moons[iz]] + "<br>";
           }
 
           //Add Lists to moonlist
@@ -262,6 +305,7 @@
         document.getElementById("moons2").innerHTML = moonlist2;
         document.getElementById("moons3").innerHTML = moonlist3 + "<br><br>";
         document.getElementById("moons4").innerHTML = moonlist4 + "<br><br>";
+        document.getElementById('moonCount').innerHTML = '0 out of 124 moons';
         document.getElementById('seedHash').innerHTML = hash;
         //document.getElementById('seed').innerHTML = seed.join("").toUpperCase();
       }
