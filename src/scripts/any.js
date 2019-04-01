@@ -9,8 +9,8 @@
   var moonCount = 0;
 
   //Seed Comparision Variables
-  var verSeedHash = "130d";
-  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.3.0 seed.";
+  var verSeedHash = "121f";
+  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.2.1 seed.";
 
   var Base64 = require('js-base64').Base64;
 
