@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 
-var currentVer = '1.2.0';
+var currentVer = '1.2.1';
 
 $(document).ready(function(){
   $.getJSON("https://api.github.com/repos/rampantepsilon/smoanyrando/releases", function(result){
