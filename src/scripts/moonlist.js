@@ -10,14 +10,14 @@ myObj = {
     'Cascade Kingdom Timer Challenge 1',
     'Cascade Kingdom Timer Challenge 2',
     'Good Morning, Captain Toad!',
-    'Dinosaur Nest: Big Cleanup!',
-    'Dinosaur Nest: Running Wild!',
-    'Nice Shot with the Chain Chomp!',
-    'Very Nice Shot with the Chain Chomp!',
-    'Past the Chasm Lifts',
-    'Hidden Chasm Passage',
-    'Our First Power Moon',
-    'Multi Moon Atop the Falls (+3)'
+    '<font color="blue">Dinosaur Nest: Big Cleanup!</font>',
+    '<font color="blue">Dinosaur Nest: Running Wild!</font>',
+    '<font color="blue">Nice Shot with the Chain Chomp!</font>',
+    '<font color="blue">Very Nice Shot with the Chain Chomp!</font>',
+    '<font color="blue">Past the Chasm Lifts</font>',
+    '<font color="blue">Hidden Chasm Passage</font>',
+    '<font color="red">Our First Power Moon</font>',
+    '<font color="red">Multi Moon Atop the Falls (+3)</font>'
   ],
   'sand':[
     'Overlooking the Desert Town',
@@ -37,16 +37,16 @@ myObj = {
     'Taking Notes: Jump on the Palm',
     'Wandering Cactus',
     'Sand Quiz: Wonderful!',
-    'Shopping in Tostarena',
+    '<font color="purple">Shopping in Tostarena</font>',
     'Employees Only',
-    'Sand Kingdom Slots',
+    '<font color="purple">Sand Kingdom Slots</font>',
     'Walking the Desert!',
     "Sphynx's Treasure Vault",
     'A Rumble from the Sandy Floor',
-    'The Invisible Maze',
-    'Skull Sign in the Transparent Maze',
-    'Jaxi Driver',
-    'Jaxi Stunt Driving'
+    '<font color="blue">The Invisible Maze</font>',
+    '<font color="blue">Skull Sign in the Transparent Maze</font>',
+    '<font color="blue">Jaxi Driver</font>',
+    '<font color="blue">Jaxi Stunt Driving</font>'
   ],
   'lake':[
     'Dorrie-Back Rider',
@@ -61,11 +61,12 @@ myObj = {
     'Taking Notes: In the Cliffside',
     'Our Secret Little Room',
     "Let's Go Swimming, Captain Toad!",
-    'Shopping in Lake Lamode',
-    'Super-Secret Zipper',
-    'Jump, Grab, Cling, and Climb',
-    'Jump, Grab, and Climb Some More',
-    'Broodals Over the Lake (+3)'
+    '<font color="purple">Shopping in Lake Lamode</font>',
+    '<font color="blue">Unzip the Chasm</font>',
+    '<font color="blue">Super-Secret Zipper</font>',
+    '<font color="blue">Jump, Grab, Cling, and Climb</font>',
+    '<font color="blue">Jump, Grab, and Climb Some More</font>',
+    '<font color="red">Broodals Over the Lake (+3)</font>'
   ],
   'wooded':[
     'Rolling Rock in the Woods',
@@ -78,13 +79,13 @@ myObj = {
     'The Nut at the Dead End',
     'Cracked Nut on a Crumbling Tower',
     'Fire in the Cave',
-    'Shopping in Steam Gardens',
-    'Nut Planted in the Tower',
-    'Stretching Your Legs',
-    'Flooding Pipeway',
-    'Flooding Pipeway Ceiling Secret',
-    'Road to Sky Garden',
-    'Flower Thieves to Sky Garden (+3)'
+    '<font color="purple">Shopping in Steam Gardens</font>',
+    '<font color="blue">Nut Planted in the Tower</font>',
+    '<font color="blue">Stretching Your Legs</font>',
+    '<font color="blue">Flooding Pipeway</font>',
+    '<font color="blue">Flooding Pipeway Ceiling Secret</font>',
+    '<font color="red">Road to Sky Garden</font>',
+    '<font color="red">Flower Thieves to Sky Garden (+3)</font>'
   ],
   'lost':[
     'Atop a Propeller Pillar',
@@ -106,7 +107,7 @@ myObj = {
     'Soaring Over Forgotten Isle!',
     'The Caged Gold',
     'Get Some Rest, Captain Toad!',
-    'Shopping on Forgotten Isle'
+    '<font color="purple">Shopping on Forgotten Isle</font>'
   ],
   'metro':[
     'Drummer on Board!',
@@ -125,23 +126,23 @@ myObj = {
     'How Do They Take Out the Trash?',
     "How You Doin', Captain Toad?",
     'Bench Friends',
-    'Shopping in New Donk City',
-    'Metro Kingdom Slots',
+    '<font color="purple">Shopping in New Donk City</font>',
+    '<font color="purple">Metro Kingdom Slots</font>',
     'Remotely Captured Car',
-    'RC Car Pro!',
-    'Taking Notes: In the Private Room',
-    'City Hall Lost & Found',
-    'Pushing Through the Crowd',
-    'High Over the Crowd',
-    'Inside the Rotating Maze',
-    'Outside the Rotating Maze',
-    'Hanging from a High-Rise',
-    'Vaulting up a High-Rise',
-    'Bullet Billding',
-    "One Man's Trash...",
-    'Motor Scooter: Escape!',
-    'Big Jump: Escape!',
-    "New Donk City's Pest Problem (+3)"
+    '<font color="blue">RC Car Pro!</font>',
+    '<font color="blue">Taking Notes: In the Private Room</font>',
+    '<font color="blue">City Hall Lost & Found</font>',
+    '<font color="blue">Pushing Through the Crowd</font>',
+    '<font color="blue">High Over the Crowd</font>',
+    '<font color="blue">Inside the Rotating Maze</font>',
+    '<font color="blue">Outside the Rotating Maze</font>',
+    '<font color="blue">Hanging from a High-Rise</font>',
+    '<font color="blue">Vaulting up a High-Rise</font>',
+    '<font color="blue">Bullet Billding</font>',
+    "<font color='blue'>One Man's Trash...</font>",
+    '<font color="blue">Motor Scooter: Escape!</font>',
+    '<font color="blue">Big Jump: Escape!</font>',
+    "<font color='red'>New Donk City's Pest Problem (+3)</font>"
   ],
   'snow':[
     'The Icicle Barrier',
@@ -155,7 +156,7 @@ myObj = {
     'Treasure in the Ice Wall',
     'Ice-Dodging Goomba Stack',
     'Captain Toad is Chilly!',
-    'Shopping in Shiveria'
+    '<font color="purple">Shopping in Shiveria</font>'
   ],
   'seaside':[
     'The Stone Pillar Seal',
@@ -176,14 +177,14 @@ myObj = {
     'Taking Notes: Ocean Surface Dash',
     'Good Job, Captain Toad!',
     'Ocean Quiz: Good!',
-    'Shopping in Bubblaine',
-    'Looking Back in the Dark Waterway',
-    "The Sphynx's Underwater Vault",
-    'A Rumble on the Seaside Floor',
-    'Wading in the Cloud Sea',
-    'Sunken Treasure in the Cloud Sea',
-    'Hurry and Stretch',
-    'Stretch on the Side Path'
+    '<font color="purple">Shopping in Bubblaine</font>',
+    '<font color="blue">Looking Back in the Dark Waterway</font>',
+    "<font color='blue'>The Sphynx's Underwater Vault</font>",
+    '<font color="blue">A Rumble on the Seaside Floor</font>',
+    '<font color="blue">Wading in the Cloud Sea</font>',
+    '<font color="blue">Sunken Treasure in the Cloud Sea</font>',
+    '<font color="blue">Hurry and Stretch</font>',
+    '<font color="blue">Stretch on the Side Path</font>'
   ],
   'luncheon':[
     'Piled on the Salt',
@@ -202,20 +203,20 @@ myObj = {
     'All the Cracks Are Fixed',
     'Taking Notes: Swimming in Magma',
     'Love Above the Lava',
-    'Shopping in Mount Volbono',
-    'Luncheon Kingdom Slots',
-    'Magma Swamp: Floating and Sinking',
-    'Corner of the Magma Swamp',
-    'Magma Narrow Path',
-    'Crossing to the Magma',
-    "Fork Flickin' to the Summit",
-    "Fork Flickin' Detour",
-    "The Broodals Are After Some Cookin'",
-    'Under the Cheese Rocks',
-    'Big Pot on the Volcano: Dive In! (+3)'
+    '<font color="purple">Shopping in Mount Volbono</font>',
+    '<font color="purple">Luncheon Kingdom Slots</font>',
+    '<font color="blue">Magma Swamp: Floating and Sinking</font>',
+    '<font color="blue">Corner of the Magma Swamp</font>',
+    '<font color="blue">Magma Narrow Path</font>',
+    '<font color="blue">Crossing to the Magma</font>',
+    "<font color='blue'>Fork Flickin' to the Summit</font>",
+    "<font color='blue'>Fork Flickin' Detour</font>",
+    "<font color='red'>The Broodals Are After Some Cookin'</font>",
+    '<font color="red">Under the Cheese Rocks</font>',
+    '<font color="red">Big Pot on the Volcano: Dive In! (+3)</font>'
   ],
   'ruined':[
-    "Battle with the Lord of Lightning (+3)"
+    "<font color='red'>Battle with the Lord of Lightning (+3)</font>"
   ],
   'bowser':[
     'Behind the Big Wall',
@@ -235,9 +236,9 @@ myObj = {
     'Underground Jizo',
     'Found Behind Bars!',
     'Good to See You, Captain Toad!',
-    "Shopping at Bowser's Castle",
-    "Infiltrate Bowser's Castle",
-    'Smart Bombing',
-    'Big Broodal Battle',
-    "Showdown at Bowser's Castle (+3)"
+    "<font color='purple'>Shopping at Bowser's Castle</font>",
+    "<font color='red'>Infiltrate Bowser's Castle</font>",
+    '<font color="red">Smart Bombing</font>',
+    '<font color="red">Big Broodal Battle</font>',
+    "<font color='red'>Showdown at Bowser's Castle (+3)</font>"
   ]};

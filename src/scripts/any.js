@@ -9,8 +9,8 @@
   var moonCount = 0;
 
   //Seed Comparision Variables
-  var verSeedHash = "120f";
-  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.2.0 seed.";
+  var verSeedHash = "130d";
+  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.3.0 seed.";
 
   var Base64 = require('js-base64').Base64;
 
@@ -59,17 +59,17 @@
       hash = document.getElementById("seedHash").value;
 
       //Setup Lists
-      var cascadeList = "<br><b><u>Cascade Kingdom</u></b><br><input type='checkbox' id='ckm1' onclick='moonTotal(this.id)'>" + myObj.cascade[15] + "<br><input type='checkbox' id='ckm2' onclick='moonTotal(this.id)'>" + myObj.cascade[16] + "<br>";
-      var sandList = "<br><b><u>Sand Kingdom</u></b><br>";
-      var lakeList = "<br><b><u>Lake Kingdom</u></b><br><input type='checkbox' id='lakm1' onclick='moonTotal(this.id)'>" + myObj.lake[16] + "<br>";
-      var woodList = "<br><b><u>Wooded Kingdom</u></b><br><input type='checkbox' id='wkm1' onclick='moonTotal(this.id)'>" + myObj.wooded[15] + "<br><input type='checkbox' id='wkm2' onclick='moonTotal(this.id)'>" + myObj.wooded[16] + "<br>";
-      var lostList = "<br><b><u>Lost Kingdom</u></b><br>";
-      var metroList = "<b><u>Metro Kingdom</u></b><br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[32] + "<br>";
-      var snowList = "<br><b><u>Snow Kingdom</u></b><br>";
-      var seasideList = "<b><u>Seaside Kingdom</u></b><br>";
-      var luncheonList = "<br><b><u>Luncheon Kingdom</u></b><br><input type='checkbox' id='lukm1' onclick='moonTotal(this.id)'>" + myObj.luncheon[24] + "<br><input type='checkbox' id='lukm2' onclick='moonTotal(this.id)'>" + myObj.luncheon[25] + "<br><input type='checkbox' id='lukm3' onclick='moonTotal(this.id)'>" + myObj.luncheon[26] + "<br>";
-      var ruinedList = "<br><b><u>Ruined Kingdom</u></b></br><input type='checkbox' id='rkm1' onclick='moonTotal(this.id)'>" + myObj.ruined[0] + "<br>";
-      var bowserList = "<br><b><u>Bowser's Kingdom</u></b><br><input type='checkbox' id='bkm1' onclick='moonTotal(this.id)'>" + myObj.bowser[18] + "<br><input type='checkbox' id='bkm2' onclick='moonTotal(this.id)'>" + myObj.bowser[19] + "<br><input type='checkbox' id='bkm3' onclick='moonTotal(this.id)'>" + myObj.bowser[20] + "<br><input type='checkbox' id='bkm4' onclick='moonTotal(this.id)'>" + myObj.bowser[21] + "<br>";
+      var cascadeList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Cascade_Kingdom' target='_blank'>Cascade Kingdom<a></u></b><br><input type='checkbox' id='ckm1' onclick='moonTotal(this.id)'>" + myObj.cascade[15] + "<br><input type='checkbox' id='ckm2' onclick='moonTotal(this.id)'>" + myObj.cascade[16] + "<br>";
+      var sandList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Sand_Kingdom' target='_blank'>Sand Kingdom</a></u></b><br>";
+      var lakeList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lake_Kingdom' target='_blank'>Lake Kingdom</a></u></b><br><input type='checkbox' id='lakm1' onclick='moonTotal(this.id)'>" + myObj.lake[17] + "<br>";
+      var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><br><input type='checkbox' id='wkm1' onclick='moonTotal(this.id)'>" + myObj.wooded[15] + "<br><input type='checkbox' id='wkm2' onclick='moonTotal(this.id)'>" + myObj.wooded[16] + "<br>";
+      var lostList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lost_Kingdom' target='_blank'>Lost Kingdom</a></u></b><br>";
+      var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[32] + "<br>";
+      var snowList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Snow_Kingdom' target='_blank'>Snow Kingdom</a></u></b><br>";
+      var seasideList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Seaside_Kingdom' target='_blank'>Seaside Kingdom</a></u></b><br>";
+      var luncheonList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Luncheon_Kingdom' target='_blank'>Luncheon Kingdom</a></u></b><br><input type='checkbox' id='lukm1' onclick='moonTotal(this.id)'>" + myObj.luncheon[24] + "<br><input type='checkbox' id='lukm2' onclick='moonTotal(this.id)'>" + myObj.luncheon[25] + "<br><input type='checkbox' id='lukm3' onclick='moonTotal(this.id)'>" + myObj.luncheon[26] + "<br>";
+      var ruinedList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Ruined_Kingdom' target='_blank'>Ruined Kingdom</a></u></b></br><input type='checkbox' id='rkm1' onclick='moonTotal(this.id)'>" + myObj.ruined[0] + "<br>";
+      var bowserList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_Bowser&apos;s_Kingdom' target='_blank'>Bowser's Kingdom</a></u></b><br><input type='checkbox' id='bkm1' onclick='moonTotal(this.id)'>" + myObj.bowser[18] + "<br><input type='checkbox' id='bkm2' onclick='moonTotal(this.id)'>" + myObj.bowser[19] + "<br><input type='checkbox' id='bkm3' onclick='moonTotal(this.id)'>" + myObj.bowser[20] + "<br><input type='checkbox' id='bkm4' onclick='moonTotal(this.id)'>" + myObj.bowser[21] + "<br>";
 
       //Determine Moons Based On Hash/Randomize
       if (hash == ''){
@@ -87,6 +87,7 @@
           var ba = Math.floor(Math.random() * 27);
           if (sandArr.indexOf(ba) === -1) sandArr.push(ba);
         }
+        sandArr.sort(function(a, b){return a-b});
         for (bb=0; bb < 16; bb++){
           var sandVal = bb+1;
           var sandCheck = "<input type='checkbox' id='skm" + sandVal +"' onclick='moonTotal(this.id)'>";
@@ -100,9 +101,10 @@
         //Lake Randomizer
         var lakeArr = [];
         while(lakeArr.length < 5){
-          var ca = Math.floor(Math.random() * 16);
+          var ca = Math.floor(Math.random() * 17);
           if (lakeArr.indexOf(ca) === -1) lakeArr.push(ca);
         }
+        lakeArr.sort(function(a, b){return a-b});
         for (c = 0; c < 5; c++){
           var lakeVal = c+2;
           var lakeCheck = "<input type='checkbox' id='lakm" + lakeVal + "' onclick='moonTotal(this.id)'>";
@@ -119,6 +121,7 @@
           var da = Math.floor(Math.random() * 15);
           if (woodArr.indexOf(da) === -1) woodArr.push(da);
         }
+        woodArr.sort(function(a, b){return a-b});
         for (d = 0; d < 12; d++){
           var woodVal = d+3;
           var woodCheck = "<input type='checkbox' id='wkm" + woodVal + "' onclick='moonTotal(this.id)'>";
@@ -135,6 +138,7 @@
           var ea = Math.floor(Math.random() * 20);
           if (lostArr.indexOf(ea) === -1) lostArr.push(ea);
         }
+        lostArr.sort(function(a, b){return a-b});
         for (e = 0; e < 10; e++){
           var lostval = e+1;
           var lostCheck = "<input type='checkbox' id='lkm" + lostval +"' onclick='moonTotal(this.id)'>";
@@ -147,10 +151,20 @@
 
         //Metro Randomizer
         var metroArr = [];
+        var metroDump = [];
         while(metroArr.length < 17){
           var fa = Math.floor(Math.random() * 32);
-          if (metroArr.indexOf(fa) === -1) metroArr.push(fa);
+          if (metroArr.indexOf(fa) === -1){
+            if (fa == 19 && metroArr.indexOf(18) !== -1){
+              metroArr.push(fa);
+            } else if (fa == 19){
+              metroDump.push(fa)
+            } else {
+              metroArr.push(fa);
+            }
+          }
         }
+        metroArr.sort(function(a, b){return a-b});
         for (f = 0; f < 17; f++){
           var metroVal = f+2;
           var metroCheck = "<input type='checkbox' id='mkm" + metroVal +"' onclick='moonTotal(this.id)'>";
@@ -167,6 +181,7 @@
           var ga = Math.floor(Math.random() * 12);
           if (snowArr.indexOf(ga) === -1) snowArr.push(ga);
         }
+        snowArr.sort(function(a, b){return a-b});
         for (g = 0; g < 10; g++){
           var snowVal = g+1;
           var snowCheck = "<input type='checkbox' id='snkm" + snowVal +"' onclick='moonTotal(this.id)'>";
@@ -183,6 +198,7 @@
           var ha = Math.floor(Math.random() * 26);
           if (seasideArr.indexOf(ha) === -1) seasideArr.push(ha);
         }
+        seasideArr.sort(function(a, b){return a-b});
         for (h = 0; h < 10; h++){
           var seasideVal = h+1;
           var seasideCheck = "<input type='checkbox' id='sekm" + seasideVal +"' onclick='moonTotal(this.id)'>";
@@ -199,6 +215,7 @@
           var ia = Math.floor(Math.random() * 24);
           if (luncheonArr.indexOf(ia) === -1) luncheonArr.push(ia);
         }
+        luncheonArr.sort(function(a, b){return a-b});
         for (i = 0; i < 13; i++){
           var luncheonVal = i+4;
           var luncheonCheck = "<input type='checkbox' id='lukm" + luncheonVal +"' onclick='moonTotal(this.id)'>";
@@ -215,6 +232,7 @@
           var ja = Math.floor(Math.random() * 18);
           if (bowserArr.indexOf(ja) === -1) bowserArr.push(ja);
         }
+        bowserArr.sort(function(a, b){return a-b});
         for (j = 0; j < 2; j++){
           var bowserVal = j+5;
           var bowserCheck = "<input type='checkbox' id='bkm" + bowserVal +"' onclick='moonTotal(this.id)'>";
@@ -237,13 +255,24 @@
         //Encode seed
         var encodedSeed = Base64.encode(seed.join(""));
 
+        //Set Outline
+        $("#list1").css("border-style", "solid");
+        $("#list2").css("border-style", "solid");
+        $("#list3").css("border-style", "solid");
+        $("#list4").css("border-style", "solid");
+
+        //Add moons to viewpoint
         document.getElementById("moons").innerHTML = moonlist;
         document.getElementById("moons2").innerHTML = moonlist2;
         document.getElementById("moons3").innerHTML = moonlist3 + "<br><br>";
         document.getElementById("moons4").innerHTML = moonlist4 + "<br><br>";
+
+        //Add top information
         document.getElementById('moonCount').innerHTML = '0 out of 124 moons';
-        //document.getElementById('seed').innerHTML = hash;
-        document.getElementById('seedHash').value = /*seed.join("").toUpperCase()*/encodedSeed;
+        document.getElementById('disclaimer').innerHTML = '<font color="red">Red moons</font> = Required | <font color="blue">Blue moons</font> = Sub-Area | <font color="purple">Purple moons</font> = Shop/Slots<br>Click the Kingdom Name for list of moons.';
+
+        //Add seed to textbox
+        document.getElementById('seedHash').value = encodedSeed;
       }
       else{
         //Decode Hash
@@ -301,12 +330,23 @@
           moonlist = wrongSeed;
         }
 
+        //Set Outline
+        $("#list1").css("border-style", "solid");
+        $("#list2").css("border-style", "solid");
+        $("#list3").css("border-style", "solid");
+        $("#list4").css("border-style", "solid");
+
+        //Add moons to viewpoint
         document.getElementById("moons").innerHTML = moonlist;
         document.getElementById("moons2").innerHTML = moonlist2;
         document.getElementById("moons3").innerHTML = moonlist3 + "<br><br>";
         document.getElementById("moons4").innerHTML = moonlist4 + "<br><br>";
+
+        //Add top information
         document.getElementById('moonCount').innerHTML = '0 out of 124 moons';
+        document.getElementById('disclaimer').innerHTML = '<font color="red">Red moons</font> = Required | <font color="blue">Blue moons</font> = Sub-Area | <font color="purple">Purple moons</font> = Shop/Slots<br>Click the Kingdom Name for list of moons.';
+
+        //Add seed to textbox
         document.getElementById('seedHash').innerHTML = hash;
-        //document.getElementById('seed').innerHTML = seed.join("").toUpperCase();
       }
   };

@@ -6,6 +6,10 @@
     <script src="scripts/any.js"></script>
     <script src="scripts/updateCheck.js"></script>
     <style>
+      a, a.click, a.hover, a.visited {
+        text-decoration: none;
+        color: black;
+      }
       html {
         background: url(background.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -31,16 +35,16 @@
         color: white;
         text-align: center;
       }
-      #updateCheck a, a:visited {
+      #updateCheck>a, #updateCheck>a:visited {
         color:white;
       }
       #moontbl {
         background:rgba(255,255,255,0.75);
       }
-      #lists {
+      #list1, #list2, #list3, #list4 {
         vertical-align: top;
         border-width: 1px;
-        border-style: solid;
+        border-style: none;
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -58,21 +62,21 @@
       </div>
       <div id="updateCheck"></div>
       <tr>
-        <td colspan='2'><br><br><br></td>
+        <td colspan='2' align="center"><br><br><br><div id="disclaimer"></div></td>
       </tr>
       <tr width="100%">
-        <td width="50%" id='lists'>
+        <td width="50%" id='list1'>
           <div id="moons"></div>
         </td>
-        <td width='50%' id='lists'>
+        <td width='50%' id='list2'>
           <div id='moons2'></div>
         </td>
       </tr>
       <tr width='100%'>
-        <td width='50%' id='lists'>
+        <td width='50%' id='list3'>
           <div id='moons3'></div>
         </td>
-        <td width='50%' id='lists'>
+        <td width='50%' id='list4'>
           <div id='moons4'></div>
         </td>
       </tr>
