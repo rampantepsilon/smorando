@@ -40,7 +40,6 @@ myObj = {
     '<font color="purple">Shopping in Tostarena</font>',
     'Employees Only',
     '<font color="purple">Sand Kingdom Slots</font>',
-    'Walking the Desert!',
     "Sphynx's Treasure Vault",
     'A Rumble from the Sandy Floor',
     '<font color="blue">The Invisible Maze</font>',

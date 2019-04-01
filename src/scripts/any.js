@@ -84,7 +84,7 @@
         //Sand Randomizer
         var sandArr = [];
         while(sandArr.length < 16){
-          var ba = Math.floor(Math.random() * 27);
+          var ba = Math.floor(Math.random() * 26);
           if (sandArr.indexOf(ba) === -1) sandArr.push(ba);
         }
         sandArr.sort(function(a, b){return a-b});
