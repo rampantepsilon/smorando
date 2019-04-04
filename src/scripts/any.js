@@ -9,8 +9,8 @@
   var moonCount = 0;
 
   //Seed Comparision Variables
-  var verSeedHash = "121f";
-  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.2.1 seed.";
+  var verSeedHash = "130da";
+  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.3.0 seed.";
 
   var Base64 = require('js-base64').Base64;
 
@@ -35,7 +35,9 @@
   }
 
   function clear(){
-    document.getElementById("seedHash").value = "";
+    var a = sessionStorage.getItem('aSeed');
+    document.getElementById('seedHash').value = a;
+    generateSeed();
   };
 
   function copySeed(){
@@ -43,13 +45,6 @@
     copyText.select();
     document.execCommand("copy");
   };
-
-  function pasteSeed(){
-    var pasteText = document.getElementById("seedHash");
-    pasteText.select();
-    document.execCommand("paste");
-    generateSeed();
-  }
 
   function generateSeed(){
       moonlist = "";
@@ -283,7 +278,7 @@
           moons[i] = parseInt(moons[i], 36);
         }
 
-        var versionCheck = moons[96] + moons[97] + moons[98] + moons[99]
+        var versionCheck = moons[96] + moons[97] + moons[98] + moons[99] + moons[100];
 
         var cs = "<input type='checkbox' id='";
         var ce = "' onclick='moonTotal(this.id)'>";

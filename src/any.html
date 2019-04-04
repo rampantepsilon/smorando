@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html height="98%">
+  <head>
+    <meta charset="UTF-8">
+    <script src="scripts/moonlist.js"></script>
+    <script src="scripts/any.js"></script>
+    <script src="scripts/updateCheck.js"></script>
+    <style>
+      a, a.click, a.hover, a.visited {
+        text-decoration: none;
+        color: black;
+      }
+      html {
+        background: url(background.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      #seed {
+        position: fixed;
+        top: 0;
+        width: 97%;
+        background-color: rgba(0,0,255,0.75);
+        color: white;
+        text-shadow: 1px 1px #333333;
+        text-align: center;
+        font-size: 18px;
+      }
+      #disclaimer {
+        position: fixed;
+        top: 65px;
+        width: 97%;
+        background-color: rgba(30,30,30,0.75);
+        color: white;
+        text-shadow: 1px 1px #fff;
+        text-shadow: -1px -1px #fff;
+        text-align: center;
+        font-size: 16px;
+      }
+      #updateCheck {
+        position: fixed;
+        bottom: 0;
+        width: 97%;
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+      #updateCheck>a, #updateCheck>a:visited {
+        color:white;
+      }
+      #moontbl {
+        background:rgba(255,255,255,0.75);
+      }
+      #list1, #list2, #list3, #list4 {
+        vertical-align: top;
+        border-width: 1px;
+        border-style: none;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--For Electron-->
+  </head>
+  <body height="100%" onload="clear()">
+    <table width="100%" height="100%" id='moontbl'>
+      <div id="seed">
+        Seed: <input id="seedHash" size="45" readonly><br>
+        <!--<button type="button" onclick="generateSeed()">Randomize</button>-->
+        <button type="button" onclick="copySeed()">Copy Seed</button>
+        <!--<button type="button" onclick="pasteSeed()">Paste Copied Seed</button>
+        <button type="button" onclick="location.reload()">Clear Seed</button>-->
+        <div id='moonCount'>Click 'Randomize' To Start</div>
+      </div>
+      <div id="disclaimer"></div>
+      <div id="updateCheck"></div>
+      <tr>
+        <td colspan='2' align="center"><br><br><br><br><br></td>
+      </tr>
+      <tr width="100%">
+        <td width="50%" id='list1'>
+          <div id="moons"></div>
+        </td>
+        <td width='50%' id='list2'>
+          <div id='moons2'></div>
+        </td>
+      </tr>
+      <tr width='100%'>
+        <td width='50%' id='list3'>
+          <div id='moons3'></div>
+        </td>
+        <td width='50%' id='list4'>
+          <div id='moons4'></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
