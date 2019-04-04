@@ -180,7 +180,8 @@ if (process.platform === 'win32') {
 
 app.on('ready', () => {
   const menu = Menu.buildFromTemplate(template)
-  Menu.setApplicationMenu(null)
+  //Menu.setApplicationMenu(null)
+  Menu.setApplicationMenu(menu)
 })
 
 app.on('browser-window-created', () => {
@@ -236,9 +237,9 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('src/index.html')
 
-
-  const menu = Menu.buildFromTemplate(template)
-  mainWindow.setMenu(menu)
+  //Add menu to top window only
+  //const menu = Menu.buildFromTemplate(template)
+  //mainWindow.setMenu(menu)
 
   // Open the DevTools.
   //win.webContents.openDevTools()

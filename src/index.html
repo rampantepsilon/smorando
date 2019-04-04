@@ -40,8 +40,9 @@
       <tr>
         <td>
           <h2>Playset</h2>
-          <input type='radio' id='set' name='set' value='any' checked> Any% (124 Moons)<br>
-          <!--<input type='radio' id='set' name='set' value='festival'> Festival% (Metro WP)<br>-->
+          <input type='radio' name='set' value='any' onclick='setSelect(this.value)' checked> Any% (124 Moons)<br>
+          <input type='radio' name='set' value='festival' onclick='setSelect(this.value)'> Festival% (Metro WP)<br>
+          <div id="selected"></div>
         </td>
         <td>
           <h2>Length</h2>
@@ -53,7 +54,8 @@
       <tr>
         <td colspan='2'>
           <h2>Use Pre-Generated Seed</h2>
-          <input id='seed' size='45'><button type='button' onclick='pasteSeed()'>Paste From Clipboard</button><br><br>
+          <input id='seed' size='45'><button type='button' onclick='pasteSeed()'>Paste From Clipboard</button><br>
+          <div id='error'></div><br>
           <button type='button' onclick="generateSeed()">Generate Seed</button>
         </td>
       </tr>
