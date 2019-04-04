@@ -3,7 +3,6 @@
   var moonlist = "";
   var moonlist2 = "";
   var hash = "null";
-  var check = "<input type='checkbox'>";
   var moonCount = 0;
 
   //Seed Comparision Variables
@@ -17,14 +16,14 @@
     var checkBox = document.getElementById(id);
     var count = document.getElementById('moonCount');
     if (checkBox.checked == true){
-      if (id == 'ckm2' || id == 'lakm1' || id == 'wkm2' || id == 'mkm1'){
+      if (id == 'ckm2' || id == 'lakm1' || id == 'wkm2' || id == 'mkm1' || id == 'mkm7'){
         moonCount += 3;
       } else {
         moonCount += 1;
       }
       count.innerHTML = moonCount + " out of 66 moons";
     } else {
-      if (id == 'ckm2' || id == 'lakm1' || id == 'wkm2' || id == 'mkm1'){
+      if (id == 'ckm2' || id == 'lakm1' || id == 'wkm2' || id == 'mkm1' || id == 'mkm7'){
         moonCount -= 3;
       } else {
         moonCount -= 1;
@@ -48,8 +47,6 @@
   function generateSeed(){
       moonlist = "";
       moonlist2 = "";
-      moonlist3 = "";
-      moonlist4 = "";
       hash = document.getElementById("seedHash").value;
 
       //Setup Lists
@@ -58,7 +55,7 @@
       var lakeList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lake_Kingdom' target='_blank'>Lake Kingdom</a></u></b><br><input type='checkbox' id='lakm1' onclick='moonTotal(this.id)'>" + myObj.lake[17] + "<br>";
       var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><br><input type='checkbox' id='wkm1' onclick='moonTotal(this.id)'>" + myObj.wooded[15] + "<br><input type='checkbox' id='wkm2' onclick='moonTotal(this.id)'>" + myObj.wooded[16] + "<br>";
       var lostList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lost_Kingdom' target='_blank'>Lost Kingdom</a></u></b><br>";
-      var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[32] + "<br><font color='red'><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[1] + "<br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[2] + "<br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[3] + "<br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[4] + "<br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[33] + "<br></font><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[34];
+      var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[32] + "<br><font color='red'><input type='checkbox' id='mkm2' onclick='moonTotal(this.id)'>" + myObj.metro[1] + "<br><input type='checkbox' id='mkm3' onclick='moonTotal(this.id)'>" + myObj.metro[2] + "<br><input type='checkbox' id='mkm4' onclick='moonTotal(this.id)'>" + myObj.metro[3] + "<br><input type='checkbox' id='mkm5' onclick='moonTotal(this.id)'>" + myObj.metro[4] + "<br><input type='checkbox' id='mkm6' onclick='moonTotal(this.id)'>" + myObj.metro[33] + "<br></font><input type='checkbox' id='mkm7' onclick='moonTotal(this.id)'>" + myObj.metro[34];
 
       //Determine Moons Based On Hash/Randomize
       if (hash == ''){

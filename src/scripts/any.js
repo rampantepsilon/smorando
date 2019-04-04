@@ -5,13 +5,11 @@
   var moonlist3 = "";
   var moonlist4 = "";
   var hash = "null";
-  var check = "<input type='checkbox'>";
   var moonCount = 0;
 
   //Seed Comparision Variables
   var set = 'a'; //Denotes Any%
   var verSeedHash = "130d"; //Hash is [Version][Dev/Full]
-  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.3.0 seed.";
 
   var Base64 = require('js-base64').Base64;
 
@@ -325,9 +323,6 @@
           moonlist2 += woodList + lostList;
           moonlist3 += metroList + snowList;
           moonlist4 += seasideList + luncheonList + ruinedList + bowserList;
-        }
-        else {
-          moonlist = wrongSeed;
         }
 
         //Set Outline
