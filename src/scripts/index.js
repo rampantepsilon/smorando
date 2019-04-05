@@ -6,6 +6,7 @@ var Base64 = require('js-base64').Base64;
 
 function pasteSeed(){
   var pasteText = document.getElementById('seed');
+  pasteText.value = '';
   pasteText.select();
   document.execCommand('paste');
   document.getElementById('error').innerHTML = '';
