@@ -7,8 +7,8 @@
 
   //Seed Comparision Variables
   var set = 'f'; //Denotes Festival%
-  var verSeedHash = "130d"; //Hash is [Version][Dev/Full]
-  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v1.3.0 seed.";
+  var verSeedHash = "200d"; //Hash is [Version][Dev/Full]
+  var wrongSeed = "<br><br>Invalid Seed<br>Please use a proper v2.0.0-alpha seed.";
 
   var Base64 = require('js-base64').Base64;
 
