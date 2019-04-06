@@ -1,5 +1,5 @@
-<h3>Super Mario Odyssey Any% Moon Randomizer</h3>
-<p>This is a SMO Any% Moon Randomizer. This randomizer produces a list of moons to obtain following some guidelines of the Any% speedrun. These guidelines are as follows:
+<h3>Super Mario Odyssey Moon Randomizer</h3>
+<p>This is a SMO Moon Randomizer. This randomizer produces a list of moons to obtain following some guidelines of the Any% speedrun. These guidelines are as follows:
 <ul>
 <li>All Kingdom moons will be randomized up to the final story moon of the kingdom.</li>
 <li>The amount of moons needed per kingdom will be the same as in the Any% route. Meaning if the kingdom needs 5 moons, the randomizer will only produce 5 moons to obtain.</li>
@@ -7,12 +7,12 @@
 As time progresses and feedback comes in from the randomizer, more stipulations may occur for selection of moons.</p>
 <p>Future Plans for the Randomizer (Note all versions listed are planned not actual releases)
 <ul>
-<li>Adding a short/long race mode. This would enable moons that may make races longer or shorter. [Beta run in v1.4.0]</li>
+<li>Adding a short/long race mode. This would enable moons that may make races longer or shorter. [Beta run in v2.1.0]</li>
 <li>Update Notifications to let players know when a new release is live. (Completed as of 3/24/19)</li>
-<li>Simpler seed sharing (Current seed count is a 100-character hash) [Planned for v2.0.0 release]</li>
+<li>Simpler seed sharing (Current seed count is a 100-character hash) [Planned Post 2.x.x]</li>
 <li><a href="https://smorando.rampantepsilon.site">Web-based Randomizer</a> (Completed as of 3/25/19)</li>
 <li>Add Support for sharing seeds via URL & allowing URLs to be inputted into the app (TBC by v2.0.0 release)</li>
-<li>Support for other run styles (Festival% [v1.3.0], Dark Side [v2.x.x], Darker Side [v2.x.x], World Peace [v1.4.0])</li>
+<li>Support for other run styles (Festival% [v2.0.0], Dark Side [v3.x.x], Darker Side [v3.x.x], World Peace [v2.1.0])</li>
 </ul>
 </p>
 <p>Source Installation</p>
