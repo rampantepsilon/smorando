@@ -141,7 +141,9 @@ myObj = {
     "<font color='blue'>One Man's Trash...</font>",
     '<font color="blue">Motor Scooter: Escape!</font>',
     '<font color="blue">Big Jump: Escape!</font>',
-    "<font color='red'>New Donk City's Pest Problem (+3)</font>"
+    "<font color='red'>New Donk City's Pest Problem (+3)</font>",
+    "<font color='red'>Powering Up the Station</font>",
+    "<font color='red'>A Traditional Festival (+3)</font>",
   ],
   'snow':[
     'The Icicle Barrier',

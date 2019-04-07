@@ -2,10 +2,10 @@ const {BrowserWindow, Menu, app, shell, dialog2} = require('electron')
 
 
 //App Info
-const label = 'SMO Any% Moon Randomizer'
-const build = '2019.04.02'
+const label = 'SMO Moon Randomizer'
+const build = '2019.04.06'
 const version = app.getVersion()
-const title = "SMO Any% Moon Randomizer v1.2.1"
+const title = "SMO Moon Randomizer v2.0.0-alpha"
 
 //Application Menu
 let template = [{
@@ -25,9 +25,9 @@ let template = [{
         focusedWindow.reload()
       }
     }
-  /*}, {
+  }, {
     label: 'Toggle DevTools',
-    role: 'toggledevtools',*/
+    role: 'toggledevtools',
   }, {
     label: 'Toggle Full Screen',
     accelerator: (() => {
@@ -180,6 +180,7 @@ if (process.platform === 'win32') {
 
 app.on('ready', () => {
   const menu = Menu.buildFromTemplate(template)
+  //Menu.setApplicationMenu(null)
   Menu.setApplicationMenu(menu)
 })
 
@@ -215,7 +216,7 @@ function createWindow () {
       Object.assign(options, {
         modal: true,
         parent: mainWindow,
-        width: 1280,
+        width: 800,
         height: 720
       })
       event.newGuest = new BrowserWindow(options)
@@ -235,6 +236,10 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('src/index.html')
+
+  //Add menu to top window only
+  //const menu = Menu.buildFromTemplate(template)
+  //mainWindow.setMenu(menu)
 
   // Open the DevTools.
   //win.webContents.openDevTools()
