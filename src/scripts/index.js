@@ -15,17 +15,33 @@ function pasteSeed(){
   pasteText.select();
   document.execCommand('paste');
   document.getElementById('error').innerHTML = '';
-  document.getElementById('time').innerHTML = 'Unable to calculate from Seed';
+
+  //Decode Seed
+  var decodedSeed2 = Base64.decode(pasteText.value);
+  var moons2 = decodedSeed2.split("");
+  for (i = 0; i < moons2.length - 4; i++){
+    moons2[i] = parseInt(moons2[i], 36);
+  }
+
+  //Determine if Festival or Any
+  var set = (moons2[0].toString(36));
+
+  if (set == 'a'){
+    document.getElementById('time').innerHTML = '2-4 Hours';
+  }
+  if (set == 'f'){
+    document.getElementById('time').innerHTML = '< 1 Hour';
+  }
 }
 
 function setSelect(set){
   setValue = set;
   document.getElementById('seed').value = '';
   document.getElementById('error').innerHTML = '';
-  if (setValue == 'any'){
+  if (setValue == 'any' || setValue == 'a'){
     estTime = '2-4 Hours';
   }
-  if (setValue == 'festival'){
+  if (setValue == 'festival' || setValue == 'f'){
     estTime = '< 1 Hour';
   }
   document.getElementById('time').innerHTML = estTime;
@@ -40,10 +56,10 @@ function generateSeed(){
   //Open page based on seeding
   if (seed == ''){
     if (setValue == 'any'){
-      window.open('any.html', '', 'width=800, height=720');
+      window.open('any.html', 'modal', 'width=820, height=740');
     }
     else if (setValue == 'festival'){
-      window.open('festival.html','','width=800, height=720');
+      window.open('festival.html','modal','width=820, height=740');
     }
   }
   else {
@@ -62,7 +78,7 @@ function generateSeed(){
       var hash = moons[97] + moons[98] + moons[99] + moons[100];
       if (hash == verHash){
         sessionStorage.setItem('aSeed', seed);
-        window.open('any.html', '', 'width=800, height=720');
+        window.open('any.html', 'modal', 'width=820, height=740');
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
@@ -72,10 +88,11 @@ function generateSeed(){
       var hash = moons[45] + moons[46] + moons[47] + moons[48];
       if (hash == verHash){
         sessionStorage.setItem('fSeed', seed);
-        window.open('festival.html','','width=800, height=720')
+        window.open('festival.html','modal','width=820, height=740')
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
+        document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
   }

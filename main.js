@@ -202,7 +202,7 @@ let win
 function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 820,
-    height: 720,
+    height: 740,
     icon: __dirname + '/logo.jpg',
     title: title,
     webPreferences: {
@@ -216,8 +216,8 @@ function createWindow () {
       Object.assign(options, {
         modal: true,
         parent: mainWindow,
-        width: 800,
-        height: 720
+        width: 820,
+        height: 740
       })
       event.newGuest = new BrowserWindow(options)
     }
