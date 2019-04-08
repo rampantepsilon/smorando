@@ -1,6 +1,6 @@
 {
   "name": "smo-rando",
-  "version": "2.0.0-alpha",
+  "version": "2.0.0-beta",
   "description": "Moon Randomizer for Super Mario Odyssey",
   "repository": {
     "type": "git",
