@@ -1,8 +1,13 @@
 var setValue = 'any';
 var verHash = '200d';
 var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper v2.0.0-alpha seed.";
+var estTime = '2-4 Hours';
 
 var Base64 = require('js-base64').Base64;
+
+function estimateTime() {
+  document.getElementById('time').innerHTML = estTime;
+}
 
 function pasteSeed(){
   var pasteText = document.getElementById('seed');
@@ -10,12 +15,20 @@ function pasteSeed(){
   pasteText.select();
   document.execCommand('paste');
   document.getElementById('error').innerHTML = '';
+  document.getElementById('time').innerHTML = 'Unable to calculate from Seed';
 }
 
 function setSelect(set){
   setValue = set;
   document.getElementById('seed').value = '';
   document.getElementById('error').innerHTML = '';
+  if (setValue == 'any'){
+    estTime = '2-4 Hours';
+  }
+  if (setValue == 'festival'){
+    estTime = '< 1 Hour';
+  }
+  document.getElementById('time').innerHTML = estTime;
   //document.getElementById('selected').innerHTML = setValue;
 }
 
