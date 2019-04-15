@@ -1,22 +1,38 @@
 window.$ = window.jQuery = require('jquery');
 
-var currentVer = '2.0.0-alpha';
+var currentVer = '2.0.0-beta';
 
 $(document).ready(function(){
-  $.getJSON("https://api.github.com/repos/rampantepsilon/smoanyrando/releases", function(result){
+  $("#updateCheck").html("Checking for Updates");
+  $.getJSON("https://api.github.com/repos/rampantepsilon/smorando/releases", function(result){
     var commit = result[0].tag_name;
-    var linUpdate = "New Version (v" + commit + ") available! <a href='https://github.com/rampantepsilon/smorando/releases/download/2.0-alpha/SMO-Moon-Randomizer-v2.0.0-alpha_Linux-x64.zip' target='_blank'>Click Here to Download</a>";
-    var winUpdate = "New Version (v" + commit + ") available! <a href='https://github.com/rampantepsilon/smorando/releases/download/2.0-alpha/SMO-Moon-Randomizer-v2.0.0-alpha_Windows-x64.exe' target='_blank'>Click Here to Download</a>";
-    if (commit != currentVer && commit > currentVer && commit.contains('alpha' || 'beta') == false){
-      if (process.platform === 'linux'){
-        $("#updateCheck").append(linUpdate);
-      }
-      else if (process.platform === 'win32'){
-        $("#updateCheck").append(winUpdate);
+    var noUpdate = "No Release Updates Available. <a id='betaCheck'>Click Here to check for Beta/Alpha Releases</a>";
+    var noUpdate2 = "No Beta/Alpha Updates Available.";
+    var update = "New Version (v" + commit + ") available! <a href='https://github.com/rampantepsilon/smorando/releases/' target='_blank'>Click Here to Download</a>";
+    var updateStatus = "";
+
+    if (commit != currentVer && commit > currentVer && commit.indexOf('alpha') == -1 && commit.indexOf('beta') == -1){
+      updateStatus = update;
+    }
+    else {
+      updateStatus = noUpdate;
+    }
+
+    $('#updateCheck').html(updateStatus);
+
+    $("#betaCheck").click(function(){
+      $("#updateCheck").html("Checking for Beta/Alpha Releases");
+      if (commit != currentVer && commit > currentVer){
+        updateStatus = update;
       }
       else {
-        $("#updateCheck").append("New Version (v" + commit + ") available! <a href='https://github.com/rampantepsilon/smorando/releases/' target='_blank'>Click Here to Download</a>");
+        updateStatus = noUpdate2;
       }
-    }
+
+      $('#updateCheck').delay(2000).queue(function(n){
+        $(this).html(updateStatus);
+         n();
+       })
+    })
   });
 });
