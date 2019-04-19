@@ -8,7 +8,7 @@
   var moonCount = 0;
 
   //Seed Comparision Variables
-  var set = 'a'; //Denotes Any%
+  var set = 'b'; //Denotes Any%
   var verSeedHash = "201d"; //Hash is [Version][Dev/Full]
 
   var Base64 = require('js-base64').Base64;
@@ -55,15 +55,15 @@
       //Setup Lists
       var cascadeList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Cascade_Kingdom' target='_blank'>Cascade Kingdom<a></u></b><br><input type='checkbox' id='ckm1' onclick='moonTotal(this.id)'>" + myObj.cascade[15] + "<br><input type='checkbox' id='ckm2' onclick='moonTotal(this.id)'>" + myObj.cascade[16] + "<br>";
       var sandList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Sand_Kingdom' target='_blank'>Sand Kingdom</a></u></b><br>";
-      var lakeList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lake_Kingdom' target='_blank'>Lake Kingdom</a></u></b><br><input type='checkbox' id='lakm1' onclick='moonTotal(this.id)'>" + myObj.lake[17] + "<br>";
+      var lakeList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lake_Kingdom' target='_blank'>Lake Kingdom</a></u></b><br><input type='checkbox' id='lakm1' onclick='moonTotal(this.id)'>" + myObj.lake[18] + "<br>";
       var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><br><input type='checkbox' id='wkm1' onclick='moonTotal(this.id)'>" + myObj.wooded[15] + "<br><input type='checkbox' id='wkm2' onclick='moonTotal(this.id)'>" + myObj.wooded[16] + "<br>";
       var lostList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lost_Kingdom' target='_blank'>Lost Kingdom</a></u></b><br>";
-      var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[32] + "<br>";
+      var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><br><input type='checkbox' id='mkm1' onclick='moonTotal(this.id)'>" + myObj.metro[35] + "<br>";
       var snowList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Snow_Kingdom' target='_blank'>Snow Kingdom</a></u></b><br>";
       var seasideList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Seaside_Kingdom' target='_blank'>Seaside Kingdom</a></u></b><br>";
-      var luncheonList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Luncheon_Kingdom' target='_blank'>Luncheon Kingdom</a></u></b><br><input type='checkbox' id='lukm1' onclick='moonTotal(this.id)'>" + myObj.luncheon[24] + "<br><input type='checkbox' id='lukm2' onclick='moonTotal(this.id)'>" + myObj.luncheon[25] + "<br><input type='checkbox' id='lukm3' onclick='moonTotal(this.id)'>" + myObj.luncheon[26] + "<br>";
+      var luncheonList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Luncheon_Kingdom' target='_blank'>Luncheon Kingdom</a></u></b><br><input type='checkbox' id='lukm1' onclick='moonTotal(this.id)'>" + myObj.luncheon[29] + "<br><input type='checkbox' id='lukm2' onclick='moonTotal(this.id)'>" + myObj.luncheon[30] + "<br><input type='checkbox' id='lukm3' onclick='moonTotal(this.id)'>" + myObj.luncheon[31] + "<br>";
       var ruinedList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Ruined_Kingdom' target='_blank'>Ruined Kingdom</a></u></b></br><input type='checkbox' id='rkm1' onclick='moonTotal(this.id)'>" + myObj.ruined[0] + "<br>";
-      var bowserList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_Bowser&apos;s_Kingdom' target='_blank'>Bowser's Kingdom</a></u></b><br><input type='checkbox' id='bkm1' onclick='moonTotal(this.id)'>" + myObj.bowser[18] + "<br><input type='checkbox' id='bkm2' onclick='moonTotal(this.id)'>" + myObj.bowser[19] + "<br><input type='checkbox' id='bkm3' onclick='moonTotal(this.id)'>" + myObj.bowser[20] + "<br><input type='checkbox' id='bkm4' onclick='moonTotal(this.id)'>" + myObj.bowser[21] + "<br>";
+      var bowserList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_Bowser&apos;s_Kingdom' target='_blank'>Bowser's Kingdom</a></u></b><br><input type='checkbox' id='bkm1' onclick='moonTotal(this.id)'>" + myObj.bowser[21] + "<br><input type='checkbox' id='bkm2' onclick='moonTotal(this.id)'>" + myObj.bowser[22] + "<br><input type='checkbox' id='bkm3' onclick='moonTotal(this.id)'>" + myObj.bowser[23] + "<br><input type='checkbox' id='bkm4' onclick='moonTotal(this.id)'>" + myObj.bowser[24] + "<br>";
 
       //Determine Moons Based On Hash/Randomize
       if (hash == ''){
@@ -81,7 +81,7 @@
         //Sand Randomizer
         var sandArr = [];
         while(sandArr.length < 16){
-          var ba = Math.floor(Math.random() * 26);
+          var ba = Math.floor(Math.random() * 32);
           if (sandArr.indexOf(ba) === -1) sandArr.push(ba);
         }
         sandArr.sort(function(a, b){return a-b});
@@ -98,7 +98,7 @@
         //Lake Randomizer
         var lakeArr = [];
         while(lakeArr.length < 5){
-          var ca = Math.floor(Math.random() * 17);
+          var ca = Math.floor(Math.random() * 18);
           if (lakeArr.indexOf(ca) === -1) lakeArr.push(ca);
         }
         lakeArr.sort(function(a, b){return a-b});
@@ -150,11 +150,11 @@
         var metroArr = [];
         var metroDump = [];
         while(metroArr.length < 17){
-          var fa = Math.floor(Math.random() * 32);
+          var fa = Math.floor(Math.random() * 35);
           if (metroArr.indexOf(fa) === -1){
-            if (fa == 19 && metroArr.indexOf(18) !== -1){
+            if (fa == 20 && metroArr.indexOf(19) !== -1){
               metroArr.push(fa);
-            } else if (fa == 19){
+            } else if (fa == 20){
               metroDump.push(fa)
             } else {
               metroArr.push(fa);
@@ -175,7 +175,7 @@
         //Snow Randomizer
         var snowArr = [];
         while(snowArr.length < 10){
-          var ga = Math.floor(Math.random() * 12);
+          var ga = Math.floor(Math.random() * 13);
           if (snowArr.indexOf(ga) === -1) snowArr.push(ga);
         }
         snowArr.sort(function(a, b){return a-b});
@@ -192,7 +192,7 @@
         //Seaside Randomizer
         var seasideArr = [];
         while(seasideArr.length < 10){
-          var ha = Math.floor(Math.random() * 26);
+          var ha = Math.floor(Math.random() * 36);
           if (seasideArr.indexOf(ha) === -1) seasideArr.push(ha);
         }
         seasideArr.sort(function(a, b){return a-b});
@@ -209,7 +209,7 @@
         //Luncheon Randomizer
         var luncheonArr = [];
         while(luncheonArr.length < 13){
-          var ia = Math.floor(Math.random() * 24);
+          var ia = Math.floor(Math.random() * 29);
           if (luncheonArr.indexOf(ia) === -1) luncheonArr.push(ia);
         }
         luncheonArr.sort(function(a, b){return a-b});
@@ -226,7 +226,7 @@
         //Bowser Randomizer
         var bowserArr = [];
         while(bowserArr.length < 2){
-          var ja = Math.floor(Math.random() * 18);
+          var ja = Math.floor(Math.random() * 21);
           if (bowserArr.indexOf(ja) === -1) bowserArr.push(ja);
         }
         bowserArr.sort(function(a, b){return a-b});
