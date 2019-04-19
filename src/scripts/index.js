@@ -67,6 +67,12 @@ function generateSeed(){
     else if (setValue == 'festival' && lengthValue == 'normal'){
       window.open('festival.html','modal','width=820, height=740');
     }
+    else if (setValue == 'any' && lengthValue == 'long'){
+      window.open('anylong.html', 'modal', 'width=820, height=740');
+    }
+    else if (setValue == 'festival' && lengthValue == 'long'){
+      window.open('festivallong.html', 'modal', 'width=820, height=740');
+    }
   }
   else {
     //Decode Seed
@@ -88,6 +94,7 @@ function generateSeed(){
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
+        document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
     if (set == 'f'){
@@ -95,6 +102,28 @@ function generateSeed(){
       if (hash == verHash){
         sessionStorage.setItem('fSeed', seed);
         window.open('festival.html','modal','width=820, height=740')
+      }
+      else {
+        document.getElementById('error').innerHTML = wrongSeed;
+        document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
+      }
+    }
+    if (set == 'b'){
+      var hash = moons[45] + moons[46] + moons[47] + moons[48];
+      if (hash == verHash){
+        sessionStorage.setItem('fSeed', seed);
+        window.open('anylong.html','modal','width=820, height=740')
+      }
+      else {
+        document.getElementById('error').innerHTML = wrongSeed;
+        document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
+      }
+    }
+    if (set == 'g'){
+      var hash = moons[45] + moons[46] + moons[47] + moons[48];
+      if (hash == verHash){
+        sessionStorage.setItem('fSeed', seed);
+        window.open('festivallong.html','modal','width=820, height=740')
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
