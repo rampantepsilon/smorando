@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 
-var currentVer = '2.0.0';
+var currentVer = '2.0.1-dev';
 
 $(document).ready(function(){
   $("#updateCheck").html("Checking for Updates");

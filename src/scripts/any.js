@@ -9,7 +9,7 @@
 
   //Seed Comparision Variables
   var set = 'a'; //Denotes Any%
-  var verSeedHash = "200f"; //Hash is [Version][Dev/Full]
+  var verSeedHash = "201d"; //Hash is [Version][Dev/Full]
 
   var Base64 = require('js-base64').Base64;
 

@@ -1,6 +1,6 @@
 var setValue = 'any';
-var verHash = '200f';
-var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper v2.0.0 seed.";
+var verHash = '201d';
+var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper v2.0.1-Dev seed.";
 var estTime = '2-4 Hours';
 
 var Base64 = require('js-base64').Base64;
