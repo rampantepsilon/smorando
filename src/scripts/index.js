@@ -27,9 +27,15 @@ function pasteSeed(){
   var set = (moons2[0].toString(36));
 
   if (set == 'a'){
-    document.getElementById('time').innerHTML = '2-5 Hours';
+    document.getElementById('time').innerHTML = '2-4 Hours';
   }
   if (set == 'f'){
+    document.getElementById('time').innerHTML = '< 1 Hour';
+  }
+  if (set == 'b'){
+    document.getElementById('time').innerHTML = '2-5 Hours';
+  }
+  if (set == 'g'){
     document.getElementById('time').innerHTML = '< 2 Hours';
   }
 }
