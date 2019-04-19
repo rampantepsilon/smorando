@@ -109,9 +109,9 @@ function generateSeed(){
       }
     }
     if (set == 'b'){
-      var hash = moons[45] + moons[46] + moons[47] + moons[48];
+      var hash = moons[97] + moons[98] + moons[99] + moons[100];
       if (hash == verHash){
-        sessionStorage.setItem('fSeed', seed);
+        sessionStorage.setItem('bSeed', seed);
         window.open('anylong.html','modal','width=820, height=740')
       }
       else {
@@ -122,7 +122,7 @@ function generateSeed(){
     if (set == 'g'){
       var hash = moons[45] + moons[46] + moons[47] + moons[48];
       if (hash == verHash){
-        sessionStorage.setItem('fSeed', seed);
+        sessionStorage.setItem('gSeed', seed);
         window.open('festivallong.html','modal','width=820, height=740')
       }
       else {

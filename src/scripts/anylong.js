@@ -34,7 +34,7 @@
   }
 
   function clear(){
-    var a = sessionStorage.getItem('aSeed');
+    var a = sessionStorage.getItem('bSeed');
     document.getElementById('seedHash').value = a;
     generateSeed();
   };

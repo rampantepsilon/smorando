@@ -32,7 +32,7 @@
   }
 
   function clear(){
-    var a = sessionStorage.getItem('fSeed');
+    var a = sessionStorage.getItem('gSeed');
     document.getElementById('seedHash').value = a;
     generateSeed();
   };
