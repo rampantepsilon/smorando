@@ -1,7 +1,7 @@
 var setValue = 'any';
 var verHash = '201d';
 var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper v2.0.1-Dev seed.";
-var estTime = '2-4 Hours';
+var estTime = '2-5 Hours';
 
 var Base64 = require('js-base64').Base64;
 
@@ -27,10 +27,10 @@ function pasteSeed(){
   var set = (moons2[0].toString(36));
 
   if (set == 'a'){
-    document.getElementById('time').innerHTML = '2-4 Hours';
+    document.getElementById('time').innerHTML = '2-5 Hours';
   }
   if (set == 'f'){
-    document.getElementById('time').innerHTML = '< 1 Hour';
+    document.getElementById('time').innerHTML = '< 2 Hours';
   }
 }
 
@@ -38,11 +38,11 @@ function setSelect(set){
   setValue = set;
   document.getElementById('seed').value = '';
   document.getElementById('error').innerHTML = '';
-  if (setValue == 'any' || setValue == 'a'){
-    estTime = '2-4 Hours';
+  if (setValue == 'any'){
+    estTime = '2-5 Hours';
   }
-  if (setValue == 'festival' || setValue == 'f'){
-    estTime = '< 1 Hour';
+  if (setValue == 'festival'){
+    estTime = '< 2 Hours';
   }
   document.getElementById('time').innerHTML = estTime;
   //document.getElementById('selected').innerHTML = setValue;
@@ -51,14 +51,14 @@ function setSelect(set){
 function generateSeed(){
   //Get Randomizer Information
   var seed = document.getElementById('seed').value;
-  //var lengthValue = document.querySelector('#length:checked').value;
+  var lengthValue = document.querySelector('#length:checked').value;
 
   //Open page based on seeding
   if (seed == ''){
-    if (setValue == 'any'){
+    if (setValue == 'any' && lengthValue == 'normal'){
       window.open('any.html', 'modal', 'width=820, height=740');
     }
-    else if (setValue == 'festival'){
+    else if (setValue == 'festival' && lengthValue == 'normal'){
       window.open('festival.html','modal','width=820, height=740');
     }
   }
