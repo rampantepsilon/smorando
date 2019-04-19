@@ -201,7 +201,7 @@ let win
 
 function createWindow () {
   const mainWindow = new BrowserWindow({
-    width: 820,
+    width: 840,
     height: 740,
     icon: __dirname + '/logo.jpg',
     title: title,
@@ -216,7 +216,7 @@ function createWindow () {
       Object.assign(options, {
         modal: true,
         parent: mainWindow,
-        width: 820,
+        width: 840,
         height: 740
       })
       event.newGuest = new BrowserWindow(options)
