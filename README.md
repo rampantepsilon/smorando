@@ -1,8 +1,10 @@
 <img src="https://smorando.rampantepsilon.site/banner.jpg"/>
-<p>This is a SMO Moon Randomizer. This randomizer produces a list of moons to obtain following some guidelines of the Any% speedrun. These guidelines are as follows:
+<p>This is a SMO Moon Randomizer. This randomizer was created using the idea that JKTKops used in his <a href="https://github.com/JKTKops/Darker-Side-Randomizer">Darker Side Randomizer</a>. This randomizer produces a list of moons to obtain following some guidelines of the Any% or Festival% speedrun. These guidelines are as follows:
 <ul>
-<li>All Kingdom moons will be randomized up to the final story moon of the kingdom.</li>
-<li>The amount of moons needed per kingdom will be the same as in the Any% route. Meaning if the kingdom needs 5 moons, the randomizer will only produce 5 moons to obtain.</li>
+<li>All Kingdom moons will be randomized up to the final story moon of the kingdom needed for progression. Sand, Metro (Any% Only), Snow, and Seaside do not have story moon requirements.</li>
+<li>The amount of moons needed per kingdom will be the same as in the Any% or Festival% route. Meaning if the kingdom needs 5 moons, the randomizer will only produce 5 moons to obtain.</li>
+<li>Shop and Slots Moons are included. However, costume moons are excluded to keep from increasing the time for runs greatly. (Possibly will add to the Long Randomizer at a later date.)
+<li>Moons way out of the way are not included. This cuts down Seaside drastically unless Long Randomizer is selected.
 </ul>
 As time progresses and feedback comes in from the randomizer, more stipulations may occur for selection of moons.</p>
 <p>Future Plans for the Randomizer (Note all versions listed are planned not actual releases)
