@@ -1,11 +1,20 @@
-const {BrowserWindow, Menu, app, shell, dialog2} = require('electron')
+const {BrowserWindow, Menu, app, shell, dialog, dialog2} = require('electron')
 
 
 //App Info
 const label = 'SMO Moon Randomizer'
 const build = '2019.04.18'
 const version = app.getVersion()
-const title = "SMO Moon Randomizer v2.0.1-dev"
+const title = "SMO Moon Randomizer v2.0.1"
+
+//Dialog Settings
+const dialogOptions = {
+    type: 'info',
+    buttons: ['Close'],
+    title: 'Changelog',
+    message: 'Changes in Version 2.0.1',
+    detail: '- Updated tracker (No more checkboxes. Simply click anywhere on the name of the moon.)\n- Added Changelog to Application\n\nDue to the lack of change in the logic, v2.0.1 will be compatible with v2.0.0. This is an optional update.',
+  };
 
 //Application Menu
 let template = [{
@@ -74,6 +83,13 @@ let template = [{
     },{
     label: 'Author: ' + 'Tom "RampantEpsilon" Ware',
     enabled: false,
+    },{
+    label: 'Changelog',
+    enabled: true,
+    click(){
+      dialog.showMessageBox(null, dialogOptions, (response, checkboxChecked) => {
+      });
+    },
     }]
 }]
 
@@ -281,7 +297,7 @@ app.on('activate', () => {
 
 
 //Dialog Box
-const {ipcMain, dialog} = require('electron')
+/*const {ipcMain, dialog} = require('electron')
 
 ipcMain.on('open-information-dialog', (event) => {
   const options = {
@@ -294,3 +310,4 @@ ipcMain.on('open-information-dialog', (event) => {
     event.sender.send('information-dialog-selection', index)
   })
 })
+*/
