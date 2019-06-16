@@ -13,7 +13,7 @@ const dialogOptions = {
     buttons: ['Close'],
     title: 'Changelog',
     message: 'Changes in Version 2.0.1',
-    detail: '- Updated tracker (No more checkboxes. Simply click anywhere on the name of the moon.)\n- Added Changelog to Application\n\nDue to the lack of change in the logic, v2.0.1 will be compatible with v2.0.0. This is an optional update.',
+    detail: '- Updated tracker (No more checkboxes. Simply click anywhere on the name of the moon.)\n- Added Changelog to Application\n- Added Long Randomizer Modes for Any% and Festival%. These modes will not be compatible with the web-based randomizer until testing is completed.\n\nDue to the lack of change in the logic, v2.0.1 will be compatible with v2.0.0. This is an optional update.',
   };
 
 //Application Menu

@@ -9,11 +9,11 @@
 As time progresses and feedback comes in from the randomizer, more stipulations may occur for selection of moons.</p>
 <p>Future Plans for the Randomizer (Note all versions listed are planned not actual releases)
 <ul>
-<li>Adding a short/long race mode. This would enable moons that may make races longer or shorter. [Beta run in v2.1.0]</li>
+<li>Adding a short/long race mode. This would enable moons that may make races longer or shorter. [Long Race Completed as of v2.0.1 (Long mode not compatible with the web-based randomizer currently. This will be completed by v2.0.2/v2.1.0)]</li>
 <li>Update Notifications to let players know when a new release is live. (Completed as of 3/24/19/Modified on 4/18/19)</li>
 <li>Simpler seed sharing (Current seed count is a 100-character hash) [Planned Post 2.x.x]</li>
 <li><a href="https://smorando.rampantepsilon.site">Web-based Randomizer</a> (Completed as of 3/25/19)</li>
-<li>Add Support for sharing seeds via URL & allowing URLs to be inputted into the app (TBC by v2.0.1 release)</li>
+<li>Add Support for sharing seeds via URL & allowing URLs to be inputted into the app (TBC by v2.1.x release)</li>
 <li>Support for other run styles (Festival% [Completed as of v2.0.0], Dark Side [v3.x.x], Darker Side [v3.x.x], World Peace [v2.1.0])</li>
 </ul>
 </p>
