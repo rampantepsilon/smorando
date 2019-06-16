@@ -13,11 +13,12 @@
   "author": "Tom \"RampantEpsilon\" Ware",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.2.2",
+    "electron": "^4.2.4",
     "jquery": "^3.4.1",
     "js-base64": "^2.5.1"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "js-base64": "^2.5.1"
   }
 }
