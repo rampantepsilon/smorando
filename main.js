@@ -5,7 +5,7 @@ const {BrowserWindow, Menu, app, shell, dialog, dialog2} = require('electron')
 const label = 'SMO Moon Randomizer'
 const build = '2019.04.18'
 const version = app.getVersion()
-const title = "SMO Moon Randomizer v2.0.1"
+const title = "SMO Moon Randomizer v2.1.0-dev"
 
 //Dialog Settings
 const dialogOptions = {
