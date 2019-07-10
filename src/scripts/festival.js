@@ -293,8 +293,9 @@
     $("#list4").css("border-style", "solid");
 
     //Add moons to viewpoint
-    document.getElementById("moons").innerHTML = moonlist;
-    document.getElementById("moons2").innerHTML = moonlist2;
+    document.getElementById("moons").innerHTML = moonlist + "<br>" + moonlist2 + "<br><br><br><br>";
+    document.getElementById("moons2").innerHTML = '';
+    $('#list2').hide();
 
     //Add top information
     document.getElementById('moonCount').innerHTML = '0 out of 66 moons';

@@ -436,7 +436,7 @@ function streamLayout(){
   $("#list4").css("border-style", "solid");
 
   //Add moons to viewpoint
-  document.getElementById("moons").innerHTML = moonlist + "<br>" + moonlist2 + "<br>" + moonlist3 + "<br>" + moonlist4 + "<br><br>";
+  document.getElementById("moons").innerHTML = moonlist + "<br>" + moonlist2 + "<br>" + moonlist3 + "<br>" + moonlist4 + "<br><br><br><br>";
   document.getElementById("moons2").innerHTML = '';
   document.getElementById("moons3").innerHTML = '';
   document.getElementById("moons4").innerHTML = '';

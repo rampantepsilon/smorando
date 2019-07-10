@@ -435,10 +435,13 @@
       $("#list4").css("border-style", "solid");
 
       //Add moons to viewpoint
-      document.getElementById("moons").innerHTML = moonlist;
-      document.getElementById("moons2").innerHTML = moonlist2;
-      document.getElementById("moons3").innerHTML = moonlist3 + "<br><br>";
-      document.getElementById("moons4").innerHTML = moonlist4 + "<br><br>";
+      document.getElementById("moons").innerHTML = moonlist + "<br>" + moonlist2 + "<br>" + moonlist3 + "<br>" + moonlist4 + "<br><br><br><br>";
+      document.getElementById("moons2").innerHTML = '';
+      document.getElementById("moons3").innerHTML = '';
+      document.getElementById("moons4").innerHTML = '';
+      $('#list2').hide();
+      $('#list3').hide();
+      $('#list4').hide();
 
       //Add top information
       document.getElementById('moonCount').innerHTML = '0 out of 124 moons';
