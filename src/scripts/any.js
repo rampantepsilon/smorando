@@ -11,8 +11,6 @@
   var set = 'a'; //Denotes Any%
   var verSeedHash = "210f"; //Hash is [Version][Dev/Full]
 
-  var Base64 = require('js-base64').Base64;
-
   function moonTotal(id){
     var checkBox = document.getElementById(id);
     var count = document.getElementById('moonCount');
@@ -91,7 +89,7 @@
           var aa = Math.floor(Math.random() * 15);
           cascadeList = cascadeList + "<div id='ckm3' onclick='highlight(this.id)'>" + myObj.cascade[aa] + "</div>";
           var aSeed = aa;
-          seed[1] = aSeed.toString(36);
+          seed[1] = String.fromCharCode(aSeed+33);
         }
 
         //Sand Randomizer
@@ -108,7 +106,7 @@
         }
         for (bc=0; bc < 16; bc++){
           var bd = bc+2;
-          seed[bd] = (sandArr[bc]).toString(36);
+          seed[bd] = String.fromCharCode(sandArr[bc]+33);
         }
 
         //Lake Randomizer
@@ -125,7 +123,7 @@
         }
         for (cc = 0; cc < 5; cc++){
           var cd = cc+18;
-          seed[cd] = (lakeArr[cc]).toString(36);
+          seed[cd] = String.fromCharCode(lakeArr[cc]+33);
         }
 
         //Wooded Randomizer
@@ -142,7 +140,7 @@
         }
         for (dc = 0; dc < 12; dc++){
           var dd = dc+23;
-          seed[dd] = (woodArr[dc]).toString(36);
+          seed[dd] = String.fromCharCode(woodArr[dc]+33);
         }
 
         //Lost Randomizer
@@ -159,7 +157,7 @@
         }
         for (ec = 0; ec < 10; ec++){
           var ed = ec+35;
-          seed[ed] = (lostArr[ec]).toString(36);
+          seed[ed] = String.fromCharCode(lostArr[ec]+33);
         }
 
         //Metro Randomizer
@@ -185,7 +183,7 @@
         }
         for (fc = 0; fc < 17; fc++){
           var fd = fc+45;
-          seed[fd] = (metroArr[fc]).toString(36);
+          seed[fd] = String.fromCharCode(metroArr[fc]+33);
         }
 
         //Snow Randomizer
@@ -202,7 +200,7 @@
         }
         for (gc = 0; gc < 10; gc++){
           var gd = gc+62;
-          seed[gd] = (snowArr[gc]).toString(36);
+          seed[gd] = String.fromCharCode(snowArr[gc]+33);
         }
 
         //Seaside Randomizer
@@ -219,7 +217,7 @@
         }
         for (hc = 0; hc < 10; hc++){
           var hd = hc+72;
-          seed[hd] = (seasideArr[hc]).toString(36);
+          seed[hd] = String.fromCharCode(seasideArr[hc]+33);
         }
 
         //Luncheon Randomizer
@@ -236,7 +234,7 @@
         }
         for (ic = 0; ic < 13; ic++){
           var id = ic+82;
-          seed[id] = (luncheonArr[ic]).toString(36);
+          seed[id] = String.fromCharCode(luncheonArr[ic]+33);
         }
 
         //Bowser Randomizer
@@ -253,7 +251,7 @@
         }
         for (jc = 0; jc < 2; jc++){
           var jd = jc + 95;
-          seed[jd] = (bowserArr[jc]).toString(36);
+          seed[jd] = String.fromCharCode(bowserArr[jc]+33);
         }
 
         //Add Version Key
@@ -266,7 +264,7 @@
         moonlist4 += seasideList + luncheonList + ruinedList + bowserList;
 
         //Encode seed
-        var encodedSeed = Base64.encode(seed.join(""));
+        var encodedSeed = seed.join("");
 
         //Set Outline
         $("#list1").css("border-style", "solid");
@@ -289,14 +287,12 @@
       }
       else{
         //Decode Hash
-        var decodedSeed = Base64.decode(hash);
-
-        var moons = decodedSeed.split("");
-        for (i = 0; i < moons.length - 4; i++){
-          moons[i] = parseInt(moons[i], 36);
+        var moons = hash.split("");
+        for (i = 1; i < moons.length - 4; i++){
+          moons[i] = (moons[i].charCodeAt()-33);
         }
 
-        var setCheck = (moons[0].toString(36));
+        var setCheck = moons[0];
         var versionCheck = moons[97] + moons[98] + moons[99] + moons[100];
 
         var cs = "<div id='";

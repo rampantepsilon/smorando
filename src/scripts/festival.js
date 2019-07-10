@@ -9,8 +9,6 @@
   var set = 'f'; //Denotes Festival%
   var verSeedHash = "210f"; //Hash is [Version][Dev/Full]
 
-  var Base64 = require('js-base64').Base64;
-
   function moonTotal(id){
     var checkBox = document.getElementById(id);
     var count = document.getElementById('moonCount');
@@ -35,6 +33,7 @@
     var a = sessionStorage.getItem('fSeed');
     document.getElementById('seedHash').value = a;
     generateSeed();
+    sessionStorage.setItem('fSeed','');
   };
 
   function copySeed(){
@@ -81,7 +80,7 @@
           var aa = Math.floor(Math.random() * 15);
           cascadeList = cascadeList + "<div id='ckm3' onclick='highlight(this.id)'>" + myObj.cascade[aa] + "</div>";
           var aSeed = aa;
-          seed[1] = aSeed.toString(36);
+          seed[1] = String.fromCharCode(aSeed+33);
         }
 
         //Sand Randomizer
@@ -98,7 +97,7 @@
         }
         for (bc=0; bc < 16; bc++){
           var bd = bc+2;
-          seed[bd] = (sandArr[bc]).toString(36);
+          seed[bd] = String.fromCharCode(sandArr[bc]+33);
         }
 
         //Lake Randomizer
@@ -115,7 +114,7 @@
         }
         for (cc = 0; cc < 5; cc++){
           var cd = cc+18;
-          seed[cd] = (lakeArr[cc]).toString(36);
+          seed[cd] = String.fromCharCode(lakeArr[cc]+33);
         }
 
         //Wooded Randomizer
@@ -132,7 +131,7 @@
         }
         for (dc = 0; dc < 12; dc++){
           var dd = dc+23;
-          seed[dd] = (woodArr[dc]).toString(36);
+          seed[dd] = String.fromCharCode(woodArr[dc]+33);
         }
 
         //Lost Randomizer
@@ -149,7 +148,7 @@
         }
         for (ec = 0; ec < 10; ec++){
           var ed = ec+35;
-          seed[ed] = (lostArr[ec]).toString(36);
+          seed[ed] = String.fromCharCode(lostArr[ec]+33);
         }
 
         //Add Version Key
@@ -157,10 +156,10 @@
 
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList;
-        moonlist2 += woodList + lostList + metroList;
+        moonlist2 += woodList + lostList + '<br>' + metroList;
 
         //Encode seed
-        var encodedSeed = Base64.encode(seed.join(""));
+        var encodedSeed = seed.join("");
 
         //Set Outline
         $("#list1").css("border-style", "solid");
@@ -178,17 +177,16 @@
 
         //Add seed to textbox
         document.getElementById('seedHash').value = encodedSeed;
+        //document.getElementById('seedHash').value = seed[1];
       }
       else{
         //Decode Hash
-        var decodedSeed = Base64.decode(hash);
-
-        var moons = decodedSeed.split("");
-        for (i = 0; i < moons.length - 4; i++){
-          moons[i] = parseInt(moons[i], 36);
+        var moons = hash.split("");
+        for (i = 1; i < moons.length - 4; i++){
+          moons[i] = (moons[i].charCodeAt()-33);
         }
 
-        var setCheck = (moons[0].toString(36));
+        var setCheck = moons[0];
         var versionCheck = moons[45] + moons[46] + moons[47] + moons[48];
 
         var cs = "<div id='";

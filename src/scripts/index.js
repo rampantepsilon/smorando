@@ -5,6 +5,11 @@ var estTime = '2-5 Hours';
 
 var Base64 = require('js-base64').Base64;
 
+function resetRando() {
+  sessionStorage.clear();
+  location.reload();
+}
+
 function estimateTime() {
   document.getElementById('time').innerHTML = estTime;
 }
@@ -17,14 +22,13 @@ function pasteSeed(){
   document.getElementById('error').innerHTML = '';
 
   //Decode Seed
-  var decodedSeed2 = Base64.decode(pasteText.value);
-  var moons2 = decodedSeed2.split("");
-  for (i = 0; i < moons2.length - 4; i++){
-    moons2[i] = parseInt(moons2[i], 36);
+  var moons2 = pasteText.value.split("");
+  for (i = 1; i < moons2.length - 4; i++){
+    moons2[i] = (moons2[i].charCodeAt()-33);
   }
 
   //Determine if Festival or Any
-  var set = (moons2[0].toString(36));
+  var set = moons2[0];
 
   if (set == 'a'){
     document.getElementById('time').innerHTML = '2-4 Hours';
@@ -41,6 +45,7 @@ function pasteSeed(){
 }
 
 function setSelect(set){
+  sessionStorage.clear();
   setValue = set;
   document.getElementById('seed').value = '';
   document.getElementById('error').innerHTML = '';
@@ -76,14 +81,13 @@ function generateSeed(){
   }
   else {
     //Decode Seed
-    var decodedSeed = Base64.decode(seed);
-    var moons = decodedSeed.split("");
-    for (i = 0; i < moons.length - 4; i++){
-      moons[i] = parseInt(moons[i], 36);
+    var moons = seed.split("");
+    for (i = 1; i < moons.length - 4; i++){
+      moons[i] = (moons[i].charCodeAt() - 33);
     }
 
     //Determine if Festival or Any
-    var set = (moons[0].toString(36));
+    var set = moons[0];
     //document.getElementById('selected').innerHTML = set;
 
     if (set == 'a'){
