@@ -30,18 +30,17 @@ function pasteSeed(){
   //Determine if Festival or Any
   var set = moons2[0];
 
-  if (set == 'a'){
-    document.getElementById('time').innerHTML = '2-4 Hours';
-  }
-  if (set == 'f'){
-    document.getElementById('time').innerHTML = '< 1 Hour';
-  }
-  if (set == 'b'){
+  if (set == 'a' || set == 'b'){
     document.getElementById('time').innerHTML = '2-5 Hours';
   }
-  if (set == 'g'){
+  if (set == 'f' || set == 'g'){
     document.getElementById('time').innerHTML = '< 2 Hours';
   }
+}
+
+function lengthSelect(){
+  sessionStorage.clear();
+  document.getElementById('seed').value = '';
 }
 
 function setSelect(set){
