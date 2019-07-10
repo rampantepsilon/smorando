@@ -12,8 +12,8 @@ const dialogOptions = {
     type: 'info',
     buttons: ['Close'],
     title: 'Changelog',
-    message: 'Changes in Version 2.0.1',
-    detail: '- Updated tracker (No more checkboxes. Simply click anywhere on the name of the moon.)\n- Added Changelog to Application\n- Added Long Randomizer Modes for Any% and Festival%. These modes will not be compatible with the web-based randomizer until testing is completed.\n\nDue to the lack of change in the logic, v2.0.1 will be compatible with v2.0.0. This is an optional update.',
+    message: 'Changes in Version 2.1.0',
+    detail: '- Fixed issue where pasting seeds would hang the randomizer to only using that seed. (If you are still having issues, try hitting the Reset Randomizer button)\n- Added World Peace Moon List for future update.\n- Dropped support for the web-based randomizer. Going forward the web-based version will be a read-only version (Planned for completion with v.2.1.1)\n- Changed seeding method to a shorter and cleaner version.\n\nWhile no logic has changed for Any% and Festival%, seeds generated in 2.1.0 will not be compatible with past versions do to the changes in seeding methods.',
   };
 
 //Application Menu
