@@ -278,7 +278,7 @@
 
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList;
-        moonlist2 += woodList + lostList + metroList;
+        moonlist2 += woodList + lostList + '<br>' + metroList;
       }
       else {
         moonlist = wrongSeed;
