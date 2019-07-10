@@ -357,3 +357,97 @@
         document.getElementById('seedHash').innerHTML = hash;
       }
   };
+
+function streamLayout(){
+  moonlist = "";
+  moonlist2 = "";
+  moonlist3 = "";
+  moonlist4 = "";
+  hash = document.getElementById("seedHash").value;
+
+  //Setup Lists
+  var cascadeList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Cascade_Kingdom' target='_blank'>Cascade Kingdom<a></u></b><div id='ckm1' onclick='highlight(this.id)'>" + myObj.cascade[15] + "</div><div id='ckm2' onclick='highlight(this.id)'>" + myObj.cascade[16] + "</div>";
+  var sandList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Sand_Kingdom' target='_blank'>Sand Kingdom</a></u></b>";
+  var lakeList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lake_Kingdom' target='_blank'>Lake Kingdom</a></u></b><div id='lakm1' onclick='highlight(this.id)'>" + myObj.lake[17] + "</div>";
+  var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><div id='wkm1' onclick='highlight(this.id)'>" + myObj.wooded[15] + "</div><div id='wkm2' onclick='highlight(this.id)'>" + myObj.wooded[16] + "</div>";
+  var lostList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lost_Kingdom' target='_blank'>Lost Kingdom</a></u></b>";
+  var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><div id='mkm1' onclick='highlight(this.id)'>" + myObj.metro[32] + "</div>";
+  var snowList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Snow_Kingdom' target='_blank'>Snow Kingdom</a></u></b>";
+  var seasideList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Seaside_Kingdom' target='_blank'>Seaside Kingdom</a></u></b>";
+  var luncheonList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Luncheon_Kingdom' target='_blank'>Luncheon Kingdom</a></u></b><div id='lukm1' onclick='highlight(this.id)'>" + myObj.luncheon[24] + "</div><div id='lukm2' onclick='highlight(this.id)'>" + myObj.luncheon[25] + "</div><div id='lukm3' onclick='highlight(this.id)'>" + myObj.luncheon[26] + "</div>";
+  var ruinedList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Ruined_Kingdom' target='_blank'>Ruined Kingdom</a></u></b><div id='rkm1' onclick='highlight(this.id)'>" + myObj.ruined[0] + "</div>";
+  var bowserList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_Bowser&apos;s_Kingdom' target='_blank'>Bowser's Kingdom</a></u></b><div id='bkm1' onclick='highlight(this.id)'>" + myObj.bowser[18] + "</div><div id='bkm2' onclick='highlight(this.id)'>" + myObj.bowser[19] + "</div><div id='bkm3' onclick='highlight(this.id)'>" + myObj.bowser[20] + "</div><div id='bkm4' onclick='highlight(this.id)'>" + myObj.bowser[21] + "</div>";
+
+  //Decode Hash
+  var moons = hash.split("");
+  for (i = 1; i < moons.length - 4; i++){
+    moons[i] = (moons[i].charCodeAt()-33);
+  }
+
+  var setCheck = moons[0];
+  var versionCheck = moons[97] + moons[98] + moons[99] + moons[100];
+
+  var cs = "<div id='";
+  var ce = "' onclick='highlight(this.id)'>";
+
+  //Version Check
+  if (versionCheck == verSeedHash){
+    //Add Moons to Lists
+    cascadeList += cs + 0 + ce + myObj.cascade[moons[1]] + "</div>";
+    for (az = 2; az < 18; az++){
+      sandList += cs + az + ce + myObj.sand[moons[az]] + "</div>";
+    }
+    for (bz = 18; bz < 23; bz++){
+      lakeList += cs + bz + ce + myObj.lake[moons[bz]] + "</div>";
+    }
+    for (cz = 23; cz < 35; cz++){
+      woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "</div>";
+    }
+    for (dz = 35; dz < 45; dz++){
+      lostList += cs + dz + ce + myObj.lost[moons[dz]] + "</div>";
+    }
+    for (ez = 45; ez < 62; ez++){
+      metroList += cs + ez + ce + myObj.metro[moons[ez]] + "</div>";
+    }
+    for (fz = 62; fz < 72; fz++){
+      snowList += cs + fz + ce + myObj.snow[moons[fz]] + "</div>";
+    }
+    for (gz = 72; gz < 82; gz++){
+      seasideList += cs + gz + ce + myObj.seaside[moons[gz]] + "</div>";
+    }
+    for (hz = 82; hz < 95; hz++){
+      luncheonList += cs + hz + ce + myObj.luncheon[moons[hz]] + "</div>";
+    }
+    for (iz = 95; iz < 97; iz++){
+      bowserList += cs + iz + ce + myObj.bowser[moons[iz]] + "</div>";
+    }
+
+    //Add Lists to moonlist
+    moonlist += cascadeList + sandList + lakeList;
+    moonlist2 += woodList + lostList;
+    moonlist3 += metroList + snowList;
+    moonlist4 += seasideList + luncheonList + ruinedList + bowserList;
+  }
+
+  //Set Outline
+  $("#list1").css("border-style", "solid");
+  $("#list2").css("border-style", "solid");
+  $("#list3").css("border-style", "solid");
+  $("#list4").css("border-style", "solid");
+
+  //Add moons to viewpoint
+  document.getElementById("moons").innerHTML = moonlist + "<br>" + moonlist2 + "<br>" + moonlist3 + "<br>" + moonlist4 + "<br><br>";
+  document.getElementById("moons2").innerHTML = '';
+  document.getElementById("moons3").innerHTML = '';
+  document.getElementById("moons4").innerHTML = '';
+  $('#list2').hide();
+  $('#list3').hide();
+  $('#list4').hide();
+
+  //Add top information
+  document.getElementById('moonCount').innerHTML = '0 out of 124 moons';
+  document.getElementById('disclaimer').innerHTML = '<font color="red">Red moons</font> = Required | <font color="blue">Blue moons</font> = Sub-Area | <font color="purple">Purple moons</font> = Shop/Slots<br>Click the Kingdom Name for list of moons.';
+
+  //Add seed to textbox
+  document.getElementById('seedHash').innerHTML = hash;
+}
