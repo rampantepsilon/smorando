@@ -1,6 +1,6 @@
 var myObj, x;
 myObj = {
-  'cascade'/*14*/:[
+  'cascade'/*15*/:[
     'Chomp Through the Rocks',
     'Behind the Waterfall',
     'On Top of the Rubble',
@@ -19,7 +19,7 @@ myObj = {
     '<font color="red">Our First Power Moon</font>',
     '<font color="red">Multi Moon Atop the Falls (+3)</font>'
   ],
-  'sand'/*35*/:[
+  'sand'/*36*/:[
     'Overlooking the Desert Town',
     'Alcove in the Ruins',
     'On the Leaning Pillar',
@@ -61,7 +61,7 @@ myObj = {
     '<font color="red">Showdown on the Inverted Pyramid</font>',
     '<font color="red">The Hole in the Desert</font>'
   ],
-  'lake'/*16*/:[
+  'lake'/*17*/:[
     'Dorrie-Back Rider',
     'Cheep Cheep Crossing',
     'End of the Hidden Passage',
@@ -81,7 +81,7 @@ myObj = {
     '<font color="blue">Jump, Grab, and Climb Some More</font>',
     '<font color="red">Broodals Over the Lake (+3)</font>'
   ],
-  'wooded'/*27*/:[
+  'wooded'/*28*/:[
     'Behind the Rock Wall',
     'Back Way Up the Mountain',
     'Rolling Rock in the Woods',
@@ -115,7 +115,7 @@ myObj = {
     '<font color="red">Path to the Secret Flower Field</font>',
     '<font color="red">Defend the Secret Flower Field! (+3)</font>'
   ],
-  'lost':[
+  'lost'/*20*/:[
     'Atop a Propeller Pillar',
     "Below the Cliff's Edge",
     'Inside the Stone Cage',
@@ -137,7 +137,7 @@ myObj = {
     'Get Some Rest, Captain Toad!',
     '<font color="purple">Shopping on Forgotten Isle</font>'
   ],
-  'metro'/*32*/:[
+  'metro'/*33*/:[
     'Inside an Iron Girder',
     'Swaying in the Breeze',
     'Girder Sandwich',
@@ -179,7 +179,7 @@ myObj = {
     "<font color='red'>Powering Up the Station</font>",
     "<font color='red'>A Traditional Festival (+3)</font>",
   ],
-  'snow':[
+  'snow'/*9*/:[
     'Entrance to Shiveria',
     'Behind Snowy Mountain',
     'Shining in the Snow in Town',
@@ -193,12 +193,9 @@ myObj = {
     '<font color="red">The Ice Wall Barrier</font>',
     '<font color="red">The Gusty Barrier</font>',
     '<font color="red">The Snowy Mountain Barrier</font>',
+    '<font color="red">The Bound Bowl Grand Prix</font>'
   ],
-  'seaside':[
-    'The Stone Pillar Seal',
-    'The Lighthouse Seal',
-    'The Hot Spring Seal',
-    'The Seal Above the Canyon',
+  'seaside'/*32*/:[
     'On the Cliff Overlooking the Beach',
     'Ride the Jetstream',
     'Ocean-Bottom Maze: Treasure',
@@ -222,7 +219,7 @@ myObj = {
     'Good Job, Captain Toad!',
     'Ocean Quiz: Good!',
     '<font color="purple">Shopping in Bubblaine</font>',
-    '<font color="blue">Looking Back in the Dark Waterway</font>',
+    'Looking Back in the Dark Waterway',
     "<font color='blue'>The Sphynx's Underwater Vault</font>",
     '<font color="blue">A Rumble on the Seaside Floor</font>',
     '<font color="blue">Wading in the Cloud Sea</font>',
@@ -230,9 +227,14 @@ myObj = {
     '<font color="blue">Fly Through the Narrow Valley</font>',
     '<font color="blue">Treasure Chest in the Narrow Valley</font>',
     '<font color="blue">Hurry and Stretch</font>',
-    '<font color="blue">Stretch on the Side Path</font>'
+    '<font color="blue">Stretch on the Side Path</font>',
+    '<font color="red">The Stone Pillar Seal</font>',
+    '<font color="red">The Lighthouse Seal</font>',
+    '<font color="red">The Hot Spring Seal</font>',
+    '<font color="red">The Seal Above the Canyon</font>',
+    '<font color="red">The Glass Is Half Full!</font>'
   ],
-  'luncheon':[
+  'luncheon'/*36*/:[
     'Piled on the Salt',
     "Lurking in the Pillar's Shadow",
     'Atop the Jutting Crag',
@@ -246,12 +248,19 @@ myObj = {
     'Golden Turnip Recipe 2',
     'Golden Turnip Recipe 3',
     'Luncheon Kingdom Timer Challenge 1',
+    'Luncheon Kingdom Timer Challenge 2',
     'Beneath the Rolling Vegetables',
     'All the Cracks Are Fixed',
     'Taking Notes: Swimming in Magma',
     'Love Above the Lava',
     '<font color="purple">Shopping in Mount Volbono</font>',
     '<font color="purple">Luncheon Kingdom Slots</font>',
+    'Alcove Behind the Pillars of Magma',
+    'Treasure Beneath the Cheese Rocks',
+    'Light the Two Flames',
+    'Light the Far-Off Lanterns',
+    'Bon Appetit, Captain Toad!',
+    'The Treasure Chest in the Veggies',
     '<font color="blue">Magma Swamp: Floating and Sinking</font>',
     '<font color="blue">Corner of the Magma Swamp</font>',
     '<font color="blue">Magma Narrow Path</font>',
@@ -264,12 +273,14 @@ myObj = {
     '<font color="blue">Taking Notes: Spinning Atheletics</font>',
     "<font color='red'>The Broodals Are After Some Cookin'</font>",
     '<font color="red">Under the Cheese Rocks</font>',
-    '<font color="red">Big Pot on the Volcano: Dive In! (+3)</font>'
+    '<font color="red">Big Pot on the Volcano: Dive In! (+3)</font>',
+    '<font color="red">Climb Up the Cascading Magma</font>',
+    '<font color="red">Cookatiel Showdown!</font>',
   ],
   'ruined':[
     "<font color='red'>Battle with the Lord of Lightning (+3)</font>"
   ],
-  'bowser':[
+  'bowser'/*18*/:[
     'Behind the Big Wall',
     'Treasure Inside the Turret',
     'From the Side Above the Castle Gate',
