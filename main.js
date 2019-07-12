@@ -34,9 +34,9 @@ let template = [{
         focusedWindow.reload()
       }
     }
-  /*}, {
+  }, {
     label: 'Toggle DevTools',
-    role: 'toggledevtools',*/
+    role: 'toggledevtools',
   }, {
     label: 'Toggle Full Screen',
     accelerator: (() => {
@@ -196,8 +196,8 @@ if (process.platform === 'win32') {
 
 app.on('ready', () => {
   const menu = Menu.buildFromTemplate(template)
-  Menu.setApplicationMenu(null)
-  //Menu.setApplicationMenu(menu)
+  //Menu.setApplicationMenu(null)
+  Menu.setApplicationMenu(menu)
 })
 
 app.on('browser-window-created', () => {
@@ -255,7 +255,7 @@ function createWindow () {
 
   //Add menu to top window only
   const menu = Menu.buildFromTemplate(template)
-  mainWindow.setMenu(menu)
+  //mainWindow.setMenu(menu)
 
   // Open the DevTools.
   //win.webContents.openDevTools()
