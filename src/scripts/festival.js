@@ -7,7 +7,7 @@
 
   //Seed Comparision Variables
   var set = 'f'; //Denotes Festival%
-  var verSeedHash = "210f"; //Hash is [Version][Dev/Full]
+  var verSeedHash = version.compat[0]; //Hash is [Version][Dev/Full]
 
   function moonTotal(id){
     var checkBox = document.getElementById(id);
@@ -193,7 +193,21 @@
         var ce = "' onclick='highlight(this.id)'>";
 
         //Version Check
-        if (versionCheck == verSeedHash){
+        for (v = 0; v < version.compat.length; v++){
+          if (compatible != 1){
+            if (version.compat[v] == versionCheck){
+              compatible = 1;
+            }
+            else {
+              compatible = 0;
+            }
+          }
+          else {
+            break;
+          }
+        }
+
+        if (compatible == 1){
           //Add Moons to Lists
           cascadeList += cs + 0 + ce + myObj.cascade[moons[1]] + "</div>";
           for (az = 2; az < 18; az++){
@@ -262,7 +276,21 @@
     var ce = "' onclick='highlight(this.id)'>";
 
     //Version Check
-    if (versionCheck == verSeedHash){
+    for (v = 0; v < version.compat.length; v++){
+      if (compatible != 1){
+        if (version.compat[v] == versionCheck){
+          compatible = 1;
+        }
+        else {
+          compatible = 0;
+        }
+      }
+      else {
+        break;
+      }
+    }
+
+    if (compatible == 1){
       //Add Moons to Lists
       cascadeList += cs + 0 + ce + myObj.cascade[moons[1]] + "</div>";
       for (az = 2; az < 18; az++){

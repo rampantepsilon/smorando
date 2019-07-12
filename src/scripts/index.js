@@ -1,5 +1,5 @@
 var setValue = 'any';
-var verHash = '210f';
+var verHash = version.compat[0];
 var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper v2.1.0 seed.";
 var estTime = '2-5 Hours';
 
@@ -88,10 +88,27 @@ function generateSeed(){
     //Determine if Festival or Any
     var set = moons[0];
     //document.getElementById('selected').innerHTML = set;
+    var compatible = 0;
 
     if (set == 'a'){
       var hash = moons[97] + moons[98] + moons[99] + moons[100];
-      if (hash == verHash){
+
+      //Check if compatible
+      for (v = 0; v < version.compat.length; v++){
+        if (compatible != 1){
+          if (version.compat[v] == hash){
+            compatible = 1;
+          }
+          else {
+            compatible = 0;
+          }
+        }
+        else {
+          break;
+        }
+      }
+
+      if (compatible == 1){
         sessionStorage.setItem('aSeed', seed);
         window.open('any.html', 'modal', 'width=820, height=740');
       }
@@ -102,7 +119,23 @@ function generateSeed(){
     }
     if (set == 'f'){
       var hash = moons[45] + moons[46] + moons[47] + moons[48];
-      if (hash == verHash){
+
+      //Check if compatible
+      for (v = 0; v < version.compat.length; v++){
+        if (compatible != 1){
+          if (version.compat[v] == hash){
+            compatible = 1;
+          }
+          else {
+            compatible = 0;
+          }
+        }
+        else {
+          break;
+        }
+      }
+
+      if (compatible == 1){
         sessionStorage.setItem('fSeed', seed);
         window.open('festival.html','modal','width=820, height=740')
       }
@@ -113,7 +146,23 @@ function generateSeed(){
     }
     if (set == 'b'){
       var hash = moons[97] + moons[98] + moons[99] + moons[100];
-      if (hash == verHash){
+
+      //Check if compatible
+      for (v = 0; v < version.compat.length; v++){
+        if (compatible != 1){
+          if (version.compat[v] == hash){
+            compatible = 1;
+          }
+          else {
+            compatible = 0;
+          }
+        }
+        else {
+          break;
+        }
+      }
+
+      if (compatible == 1){
         sessionStorage.setItem('bSeed', seed);
         window.open('anylong.html','modal','width=820, height=740')
       }
@@ -124,7 +173,23 @@ function generateSeed(){
     }
     if (set == 'g'){
       var hash = moons[45] + moons[46] + moons[47] + moons[48];
-      if (hash == verHash){
+
+      //Check if compatible
+      for (v = 0; v < version.compat.length; v++){
+        if (compatible != 1){
+          if (version.compat[v] == hash){
+            compatible = 1;
+          }
+          else {
+            compatible = 0;
+          }
+        }
+        else {
+          break;
+        }
+      }
+
+      if (compatible == 1){
         sessionStorage.setItem('gSeed', seed);
         window.open('festivallong.html','modal','width=820, height=740')
       }
