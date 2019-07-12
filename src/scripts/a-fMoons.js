@@ -1,6 +1,6 @@
 var myObj, x;
 myObj = {
-  'cascade':[
+  'cascade'/*15*/:[
     'Chomp Through the Rocks',
     'Behind the Waterfall',
     'On Top of the Rubble',
@@ -19,7 +19,7 @@ myObj = {
     '<font color="red">Our First Power Moon</font>',
     '<font color="red">Multi Moon Atop the Falls (+3)</font>'
   ],
-  'sand':[
+  'sand'/*26*/:[
     'Overlooking the Desert Town',
     'Alcove in the Ruins',
     'On the Leaning Pillar',
@@ -47,7 +47,7 @@ myObj = {
     '<font color="blue">Jaxi Driver</font>',
     '<font color="blue">Jaxi Stunt Driving</font>'
   ],
-  'lake':[
+  'lake'/*17*/:[
     'Dorrie-Back Rider',
     'Cheep Cheep Crossing',
     'End of the Hidden Passage',
@@ -67,7 +67,7 @@ myObj = {
     '<font color="blue">Jump, Grab, and Climb Some More</font>',
     '<font color="red">Broodals Over the Lake (+3)</font>'
   ],
-  'wooded':[
+  'wooded'/*15*/:[
     'Rolling Rock in the Woods',
     'Caught Hopping in the Forest!',
     'Atop the Tall Tree',
@@ -86,7 +86,7 @@ myObj = {
     '<font color="red">Road to Sky Garden</font>',
     '<font color="red">Flower Thieves to Sky Garden (+3)</font>'
   ],
-  'lost':[
+  'lost'/*20*/:[
     'Atop a Propeller Pillar',
     "Below the Cliff's Edge",
     'Inside the Stone Cage',
@@ -108,7 +108,7 @@ myObj = {
     'Get Some Rest, Captain Toad!',
     '<font color="purple">Shopping on Forgotten Isle</font>'
   ],
-  'metro':[
+  'metro'/*32*/:[
     'Drummer on Board!',
     'Guitarist on Board!',
     'Bassist on Board!',
@@ -145,7 +145,7 @@ myObj = {
     "<font color='red'>Powering Up the Station</font>",
     "<font color='red'>A Traditional Festival (+3)</font>",
   ],
-  'snow':[
+  'snow'/*12*/:[
     'The Icicle Barrier',
     'The Ice Wall Barrier',
     'The Gusty Barrier',
@@ -159,7 +159,7 @@ myObj = {
     'Captain Toad is Chilly!',
     '<font color="purple">Shopping in Shiveria</font>'
   ],
-  'seaside':[
+  'seaside'/*26*/:[
     'The Stone Pillar Seal',
     'The Lighthouse Seal',
     'The Hot Spring Seal',
@@ -179,7 +179,7 @@ myObj = {
     'Good Job, Captain Toad!',
     'Ocean Quiz: Good!',
     '<font color="purple">Shopping in Bubblaine</font>',
-    '<font color="blue">Looking Back in the Dark Waterway</font>',
+    'Looking Back in the Dark Waterway',
     "<font color='blue'>The Sphynx's Underwater Vault</font>",
     '<font color="blue">A Rumble on the Seaside Floor</font>',
     '<font color="blue">Wading in the Cloud Sea</font>',
@@ -187,7 +187,7 @@ myObj = {
     '<font color="blue">Hurry and Stretch</font>',
     '<font color="blue">Stretch on the Side Path</font>'
   ],
-  'luncheon':[
+  'luncheon'/*24*/:[
     'Piled on the Salt',
     "Lurking in the Pillar's Shadow",
     'Atop the Jutting Crag',
@@ -216,10 +216,10 @@ myObj = {
     '<font color="red">Under the Cheese Rocks</font>',
     '<font color="red">Big Pot on the Volcano: Dive In! (+3)</font>'
   ],
-  'ruined':[
+  'ruined'/*0*/:[
     "<font color='red'>Battle with the Lord of Lightning (+3)</font>"
   ],
-  'bowser':[
+  'bowser'/*18*/:[
     'Behind the Big Wall',
     'Treasure Inside the Turret',
     'From the Side Above the Castle Gate',

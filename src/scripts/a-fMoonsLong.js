@@ -198,7 +198,7 @@ myObj = {
     'Good Job, Captain Toad!',
     'Ocean Quiz: Good!',
     '<font color="purple">Shopping in Bubblaine</font>',
-    '<font color="blue">Looking Back in the Dark Waterway</font>',
+    'Looking Back in the Dark Waterway',
     "<font color='blue'>The Sphynx's Underwater Vault</font>",
     '<font color="blue">A Rumble on the Seaside Floor</font>',
     '<font color="blue">Wading in the Cloud Sea</font>',
