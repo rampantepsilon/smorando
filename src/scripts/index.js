@@ -1,6 +1,13 @@
 var setValue = 'any';
 var verHash = version.compat[0];
-var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper v2.1.0 seed.";
+var versionCompat = '';
+for (i = 0; i < version.versionSupported.length; i++){
+  if (i>0){
+    versionCompat += " / ";
+  }
+  versionCompat += version.versionSupported[i];
+}
+var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper "+versionCompat+" seed.";
 var estTime = '2-5 Hours';
 
 var Base64 = require('js-base64').Base64;

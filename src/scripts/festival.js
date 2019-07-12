@@ -7,7 +7,7 @@
 
   //Seed Comparision Variables
   var set = 'f'; //Denotes Festival%
-  var verSeedHash = version.compat[0]; //Hash is [Version][Dev/Full]
+  var verHash = version.compat[0]; //Hash is [Version][Dev/Full]
 
   function moonTotal(id){
     var checkBox = document.getElementById(id);
@@ -152,7 +152,7 @@
         }
 
         //Add Version Key
-        seed[45] = verSeedHash;
+        seed[45] = verHash;
 
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList;

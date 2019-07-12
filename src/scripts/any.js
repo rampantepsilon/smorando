@@ -256,7 +256,7 @@
         }
 
         //Add Version Key
-        seed[97] = verSeedHash;
+        seed[97] = verHash;
 
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList;
