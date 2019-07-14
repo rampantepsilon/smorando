@@ -19,6 +19,7 @@ function resetRando() {
 
 function estimateTime() {
   document.getElementById('time').innerHTML = estTime;
+  $(".wp").attr("disabled", true);
 }
 
 function pasteSeed(){
@@ -57,9 +58,16 @@ function setSelect(set){
   document.getElementById('error').innerHTML = '';
   if (setValue == 'any'){
     estTime = '2-5 Hours';
+    $(".long").attr("disabled", false);
   }
   if (setValue == 'festival'){
     estTime = '< 2 Hours';
+    $(".long").attr("disabled", false);
+  }
+  if (setValue == 'wp'){
+    estTime = '??? (Work in Progress)';
+    $(".normal").prop("checked", true);
+    $(".long").attr("disabled", true);
   }
   document.getElementById('time').innerHTML = estTime;
   //document.getElementById('selected').innerHTML = setValue;
@@ -83,6 +91,9 @@ function generateSeed(){
     }
     else if (setValue == 'festival' && lengthValue == 'long'){
       window.open('festivallong.html', 'modal', 'width=820, height=740');
+    }
+    else if (setValue == 'wp' && lengthValue == 'normal'){
+      window.open('wp.html','modal','width=820, height=740');
     }
   }
   else {
