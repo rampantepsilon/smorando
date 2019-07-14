@@ -13,7 +13,7 @@ const dialogOptions = {
     buttons: ['Close'],
     title: 'Changelog',
     message: 'Changes in Version 2.1.0',
-    detail: '- Fixed issue where pasting seeds would hang the randomizer to only using that seed. (If you are still having issues, try hitting the Reset Randomizer button)\n- Added World Peace Moon List for future update.\n- Dropped support for the web-based randomizer. Going forward the web-based version will be a read-only version (Planned for completion with v2.1.1 Currently the web version will be using v2.0.0/2.0.1)\n- Changed seeding method to a shorter and cleaner version.\n- Changed Method for Version Checking (Now there will be unquestionable version checking going forward.)\n\nWhile no logic has changed for Any% and Festival%, seeds generated in 2.1.0 will not be compatible with past versions do to the changes in seeding methods.',
+    detail: '- Fixed issue where pasteing seeds would hang the randomizer to only using that seed. (If you are still having issues, try hitting the Reset Randomizer button)\n- Added World Peace Moon List for future update.\n- Dropped support for the web-based randomizer. Going forward the web-based version will be a read-only version (Planned for completion with v2.1.1 Currently the web version will be using v2.0.0/2.0.1)\n- Changed seeding method to a shorter and cleaner version.\n- Changed Method for Version Checking (Now there will be unquestionable version checking going forward.)\n\nWhile no logic has changed for Any% and Festival%, seeds generated in 2.1.0 will not be compatible with past versions due to the changes in seeding methods.',
   };
 
 //Application Menu
