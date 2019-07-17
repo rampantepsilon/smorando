@@ -216,5 +216,32 @@ function generateSeed(){
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
+    /*if (set == 'w'){
+      var hash = moons[1] + moons[2] + moons[3] + moons[4];
+
+      //Check if compatible
+      for (v = 0; v < version.compat.length; v++){
+        if (compatible != 1){
+          if (version.compat[v] == hash){
+            compatible = 1;
+          }
+          else {
+            compatible = 0;
+          }
+        }
+        else {
+          break;
+        }
+      }
+
+      if (compatible == 1){
+        sessionStorage.setItem('wSeed', seed);
+        window.open('wp.html', 'modal', 'width=820, height=740');
+      }
+      else {
+        document.getElementById('error').innerHTML = wrongSeed;
+        document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
+      }
+    }*/
   }
 }
