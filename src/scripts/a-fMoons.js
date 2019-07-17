@@ -68,6 +68,7 @@ myObj = {
     '<font color="red">Broodals Over the Lake (+3)</font>'
   ],
   'wooded'/*15*/:[
+    'Flower Thieves to Sky Garden (+3)',
     'Rolling Rock in the Woods',
     'Caught Hopping in the Forest!',
     'Atop the Tall Tree',
@@ -83,8 +84,7 @@ myObj = {
     '<font color="blue">Stretching Your Legs</font>',
     '<font color="blue">Flooding Pipeway</font>',
     '<font color="blue">Flooding Pipeway Ceiling Secret</font>',
-    '<font color="red">Road to Sky Garden</font>',
-    '<font color="red">Flower Thieves to Sky Garden (+3)</font>'
+    '<font color="red">Road to Sky Garden</font>'
   ],
   'lost'/*20*/:[
     'Atop a Propeller Pillar',

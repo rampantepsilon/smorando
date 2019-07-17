@@ -14,14 +14,14 @@
     var checkBox = document.getElementById(id);
     var count = document.getElementById('moonCount');
     if (!id.includes('Marked')){
-      if (id == 'ckm2' || id == 'lakm1' || id == 'wkm2' || id == 'mkm1' || id == 'mkm7'){
+      if (id == 'ckm2' || id == 'lakm1' || id == 'wkmm1' || id == 'mkm1' || id == 'mkm7'){
         moonCount += 3;
       } else {
         moonCount += 1;
       }
       count.innerHTML = moonCount + " out of 66 moons";
     } else {
-      if (id == 'ckm2Marked' || id == 'lakm1Marked' || id == 'wkm2Marked' || id == 'mkm1Marked' || id == 'mkm7Marked'){
+      if (id == 'ckm2Marked' || id == 'lakm1Marked' || id == 'wkmm1Marked' || id == 'mkm1Marked' || id == 'mkm7Marked'){
         moonCount -= 3;
       } else {
         moonCount -= 1;
@@ -67,7 +67,7 @@
       var cascadeList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Cascade_Kingdom' target='_blank'>Cascade Kingdom<a></u></b><div id='ckm1' onclick='highlight(this.id)'>" + myObj.cascade[15] + "</div><div id='ckm2' onclick='highlight(this.id)'>" + myObj.cascade[16] + "</div>";
       var sandList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Sand_Kingdom' target='_blank'>Sand Kingdom</a></u></b>";
       var lakeList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lake_Kingdom' target='_blank'>Lake Kingdom</a></u></b><div id='lakm1' onclick='highlight(this.id)'>" + myObj.lake[17] + "</div>";
-      var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><div id='wkm1' onclick='highlight(this.id)'>" + myObj.wooded[15] + "</div><div id='wkm2' onclick='highlight(this.id)'>" + myObj.wooded[16] + "</div>";
+      var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><div id='wkm1' onclick='highlight(this.id)'>"/* + myObj.wooded[15] + "</div><div id='wkm2' onclick='highlight(this.id)'>"*/ + myObj.wooded[16] + "</div>";
       var lostList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lost_Kingdom' target='_blank'>Lost Kingdom</a></u></b>";
       var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><div id='mkm1' onclick='highlight(this.id)'>" + myObj.metro[32] + "</div><font color='red'><div id='mkm2' onclick='highlight(this.id)'>" + myObj.metro[0] + "</div><div id='mkm3' onclick='highlight(this.id)'>" + myObj.metro[1] + "</div><div id='mkm4' onclick='highlight(this.id)'>" + myObj.metro[2] + "</div><div id='mkm5' onclick='highlight(this.id)'>" + myObj.metro[3] + "</div><div id='mkm6' onclick='highlight(this.id)'>" + myObj.metro[33] + "</div></font><div id='mkm7' onclick='highlight(this.id)'>" + myObj.metro[34]+"</div>";
 
@@ -120,19 +120,45 @@
 
         //Wooded Randomizer
         var woodArr = [];
-        while(woodArr.length < 12){
-          var da = Math.floor(Math.random() * 15);
-          if (woodArr.indexOf(da) === -1) woodArr.push(da);
+        var woodDump = [];
+        var woodCount = 0;
+        while(woodCount < 15){
+          var da = Math.floor(Math.random() * 16);
+          if (woodArr.indexOf(da) === -1){
+            if (da == 0){
+              if (woodCount < 12){
+                woodCount += 3;
+                woodArr.push(da);
+              }
+              else{
+                woodDump.push(da);
+              }
+            }
+            else{
+              woodCount += 1;
+              woodArr.push(da);
+            }
+          }
         }
         woodArr.sort(function(a, b){return a-b});
-        for (d = 0; d < 12; d++){
+        for (d = 0; d < woodArr.length; d++){
           var woodVal = d+3;
           var woodCheck = "<div id='wkm" + woodVal + "' onclick='highlight(this.id)'>";
-          woodList = woodList + woodCheck + myObj.wooded[woodArr[d]] + "</div>";
+          if (myObj.wooded[woodArr[d]] != 'Flower Thieves to Sky Garden (+3)'){
+              woodList = woodList + woodCheck + myObj.wooded[woodArr[d]] + "</div>";
+          }
+          else{
+            woodList = woodList + "<div id='wkmm1' onclick='highlight(this.id)'>" + myObj.wooded[woodArr[d]] + "</div>";
+          }
         }
-        for (dc = 0; dc < 12; dc++){
+        for (dc = 0; dc < 15; dc++){
           var dd = dc+27;
-          seed[dd] = String.fromCharCode(woodArr[dc]+33);
+          if (woodArr[dc] != null){
+            seed[dd] = String.fromCharCode(woodArr[dc]+33);
+          }
+          else {
+            seed[dd] = String.fromCharCode(80);
+          }
         }
 
         //Lost Randomizer
@@ -148,7 +174,7 @@
           lostList = lostList + lostCheck + myObj.lost[lostArr[e]] + "</div>";
         }
         for (ec = 0; ec < 10; ec++){
-          var ed = ec+39;
+          var ed = ec+42;
           seed[ed] = String.fromCharCode(lostArr[ec]+33);
         }
 
@@ -221,10 +247,20 @@
           for (bz = 22; bz < 27; bz++){
             lakeList += cs + bz + ce + myObj.lake[moons[bz]] + "</div>";
           }
-          for (cz = 27; cz < 39; cz++){
-            woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "</div>";
+          for (cz = 27; cz < 42; cz++){
+            if (moons[cz] != 47){
+              if (moons[cz] == 0){
+                woodList += cs + "wkmm1" + ce + myObj.wooded[moons[cz]] + "</div>";
+              }
+              else {
+                woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "</div>";
+              }
+            }
+            else {
+              break;
+            }
           }
-          for (dz = 39; dz < 49; dz++){
+          for (dz = 42; dz < 52; dz++){
             lostList += cs + dz + ce + myObj.lost[moons[dz]] + "</div>";
           }
 
@@ -256,6 +292,7 @@
   };
 
   function streamLayout(){
+    moonCount = 0;
     moonlist = "";
     moonlist2 = "";
     hash = document.getElementById("seedHash").value;
@@ -264,7 +301,7 @@
     var cascadeList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Cascade_Kingdom' target='_blank'>Cascade Kingdom<a></u></b><div id='ckm1' onclick='highlight(this.id)'>" + myObj.cascade[15] + "</div><div id='ckm2' onclick='highlight(this.id)'>" + myObj.cascade[16] + "</div>";
     var sandList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Sand_Kingdom' target='_blank'>Sand Kingdom</a></u></b>";
     var lakeList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lake_Kingdom' target='_blank'>Lake Kingdom</a></u></b><div id='lakm1' onclick='highlight(this.id)'>" + myObj.lake[17] + "</div>";
-    var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><div id='wkm1' onclick='highlight(this.id)'>" + myObj.wooded[15] + "</div><div id='wkm2' onclick='highlight(this.id)'>" + myObj.wooded[16] + "</div>";
+    var woodList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Wooded_Kingdom' target='_blank'>Wooded Kingdom</a></u></b><div id='wkm1' onclick='highlight(this.id)'>"/* + myObj.wooded[15] + "</div><div id='wkm2' onclick='highlight(this.id)'>"*/ + myObj.wooded[16] + "</div>";
     var lostList = "<br><b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Lost_Kingdom' target='_blank'>Lost Kingdom</a></u></b>";
     var metroList = "<b><u><a href='https://www.mariowiki.com/List_of_Power_Moons_in_the_Metro_Kingdom' target='_blank'>Metro Kingdom</a></u></b><div id='mkm1' onclick='highlight(this.id)'>" + myObj.metro[32] + "</div><font color='red'><div id='mkm2' onclick='highlight(this.id)'>" + myObj.metro[0] + "</div><div id='mkm3' onclick='highlight(this.id)'>" + myObj.metro[1] + "</div><div id='mkm4' onclick='highlight(this.id)'>" + myObj.metro[2] + "</div><div id='mkm5' onclick='highlight(this.id)'>" + myObj.metro[3] + "</div><div id='mkm6' onclick='highlight(this.id)'>" + myObj.metro[33] + "</div></font><div id='mkm7' onclick='highlight(this.id)'>" + myObj.metro[34]+"</div>";
 
@@ -304,10 +341,20 @@
       for (bz = 22; bz < 27; bz++){
         lakeList += cs + bz + ce + myObj.lake[moons[bz]] + "</div>";
       }
-      for (cz = 27; cz < 39; cz++){
-        woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "</div>";
+      for (cz = 27; cz < 42; cz++){
+        if (moons[cz] != 47){
+          if (moons[cz] == 0){
+            woodList += cs + "wkmm1" + ce + myObj.wooded[moons[cz]] + "</div>";
+          }
+          else {
+            woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "</div>";
+          }
+        }
+        else {
+          break;
+        }
       }
-      for (dz = 39; dz < 49; dz++){
+      for (dz = 42; dz < 52; dz++){
         lostList += cs + dz + ce + myObj.lost[moons[dz]] + "</div>";
       }
 
