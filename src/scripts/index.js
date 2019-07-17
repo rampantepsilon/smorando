@@ -99,7 +99,7 @@ function generateSeed(){
   else {
     //Decode Seed
     var moons = seed.split("");
-    for (i = 1; i < moons.length - 4; i++){
+    for (i = 5; i < moons.length; i++){
       moons[i] = (moons[i].charCodeAt() - 33);
     }
 
@@ -109,7 +109,7 @@ function generateSeed(){
     var compatible = 0;
 
     if (set == 'a'){
-      var hash = moons[97] + moons[98] + moons[99] + moons[100];
+      var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
       //Check if compatible
       for (v = 0; v < version.compat.length; v++){
@@ -136,7 +136,7 @@ function generateSeed(){
       }
     }
     if (set == 'f'){
-      var hash = moons[45] + moons[46] + moons[47] + moons[48];
+      var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
       //Check if compatible
       for (v = 0; v < version.compat.length; v++){
@@ -163,7 +163,7 @@ function generateSeed(){
       }
     }
     if (set == 'b'){
-      var hash = moons[97] + moons[98] + moons[99] + moons[100];
+      var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
       //Check if compatible
       for (v = 0; v < version.compat.length; v++){
@@ -190,7 +190,7 @@ function generateSeed(){
       }
     }
     if (set == 'g'){
-      var hash = moons[45] + moons[46] + moons[47] + moons[48];
+      var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
       //Check if compatible
       for (v = 0; v < version.compat.length; v++){

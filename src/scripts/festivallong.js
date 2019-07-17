@@ -4,6 +4,7 @@
   var moonlist2 = "";
   var hash = "null";
   var moonCount = 0;
+  var compatible = 0;
 
   //Seed Comparision Variables
   var set = 'g'; //Denotes Festival%
@@ -79,7 +80,7 @@
           var aa = Math.floor(Math.random() * 15);
           cascadeList = cascadeList + "<div id='ckm3' onclick='highlight(this.id)'>" + myObj.cascade[aa] + "</div>";
           var aSeed = aa;
-          seed[1] = String.fromCharCode(aSeed+33);
+          seed[5] = String.fromCharCode(aSeed+33);
         }
 
         //Sand Randomizer
@@ -95,7 +96,7 @@
           sandList = sandList + sandCheck + myObj.sand[sandArr[bb]] + "</div>";
         }
         for (bc=0; bc < 16; bc++){
-          var bd = bc+2;
+          var bd = bc+6;
           seed[bd] = String.fromCharCode(sandArr[bc]+33);
         }
 
@@ -112,7 +113,7 @@
           lakeList = lakeList + lakeCheck + myObj.lake[lakeArr[c]] + "</div>";
         }
         for (cc = 0; cc < 5; cc++){
-          var cd = cc+18;
+          var cd = cc+22;
           seed[cd] = String.fromCharCode(lakeArr[cc]+33);
         }
 
@@ -129,7 +130,7 @@
           woodList = woodList + woodCheck + myObj.wooded[woodArr[d]] + "</div>";
         }
         for (dc = 0; dc < 12; dc++){
-          var dd = dc+23;
+          var dd = dc+27;
           seed[dd] = String.fromCharCode(woodArr[dc]+33);
         }
 
@@ -146,12 +147,16 @@
           lostList = lostList + lostCheck + myObj.lost[lostArr[e]] + "</div>";
         }
         for (ec = 0; ec < 10; ec++){
-          var ed = ec+35;
+          var ed = ec+39;
           seed[ed] = String.fromCharCode(lostArr[ec]+33);
         }
 
         //Add Version Key
-        seed[45] = verHash;
+        var ver = verHash.split("");
+        seed[1] = ver[0];
+        seed[2] = ver[1];
+        seed[3] = ver[2];
+        seed[4] = ver[3];
 
         //Add Lists to moonlist
         moonlist += cascadeList + sandList + lakeList;
@@ -180,12 +185,12 @@
       else{
         //Decode Hash
         var moons = hash.split("");
-        for (i = 1; i < moons.length - 4; i++){
+        for (i = 5; i < moons.length; i++){
           moons[i] = (moons[i].charCodeAt()-33);
         }
 
         var setCheck = moons[0];
-        var versionCheck = moons[45] + moons[46] + moons[47] + moons[48];
+        var versionCheck = moons[1] + moons[2] + moons[3] + moons[4];
 
         var cs = "<div id='";
         var ce = "' onclick='highlight(this.id)'>";
@@ -207,17 +212,17 @@
 
         if (compatible == 1){
           //Add Moons to Lists
-          cascadeList += cs + 0 + ce + myObj.cascade[moons[1]] + "</div>";
-          for (az = 2; az < 18; az++){
+          cascadeList += cs + 0 + ce + myObj.cascade[moons[5]] + "</div>";
+          for (az = 6; az < 18; az++){
             sandList += cs + az + ce + myObj.sand[moons[az]] + "</div>";
           }
-          for (bz = 18; bz < 23; bz++){
+          for (bz = 22; bz < 27; bz++){
             lakeList += cs + bz + ce + myObj.lake[moons[bz]] + "</div>";
           }
-          for (cz = 23; cz < 35; cz++){
+          for (cz = 27; cz < 39; cz++){
             woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "</div>";
           }
-          for (dz = 35; dz < 45; dz++){
+          for (dz = 39; dz < 49; dz++){
             lostList += cs + dz + ce + myObj.lost[moons[dz]] + "</div>";
           }
 
@@ -263,12 +268,12 @@
 
       //Decode Hash
       var moons = hash.split("");
-      for (i = 1; i < moons.length - 4; i++){
+      for (i = 5; i < moons.length; i++){
         moons[i] = (moons[i].charCodeAt()-33);
       }
 
       var setCheck = moons[0];
-      var versionCheck = moons[45] + moons[46] + moons[47] + moons[48];
+      var versionCheck = moons[1] + moons[2] + moons[3] + moons[4];
 
       var cs = "<div id='";
       var ce = "' onclick='highlight(this.id)'>";
@@ -290,17 +295,17 @@
 
       if (compatible == 1){
         //Add Moons to Lists
-        cascadeList += cs + 0 + ce + myObj.cascade[moons[1]] + "</div>";
-        for (az = 2; az < 18; az++){
+        cascadeList += cs + 0 + ce + myObj.cascade[moons[5]] + "</div>";
+        for (az = 6; az < 18; az++){
           sandList += cs + az + ce + myObj.sand[moons[az]] + "</div>";
         }
-        for (bz = 18; bz < 23; bz++){
+        for (bz = 22; bz < 27; bz++){
           lakeList += cs + bz + ce + myObj.lake[moons[bz]] + "</div>";
         }
-        for (cz = 23; cz < 35; cz++){
+        for (cz = 27; cz < 39; cz++){
           woodList += cs + cz + ce + myObj.wooded[moons[cz]] + "</div>";
         }
-        for (dz = 35; dz < 45; dz++){
+        for (dz = 39; dz < 49; dz++){
           lostList += cs + dz + ce + myObj.lost[moons[dz]] + "</div>";
         }
 
