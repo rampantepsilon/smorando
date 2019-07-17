@@ -25,7 +25,7 @@ myObj = {
     'On the Leaning Pillar',
     'Hidden Room in the Flowing Sands',
     'Secret of the Mural',
-    'Secret of the Inverted Mural'
+    'Secret of the Inverted Mural',
     'On Top of the Stone Archway',
     'From a Crate in the Ruins',
     'On the Lone Pillar',
@@ -33,7 +33,7 @@ myObj = {
     'Where the Birds Gather',
     'Top of a Dune',
     'Lost in the Luggage',
-    'Bullet Bill Breakthrough'
+    'Bullet Bill Breakthrough',
     'Inside a Block Is a Hard Place',
     'Bird Traveling the Desert',
     'The Treasure of Jaxi Ruins',
@@ -59,7 +59,7 @@ myObj = {
     '<font color="red">Atop the Highest Tower</font>',
     '<font color="red">Moon Shards In The Sand</font>',
     '<font color="red">Showdown on the Inverted Pyramid</font>',
-    '<font color="red">The Hole in the Desert</font>'
+    '<font color="red">The Hole in the Desert (+3)</font>'
   ],
   'lake'/*17*/:[
     'Dorrie-Back Rider',
@@ -193,7 +193,7 @@ myObj = {
     '<font color="red">The Ice Wall Barrier</font>',
     '<font color="red">The Gusty Barrier</font>',
     '<font color="red">The Snowy Mountain Barrier</font>',
-    '<font color="red">The Bound Bowl Grand Prix</font>'
+    '<font color="red">The Bound Bowl Grand Prix (+3)</font>'
   ],
   'seaside'/*32*/:[
     'On the Cliff Overlooking the Beach',
@@ -232,7 +232,7 @@ myObj = {
     '<font color="red">The Lighthouse Seal</font>',
     '<font color="red">The Hot Spring Seal</font>',
     '<font color="red">The Seal Above the Canyon</font>',
-    '<font color="red">The Glass Is Half Full!</font>'
+    '<font color="red">The Glass Is Half Full! (+3)</font>'
   ],
   'luncheon'/*36*/:[
     'Piled on the Salt',
@@ -275,12 +275,12 @@ myObj = {
     '<font color="red">Under the Cheese Rocks</font>',
     '<font color="red">Big Pot on the Volcano: Dive In! (+3)</font>',
     '<font color="red">Climb Up the Cascading Magma</font>',
-    '<font color="red">Cookatiel Showdown!</font>',
+    '<font color="red">Cookatiel Showdown! (+3)</font>',
   ],
   'ruined':[
     "<font color='red'>Battle with the Lord of Lightning (+3)</font>"
   ],
-  'bowser'/*18*/:[
+  'bowser'/*21*/:[
     'Behind the Big Wall',
     'Treasure Inside the Turret',
     'From the Side Above the Castle Gate',
