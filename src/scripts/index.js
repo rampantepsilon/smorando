@@ -19,7 +19,7 @@ function resetRando() {
 
 function estimateTime() {
   document.getElementById('time').innerHTML = estTime;
-  $(".wp").attr("disabled", true);
+  //$(".wp").attr("disabled", true);
 }
 
 function pasteSeed(){
@@ -216,7 +216,7 @@ function generateSeed(){
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
-    /*if (set == 'w'){
+    if (set == 'w'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
       //Check if compatible
@@ -242,6 +242,6 @@ function generateSeed(){
         document.getElementById('error').innerHTML = wrongSeed;
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
-    }*/
+    }
   }
 }

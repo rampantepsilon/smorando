@@ -5,15 +5,15 @@ const {BrowserWindow, Menu, app, shell, dialog, dialog2} = require('electron')
 const label = 'SMO Moon Randomizer'
 const build = '2019.06.17'
 const version = app.getVersion()
-const title = "SMO Moon Randomizer v2.1.0"
+const title = "SMO Moon Randomizer v2.1.1-dev"
 
 //Dialog Settings
 const dialogOptions = {
     type: 'info',
     buttons: ['Close'],
     title: 'Changelog',
-    message: 'Changes in Version 2.1.0',
-    detail: '- Fixed issue where pasteing seeds would hang the randomizer to only using that seed. (If you are still having issues, try hitting the Reset Randomizer button)\n- Added World Peace Moon List for future update.\n- Dropped support for the web-based randomizer. Going forward the web-based version will be a read-only version (Planned for completion with v2.1.1 Currently the web version will be using v2.0.0/2.0.1)\n- Changed seeding method to a shorter and cleaner version.\n- Changed Method for Version Checking (Now there will be unquestionable version checking going forward.)\n- Changed Wooded Kingdom logic to allow for ignoring Spewter fight. (Normal Randomizer Only)\n\nPlease Note: Seeds generated in 2.1.0 will not be compatible with past versions due to the changes in seeding methods and logic changes.',
+    message: 'Changes in Version 2.1.1',
+    detail: '- Added World Peace Normal Randomizer\n- Updated World Peace Moon List to reflect moon types better.\n\nPlease Note: Any% and Festival% seeds generated in v2.1.1 will be compatible with v2.1.0. However, World Peace seeds will only be available within v2.1.1.',
   };
 
 //Application Menu
