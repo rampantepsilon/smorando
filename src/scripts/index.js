@@ -45,7 +45,7 @@ function pasteSeed(){
     document.getElementById('time').innerHTML = '< 2 Hours';
   }
   if (set == 'w'){
-    document.getElementById('time').innerHTML = '??? (Work in Progress)'
+    document.getElementById('time').innerHTML = '2-4 Hours (Estimated)'
   }
 }
 
@@ -68,7 +68,7 @@ function setSelect(set){
     $(".long").attr("disabled", false);
   }
   if (setValue == 'wp'){
-    estTime = '??? (Work in Progress)';
+    estTime = '2-4 Hours (Estimated)';
     $(".normal").prop("checked", true);
     $(".long").attr("disabled", true);
   }
