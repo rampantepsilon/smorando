@@ -3,16 +3,16 @@ const {BrowserWindow, Menu, app, shell, dialog, dialog2} = require('electron')
 
 //App Info
 const label = 'SMO Moon Randomizer'
-const build = '2019.06.17'
+const build = '2019.06.18'
 const version = app.getVersion()
-const title = "SMO Moon Randomizer v2.1.1-dev"
+const title = "SMO Moon Randomizer v2.2.0-dev"
 
 //Dialog Settings
 const dialogOptions = {
     type: 'info',
     buttons: ['Close'],
     title: 'Changelog',
-    message: 'Changes in Version 2.1.1',
+    message: 'Changes in Version 2.2.0',
     detail: '- Added World Peace Normal Randomizer\n- Updated World Peace Moon List to reflect moon types better.\n\nPlease Note: Any% and Festival% seeds generated in v2.1.1 will be compatible with v2.1.0. However, World Peace seeds will only be available within v2.1.1.',
   };
 

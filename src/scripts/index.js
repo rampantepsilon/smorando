@@ -44,6 +44,9 @@ function pasteSeed(){
   if (set == 'f' || set == 'g'){
     document.getElementById('time').innerHTML = '< 2 Hours';
   }
+  if (set == 'w'){
+    document.getElementById('time').innerHTML = '??? (Work in Progress)'
+  }
 }
 
 function lengthSelect(){
