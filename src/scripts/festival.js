@@ -241,7 +241,7 @@
         if (compatible == 1){
           //Add Moons to Lists
           cascadeList += cs + 0 + ce + myObj.cascade[moons[5]] + "</div>";
-          for (az = 6; az < 18; az++){
+          for (az = 6; az < 22; az++){
             sandList += cs + az + ce + myObj.sand[moons[az]] + "</div>";
           }
           for (bz = 22; bz < 27; bz++){
@@ -335,7 +335,7 @@
     if (compatible == 1){
       //Add Moons to Lists
       cascadeList += cs + 0 + ce + myObj.cascade[moons[5]] + "</div>";
-      for (az = 6; az < 18; az++){
+      for (az = 6; az < 22; az++){
         sandList += cs + az + ce + myObj.sand[moons[az]] + "</div>";
       }
       for (bz = 22; bz < 27; bz++){
