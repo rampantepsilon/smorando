@@ -1,4 +1,4 @@
-<img src="https://smorando.rampantepsilon.site/banner.jpg"/>
+<img src="https://smorando.rampantepsilon.site/images/banner.jpg"/>
 <p>This is a SMO Moon Randomizer. This randomizer was created using the idea that JKTKops used in his <a href="https://github.com/JKTKops/Darker-Side-Randomizer">Darker Side Randomizer</a>. This randomizer produces a list of moons to obtain following some guidelines of the Any% or Festival% speedrun. These guidelines are as follows:
 <ul>
 <li>All Kingdom moons will be randomized up to the final story moon of the kingdom needed for progression. Sand, Metro (Any% Only), Snow, and Seaside do not have story moon requirements.</li>
