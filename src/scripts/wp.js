@@ -10,7 +10,7 @@
 
   //Seed Comparision Variables
   var set = 'w'; //Denotes Any%
-  var verHash = version.compat[0]; //Hash is [Version][Dev/Full]
+  var verHash = version.compat[1]; //Hash is [Version][Dev/Full]
 
   function moonTotal(id){
     var checkBox = document.getElementById(id);
