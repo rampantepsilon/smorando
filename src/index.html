@@ -48,14 +48,15 @@
           <h2><u>Playset</u></h2>
           <input type='radio' name='set' value='any' class='any' onclick='setSelect(this.value)' checked> Any% (124 Moons)<br>
           <input type='radio' name='set' value='festival' class='festival' onclick='setSelect(this.value)'> Festival% (Metro WP)<br>
-          <input type='radio' name='set' value='wp' class='wp' onclick='setSelect(this.value)'>World Peace<br>
+          <input type='radio' name='set' value='wp' class='wp' onclick='setSelect(this.value)'>World Peace (BETA)<br>
           <div id="selected"></div>
         </td>
         <td>
-          <h2><u>Length</u></h2>
+          <h2><u>Clips Allowed</u></h2>
           <!--<input type='radio' id='length' name='length' value='short'> Short Randomizer<br>-->
-          <input type='radio' id='length' class='normal' name='length' value='normal' onclick='lengthSelect()' checked> Normal Randomizer<br>
-          <input type='radio' id='length' class='long' name='length' value='long' onclick='lengthSelect()'> Long Randomizer<br>
+          <input type='radio' id='clips' class='none' name='clips' value='none' onclick='lengthSelect()' checked> No Clips<br>
+          <input type='radio' id='clips' class='v1' name='clips' value='v1' onclick='lengthSelect()'> v1.0 Clips<br>
+          <input type='radio' id='clips' class='cp' name='clips' value='cp' onclick='lengthSelect()'> Current Patch Clips<br>
         </td>
       </tr>
       <tr>

@@ -8,7 +8,7 @@ for (i = 0; i < version.versionSupported.length; i++){
   versionCompat += version.versionSupported[i];
 }
 var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper "+versionCompat+" seed.";
-var estTime = '2-5 Hours';
+var estTime = '2-4 Hours';
 
 var Base64 = require('js-base64').Base64;
 
@@ -19,6 +19,9 @@ function resetRando() {
 
 function estimateTime() {
   document.getElementById('time').innerHTML = estTime;
+  $(".none").prop("checked", true);
+  $(".v1").attr("disabled", true);
+  $(".cp").attr("disabled", true);
   //$(".wp").attr("disabled", true);
 }
 
@@ -38,13 +41,13 @@ function pasteSeed(){
   //Determine if Festival or Any
   var set = moons2[0];
 
-  if (set == 'a' || set == 'b'){
-    document.getElementById('time').innerHTML = '2-5 Hours';
+  if (set == 'a' || set == 'b' || set == 'c'){
+    document.getElementById('time').innerHTML = '2-4 Hours';
   }
-  if (set == 'f' || set == 'g'){
-    document.getElementById('time').innerHTML = '< 2 Hours';
+  if (set == 'f' || set == 'g' || set == 'h'){
+    document.getElementById('time').innerHTML = '< 1 Hours';
   }
-  if (set == 'w'){
+  if (set == 'w' || set == 'x' || set == 'y'){
     document.getElementById('time').innerHTML = '2-4 Hours (Estimated)'
   }
 }
@@ -60,17 +63,20 @@ function setSelect(set){
   document.getElementById('seed').value = '';
   document.getElementById('error').innerHTML = '';
   if (setValue == 'any'){
-    estTime = '2-5 Hours';
-    $(".long").attr("disabled", false);
+    estTime = '2-4 Hours';
+    $(".v1").attr("disabled", true);
+    $(".cp").attr("disabled", true);
   }
   if (setValue == 'festival'){
     estTime = '< 2 Hours';
-    $(".long").attr("disabled", false);
+    $(".v1").attr("disabled", true);
+    $(".cp").attr("disabled", true);
   }
   if (setValue == 'wp'){
     estTime = '2-4 Hours (Estimated)';
-    $(".normal").prop("checked", true);
-    $(".long").attr("disabled", true);
+    $(".none").prop("checked", true);
+    $(".v1").attr("disabled", true);
+    $(".cp").attr("disabled", true);
   }
   document.getElementById('time').innerHTML = estTime;
   //document.getElementById('selected').innerHTML = setValue;
@@ -79,23 +85,17 @@ function setSelect(set){
 function generateSeed(){
   //Get Randomizer Information
   var seed = document.getElementById('seed').value;
-  var lengthValue = document.querySelector('#length:checked').value;
+  var lengthValue = document.querySelector('#clips:checked').value;
 
   //Open page based on seeding
   if (seed == ''){
-    if (setValue == 'any' && lengthValue == 'normal'){
+    if (setValue == 'any' && lengthValue == 'none'){
       window.open('any.html', 'modal', 'width=820, height=740');
     }
-    else if (setValue == 'festival' && lengthValue == 'normal'){
+    else if (setValue == 'festival' && lengthValue == 'none'){
       window.open('festival.html','modal','width=820, height=740');
     }
-    else if (setValue == 'any' && lengthValue == 'long'){
-      window.open('anylong.html', 'modal', 'width=820, height=740');
-    }
-    else if (setValue == 'festival' && lengthValue == 'long'){
-      window.open('festivallong.html', 'modal', 'width=820, height=740');
-    }
-    else if (setValue == 'wp' && lengthValue == 'normal'){
+    else if (setValue == 'wp' && lengthValue == 'none'){
       window.open('wp.html','modal','width=820, height=740');
     }
   }
