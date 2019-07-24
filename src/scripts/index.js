@@ -41,10 +41,10 @@ function pasteSeed(){
   //Determine if Festival or Any
   var set = moons2[0];
 
-  if (set == 'a' || set == 'b' || set == 'c'){
+  if (set == 'a' || set == 'b' || set == 'c' || set == 'd'){
     document.getElementById('time').innerHTML = '2-4 Hours';
   }
-  if (set == 'f' || set == 'g' || set == 'h'){
+  if (set == 'f' || set == 'g' || set == 'h' || set == 'i'){
     document.getElementById('time').innerHTML = '< 1 Hours';
   }
   if (set == 'w' || set == 'x' || set == 'y'){
