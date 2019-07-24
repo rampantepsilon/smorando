@@ -13,7 +13,7 @@ const dialogOptions = {
     buttons: ['Close'],
     title: 'Changelog',
     message: 'Changes in Version 2.2.0',
-    detail: '- Added World Peace Normal Randomizer\n- Updated World Peace Moon List to reflect moon types better.\n\nPlease Note: Any% and Festival% seeds generated in v2.1.1 will be compatible with v2.1.0. However, World Peace seeds will only be available within v2.1.1.',
+    detail: "- Added World Peace Normal Randomizer\n- Updated World Peace Moon List to reflect moon types better.\n- Removed Ability to Generate Long Randomizer Seeds (They are still playable if you have the seed. They will be phased out when v3.0.0 releases.)\n- Added Clips Allowed Selection (Normal Randomizer has been renamed to No Clips)\n\nClips Definition\n-No Clips\n--- Beginner Friendly. This is for players that either haven't done a SMO speedrun or are just learning the game.\n- v1.0 Clilps\n--- Includes First Moon Skip in Cascade and Sphynx Clip in Sand, Roll Cancel Clips in Sand, Wooded, and Snow, and Snow Jump\n- Current Patch Clips\n--- Includes Roll Cancel Clips in Sand, Wooded, and Snow, and Snow Jump\n\nPlease Note: All Any% and Festival% seeds generated in v2.1.1 will be compatible with v2.2.0. However, World Peace seeds will only be available within v2.2.0. All seeds generated in v2.2.0 will be compatible with future releases provided no logic changes occur.",
   };
 
 //Application Menu
