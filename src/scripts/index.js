@@ -66,17 +66,23 @@ function setSelect(set){
     estTime = '2-4 Hours';
     $(".v1").attr("disabled", true);
     $(".cp").attr("disabled", true);
+    $("#v1NS").show();
+    $("#cpNS").show();
   }
   if (setValue == 'festival'){
     estTime = '< 2 Hours';
     $(".v1").attr("disabled", true);
     $(".cp").attr("disabled", true);
+    $("#v1NS").show();
+    $("#cpNS").show();
   }
   if (setValue == 'wp'){
     estTime = '2-4 Hours (Estimated)';
     $(".none").prop("checked", true);
     $(".v1").attr("disabled", true);
     $(".cp").attr("disabled", false);
+    $("#v1NS").show();
+    $("#cpNS").hide();
   }
   document.getElementById('time').innerHTML = estTime;
   //document.getElementById('selected').innerHTML = setValue;
