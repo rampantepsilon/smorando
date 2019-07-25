@@ -56,8 +56,8 @@ myObj = {
     '<font color="blue">The Bullet Bill Maze: Side Path</font>',
     '<font color="blue">Jaxi Driver</font>',
     '<font color="blue">Jaxi Stunt Driving</font>',
-    '<font color="red">Atop the Highest Tower</font>',
-    '<font color="red">Moon Shards In The Sand</font>',
+    'Atop the Highest Tower',
+    'Moon Shards In The Sand',
     '<font color="red">Showdown on the Inverted Pyramid</font>',
     '<font color="red">The Hole in the Desert (+3)</font>'
   ],
@@ -189,10 +189,10 @@ myObj = {
     'Ice-Dodging Goomba Stack',
     'Captain Toad is Chilly!',
     '<font color="purple">Shopping in Shiveria</font>',
-    '<font color="red">The Icicle Barrier</font>',
-    '<font color="red">The Ice Wall Barrier</font>',
-    '<font color="red">The Gusty Barrier</font>',
-    '<font color="red">The Snowy Mountain Barrier</font>',
+    'The Icicle Barrier',
+    'The Ice Wall Barrier',
+    'The Gusty Barrier',
+    'The Snowy Mountain Barrier',
     '<font color="red">The Bound Bowl Grand Prix (+3)</font>'
   ],
   'seaside'/*32*/:[

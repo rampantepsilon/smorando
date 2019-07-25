@@ -47,7 +47,7 @@ function pasteSeed(){
   if (set == 'f' || set == 'g' || set == 'h' || set == 'i'){
     document.getElementById('time').innerHTML = '< 1 Hours';
   }
-  if (set == 'w' || set == 'x' || set == 'y'){
+  if (set == 'w' || set == 'x'){
     document.getElementById('time').innerHTML = '2-4 Hours (Estimated)'
   }
 }
@@ -76,7 +76,7 @@ function setSelect(set){
     estTime = '2-4 Hours (Estimated)';
     $(".none").prop("checked", true);
     $(".v1").attr("disabled", true);
-    $(".cp").attr("disabled", true);
+    $(".cp").attr("disabled", false);
   }
   document.getElementById('time').innerHTML = estTime;
   //document.getElementById('selected').innerHTML = setValue;
@@ -97,6 +97,9 @@ function generateSeed(){
     }
     else if (setValue == 'wp' && lengthValue == 'none'){
       window.open('wp.html','modal','width=820, height=740');
+    }
+    else if (setValue == 'wp' && lengthValue == 'cp'){
+      window.open('wpCPClips.html','modal','width=820, height=740');
     }
   }
   else {
@@ -240,6 +243,33 @@ function generateSeed(){
       if (compatible == 1){
         sessionStorage.setItem('wSeed', seed);
         window.open('wp.html', 'modal', 'width=820, height=740');
+      }
+      else {
+        document.getElementById('error').innerHTML = wrongSeed;
+        document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
+      }
+    }
+    if (set == 'x'){
+      var hash = moons[1] + moons[2] + moons[3] + moons[4];
+
+      //Check if compatible
+      for (v = 0; v < version.compat.length; v++){
+        if (compatible != 1){
+          if (version.compat[v] == hash){
+            compatible = 1;
+          }
+          else {
+            compatible = 0;
+          }
+        }
+        else {
+          break;
+        }
+      }
+
+      if (compatible == 1){
+        sessionStorage.setItem('wSeed', seed);
+        window.open('wpCPClips.html', 'modal', 'width=820, height=740');
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
