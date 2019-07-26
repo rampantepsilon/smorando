@@ -21,7 +21,8 @@ function estimateTime() {
   document.getElementById('time').innerHTML = estTime;
   $(".none").prop("checked", true);
   $(".v1").attr("disabled", true);
-  $(".cp").attr("disabled", true);
+  //$(".cp").attr("disabled", true);
+  $("#cpNS").hide();
   //$(".wp").attr("disabled", true);
 }
 
@@ -65,9 +66,9 @@ function setSelect(set){
   if (setValue == 'any'){
     estTime = '2-4 Hours';
     $(".v1").attr("disabled", true);
-    $(".cp").attr("disabled", true);
+    $(".cp").attr("disabled", false);
     $("#v1NS").show();
-    $("#cpNS").show();
+    $("#cpNS").hide();
   }
   if (setValue == 'festival'){
     estTime = '< 2 Hours';
@@ -97,6 +98,9 @@ function generateSeed(){
   if (seed == ''){
     if (setValue == 'any' && lengthValue == 'none'){
       window.open('any.html', 'modal', 'width=820, height=740');
+    }
+    else if (setValue == 'any' && lengthValue == 'cp'){
+      window.open('anycp.html', 'modal', 'width=820, height=740');
     }
     else if (setValue == 'festival' && lengthValue == 'none'){
       window.open('festival.html','modal','width=820, height=740');
@@ -141,6 +145,33 @@ function generateSeed(){
       if (compatible == 1){
         sessionStorage.setItem('aSeed', seed);
         window.open('any.html', 'modal', 'width=820, height=740');
+      }
+      else {
+        document.getElementById('error').innerHTML = wrongSeed;
+        document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
+      }
+    }
+    if (set == 'd'){
+      var hash = moons[1] + moons[2] + moons[3] + moons[4];
+
+      //Check if compatible
+      for (v = 0; v < version.compat.length; v++){
+        if (compatible != 1){
+          if (version.compat[v] == hash){
+            compatible = 1;
+          }
+          else {
+            compatible = 0;
+          }
+        }
+        else {
+          break;
+        }
+      }
+
+      if (compatible == 1){
+        sessionStorage.setItem('aSeed', seed);
+        window.open('anycp.html', 'modal', 'width=820, height=740');
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
