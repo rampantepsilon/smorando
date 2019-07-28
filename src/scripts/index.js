@@ -8,7 +8,7 @@ for (i = 0; i < version.versionSupported.length; i++){
   versionCompat += version.versionSupported[i];
 }
 var wrongSeed = "<font color='red'>Invalid Seed. Please use a proper "+versionCompat+" seed.";
-var estTime = '2-4 Hours';
+var estTime = '1-1/2 - 4 Hours';
 
 var Base64 = require('js-base64').Base64;
 
@@ -43,13 +43,13 @@ function pasteSeed(){
   var set = moons2[0];
 
   if (set == 'a' || set == 'b' || set == 'c' || set == 'd'){
-    document.getElementById('time').innerHTML = '2-4 Hours';
+    document.getElementById('time').innerHTML = '1-1/2 - 4 Hours';
   }
   if (set == 'f' || set == 'g' || set == 'h' || set == 'i'){
     document.getElementById('time').innerHTML = '< 1 Hours';
   }
   if (set == 'w' || set == 'x'){
-    document.getElementById('time').innerHTML = '2-4 Hours (Estimated)'
+    document.getElementById('time').innerHTML = '2 - 4 Hours (Estimated)'
   }
 }
 
@@ -64,7 +64,7 @@ function setSelect(set){
   document.getElementById('seed').value = '';
   document.getElementById('error').innerHTML = '';
   if (setValue == 'any'){
-    estTime = '2-4 Hours';
+    estTime = '1-1/2 - 4 Hours';
     $(".v1").attr("disabled", true);
     $(".cp").attr("disabled", false);
     $("#v1NS").show();
@@ -78,7 +78,7 @@ function setSelect(set){
     $("#cpNS").show();
   }
   if (setValue == 'wp'){
-    estTime = '2-4 Hours (Estimated)';
+    estTime = '2 - 4 Hours (Estimated)';
     $(".none").prop("checked", true);
     $(".v1").attr("disabled", true);
     $(".cp").attr("disabled", false);
