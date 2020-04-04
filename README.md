@@ -9,7 +9,7 @@
 As time progresses and feedback comes in from the randomizer, more stipulations may occur for selection of moons.</p>
 <p>Future Plans for the Randomizer (Note all versions listed are planned not actual releases)
 <ul>
-<li>Adding a short/long race mode. This would enable moons that may make races longer or shorter. [Long Race Completed as of v2.0.1]</li>
+<li><s>Adding a short/long race mode. This would enable moons that may make races longer or shorter. [Long Race Completed as of v2.0.1]</s><br>Changed to new layout for modes including No Clips, v1 Clips, and Current Patch Clips</li>
 <li>Update Notifications to let players know when a new release is live. (Completed as of 3/24/19/Modified on 4/18/19)</li>
 <li>Simpler seed sharing (Current seed count is a 100-character hash) [Last Modified in v2.1.1]</li>
 <li><a href="https://smorando.rampantepsilon.site">Web-based Randomizer</a> (Completed as of 3/25/19 [Discontinued as of v2.1.1])</li>

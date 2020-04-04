@@ -9,8 +9,8 @@
   var compatible = 0;
 
   //Seed Comparision Variables
-  var set = 'w'; //Denotes Any%
-  var verHash = version.compat[1]; //Hash is [Version][Dev/Full]
+  var set = 'w'; //Denotes Clips
+  var verHash = version.compat[1]; //Hash is version.compat[location in version.js]
 
   function moonTotal(id){
     var checkBox = document.getElementById(id);
