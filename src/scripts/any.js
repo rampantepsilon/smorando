@@ -22,15 +22,15 @@
       } else {
         moonCount += 1;
       }
-      count.innerHTML = moonCount + " out of 124 moons";
     } else {
+      var bar = document.getElementById('moonProgBar');
       if (id == 'ckm2Marked' || id == 'lakm1Marked' || id == 'wkmm1Marked' || id == 'mkm1Marked' || id == 'lukm3Marked' || id == 'rkm1Marked' || id == 'bkm4Marked'){
         moonCount -= 3;
       } else {
         moonCount -= 1;
       }
-      count.innerHTML = moonCount + " out of 124 moons";
     }
+    count.innerHTML = moonCount + " out of 124 moons";
   }
 
   function clear(){
