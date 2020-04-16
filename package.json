@@ -10,7 +10,8 @@
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager ./ --overwrite --platform=darwin --asar --arch=x64 --icon=logo.jpg --out=build",
-    "package-win": "electron-packager ./ smo-rando --overwrite --asar --platform=win32 --arch=x64 --icon=logo.ico --out=build --version-string.CompanyName=RampantEpsilon --version-string.ProductName=\"Super Mario Odyssey Moon Randomizer v2.2.0\"",
+    "package-win64": "electron-packager ./ smo-rando --overwrite --asar --platform=win32 --arch=x64 --icon=logo.ico --out=build --version-string.CompanyName=RampantEpsilon --version-string.ProductName=\"Super Mario Odyssey Moon Randomizer v2.2.0\"",
+    "package-win32": "electron-packager ./ smo-rando --overwrite --asar --platform=win32 --arch=ia32 --icon=logo.ico --out=build --version-string.CompanyName=RampantEpsilon --version-string.ProductName=\"Super Mario Odyssey Moon Randomizer v2.2.0\"",
     "package-linux": "electron-packager ./ smo-rando --platform=linux --arch=x64 --overwrite --asar  --icon=logo.jpg --out=build"
   },
   "author": "Tom \"RampantEpsilon\" Ware",
