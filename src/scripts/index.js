@@ -56,6 +56,8 @@ function pasteSeed(){
 function lengthSelect(){
   sessionStorage.clear();
   document.getElementById('seed').value = '';
+
+  //console.log(process.versions.electron) //For Debug Only
 }
 
 function setSelect(set){
@@ -97,19 +99,29 @@ function generateSeed(){
   //Open page based on seeding
   if (seed == ''){
     if (setValue == 'any' && lengthValue == 'none'){
-      window.open('any.html', 'modal', 'width=820, height=740');
+      $("#body").load('any.html')
+      setTimeout("clear()", 50);
+      //window.open('any.html', 'modal');
     }
     else if (setValue == 'any' && lengthValue == 'cp'){
-      window.open('anycp.html', 'modal', 'width=820, height=740');
+      $("#body").load('anycp.html')
+      setTimeout("clear()", 50);
+      //window.open('anycp.html', 'modal');
     }
     else if (setValue == 'festival' && lengthValue == 'none'){
-      window.open('festival.html','modal','width=820, height=740');
+      $("#body").load('festival.html')
+      setTimeout("clear()", 50);
+      //window.open('festival.html', 'modal');
     }
     else if (setValue == 'wp' && lengthValue == 'none'){
-      window.open('wp.html','modal','width=820, height=740');
+      $("#body").load('wp.html')
+      setTimeout("clear()", 50);
+      //window.open('wp.html', 'modal');
     }
     else if (setValue == 'wp' && lengthValue == 'cp'){
-      window.open('wpCPClips.html','modal','width=820, height=740');
+      $("#body").load('wpCPClips.html')
+      setTimeout("clear()", 50);
+      //window.open('wpCPClips.html', 'modal');
     }
   }
   else {
@@ -119,11 +131,12 @@ function generateSeed(){
       moons[i] = (moons[i].charCodeAt() - 33);
     }
 
-    //Determine if Festival or Any
+    //Determine if Festival, Any, or WP
     var set = moons[0];
     //document.getElementById('selected').innerHTML = set;
     var compatible = 0;
 
+    //Any No Clips (v2.1.1+)
     if (set == 'a'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
@@ -144,13 +157,17 @@ function generateSeed(){
 
       if (compatible == 1){
         sessionStorage.setItem('aSeed', seed);
-        window.open('any.html', 'modal', 'width=820, height=740');
+        $("#body").load('any.html')
+        setTimeout("clear()", 50);
+        //window.open('any.html', 'modal');
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
+
+    //Any Current Patch (v2.2.0+)
     if (set == 'd'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
@@ -171,13 +188,17 @@ function generateSeed(){
 
       if (compatible == 1){
         sessionStorage.setItem('aSeed', seed);
-        window.open('anycp.html', 'modal', 'width=820, height=740');
+        $("#body").load('anycp.html')
+        setTimeout("clear()", 50);
+        //window.open('anycp.html', 'modal');
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
+
+    //Festival No Clips (v2.1.1+)
     if (set == 'f'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
@@ -198,13 +219,17 @@ function generateSeed(){
 
       if (compatible == 1){
         sessionStorage.setItem('fSeed', seed);
-        window.open('festival.html','modal','width=820, height=740')
+        $("#body").load('festival.html')
+        setTimeout("clear()", 50);
+        //window.open('festival.html','modal')
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
+
+    //Any Long (To Be Removed by 3.0.0)
     if (set == 'b'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
@@ -225,13 +250,17 @@ function generateSeed(){
 
       if (compatible == 1){
         sessionStorage.setItem('bSeed', seed);
-        window.open('anylong.html','modal','width=820, height=740')
+        $("#body").load('anylong.html')
+        setTimeout("clear()", 50);
+        //window.open('anylong.html','modal')
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
+
+    //Festival Long (To Be Removed by 3.0.0)
     if (set == 'g'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
@@ -252,13 +281,17 @@ function generateSeed(){
 
       if (compatible == 1){
         sessionStorage.setItem('gSeed', seed);
-        window.open('festivallong.html','modal','width=820, height=740')
+        $("#body").load('festivallong.html')
+        setTimeout("clear()", 50);
+        //window.open('festivallong.html','modal')
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
+
+    //World Peace No Clips (v2.2.0+)
     if (set == 'w'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
@@ -279,13 +312,17 @@ function generateSeed(){
 
       if (compatible == 1){
         sessionStorage.setItem('wSeed', seed);
-        window.open('wp.html', 'modal', 'width=820, height=740');
+        $("#body").load('wp.html')
+        setTimeout("clear()", 50);
+        //window.open('wp.html', 'modal');
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;
         document.getElementById('time').innerHTML = 'Enter A Valid Seed To See Estimate';
       }
     }
+
+    //World Peace Current Patch (v2.2.0+)
     if (set == 'x'){
       var hash = moons[1] + moons[2] + moons[3] + moons[4];
 
@@ -306,7 +343,9 @@ function generateSeed(){
 
       if (compatible == 1){
         sessionStorage.setItem('wSeed', seed);
-        window.open('wpCPClips.html', 'modal', 'width=820, height=740');
+        $("#body").load('wpCPClips.html')
+        setTimeout("clear()", 50);
+        //window.open('wpCPClips.html', 'modal');
       }
       else {
         document.getElementById('error').innerHTML = wrongSeed;

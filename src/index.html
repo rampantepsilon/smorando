@@ -35,47 +35,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--For Electron-->
   </head>
-  <body height="100%" onload="estimateTime()">
-    <table width="100%" height="100%" id='moontbl'>
-      <div id="updateCheck"></div>
-      <tr style='background-color: rgba(228,20,33,255);'>
-        <td colspan='2' align='center'>
-          <img src='banner.jpg' />
-        </td>
-      </tr>
+  <body height="100%" onload='estimateTime()'>
+    <table height='100%' width='100%' id='body'>
       <tr>
-        <td width='50%'>
-          <h2><u>Playset</u></h2>
-          <input type='radio' name='set' value='any' class='any' onclick='setSelect(this.value)' checked> Any% (124 Moons)<br>
-          <input type='radio' name='set' value='festival' class='festival' onclick='setSelect(this.value)'> Festival% (Metro WP)<br>
-          <input type='radio' name='set' value='wp' class='wp' onclick='setSelect(this.value)'> World Peace (BETA)<br>
-          <div id="selected"></div>
-        </td>
-        <td width='50%'>
-          <h2><u>Clips Allowed</u></h2>
-          <!--<input type='radio' id='length' name='length' value='short'> Short Randomizer<br>-->
-          <input type='radio' id='clips' class='none' name='clips' value='none' onclick='lengthSelect()' checked> No Clips<br>
-          <input type='radio' id='clips' class='v1' name='clips' value='v1' onclick='lengthSelect()'> v1.0 Clips <span id='v1NS'>(Not Supported)</span><br>
-          <input type='radio' id='clips' class='cp' name='clips' value='cp' onclick='lengthSelect()'> Current Patch Clips <span id='cpNS'>(Not Supported)</span><br>
-        </td>
-      </tr>
-      <tr>
-        <td colspan='2' align='center'>
-          <table>
+        <td id='body'>
+          <table width="100%" height="100%" id='moontbl'>
+            <div id="updateCheck"></div>
+            <tr style='background-color: rgba(228,20,33,255);'>
+              <td colspan='2' align='center'>
+                <img src='banner.jpg' />
+              </td>
+            </tr>
             <tr>
-              <td align='right'><h3>Estimated Seed Time<font color='red'>*</font>:</h3></td>
-              <td><h3><div id='time'></div></h3></td>
+              <td width='50%'>
+                <h2><u>Playset</u></h2>
+                <input type='radio' name='set' value='any' class='any' onclick='setSelect(this.value)' checked> Any% (124 Moons)<br>
+                <input type='radio' name='set' value='festival' class='festival' onclick='setSelect(this.value)'> Festival% (Metro WP)<br>
+                <input type='radio' name='set' value='wp' class='wp' onclick='setSelect(this.value)'> World Peace (BETA)<br>
+                <div id="selected"></div>
+              </td>
+              <td width='50%'>
+                <h2><u>Clips Allowed</u></h2>
+                <!--<input type='radio' id='length' name='length' value='short'> Short Randomizer<br>-->
+                <input type='radio' id='clips' class='none' name='clips' value='none' onclick='lengthSelect()' checked> No Clips<br>
+                <input type='radio' id='clips' class='v1' name='clips' value='v1' onclick='lengthSelect()'> v1.0 Clips <span id='v1NS'>(Not Supported)</span><br>
+                <input type='radio' id='clips' class='cp' name='clips' value='cp' onclick='lengthSelect()'> Current Patch Clips <span id='cpNS'>(Not Supported)</span><br>
+              </td>
+            </tr>
+            <tr>
+              <td colspan='2' align='center'>
+                <table>
+                  <tr>
+                    <td align='right'><h3>Estimated Seed Time<font color='red'>*</font>:</h3></td>
+                    <td><h3><div id='time'></div></h3></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan='2'>
+                <h2><u>Use Pre-Generated Seed</u></h2>
+                <input id='seed' size='45'><button type='button' onclick='pasteSeed()'>Paste From Clipboard</button><br>
+                <div id='error'></div><br>
+                <button type='button' onclick="generateSeed()">Generate Seed</button><button type='button' onclick='resetRando()'>Reset Randomizer</button><br><br>
+                <span style="font-size: 12px"><font color="red">* = Estimated times are based off of category speedruns. Actual times may vary.</font><br>Times Estimates Span for both long and normal randomizers.</span>
+              </td>
             </tr>
           </table>
-        </td>
-      </tr>
-      <tr>
-        <td colspan='2'>
-          <h2><u>Use Pre-Generated Seed</u></h2>
-          <input id='seed' size='45'><button type='button' onclick='pasteSeed()'>Paste From Clipboard</button><br>
-          <div id='error'></div><br>
-          <button type='button' onclick="generateSeed()">Generate Seed</button><button type='button' onclick='resetRando()'>Reset Randomizer</button><br><br>
-          <span style="font-size: 12px"><font color="red">* = Estimated times are based off of category speedruns. Actual times may vary.</font><br>Times Estimates Span for both long and normal randomizers.</span>
         </td>
       </tr>
     </table>

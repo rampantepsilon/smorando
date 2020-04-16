@@ -67,7 +67,7 @@
       <div id="seed">
         Seed: <input id="seedHash" size="45" readonly><br>
         <button type="button" onclick="copySeed()">Copy Seed</button>
-        <button type="button" onclick="window.close()">Start A New Seed</button>
+        <button type="button" onclick="newSeed()">Start A New Seed</button>
         <button type='button' onclick='streamLayout()'>Stream Layout</button>
         <div id='moonCount'>An Error Has Occurred</div>
       </div>
@@ -89,4 +89,11 @@
       </tr>
     </table>
   </body>
+
+  <script>
+    function newSeed(){
+      $("#body").load('index.html');
+      setTimeout('estimateTime()', 50);
+    }
+  </script>
 </html>
