@@ -1,6 +1,6 @@
 {
   "name": "smo-rando",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Moon Randomizer for Super Mario Odyssey",
   "repository": {
     "type": "git",
@@ -9,21 +9,17 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package-mac": "electron-packager ./ --overwrite --platform=darwin --asar --arch=x64 --icon=logo.jpg --prune=true --out=build/v2.2.0",
-    "package-win": "electron-packager ./ smo-rando --overwrite --asar --platform=win32 --arch=ia32 --icon=logo.ico --prune=true --out=build/v2.2.0 --version-string.CompanyName=RampantEpsilon --version-string.ProductName=\"Super Mario Odyssey Moon Randomizer v2.2.0\"",
-    "package-linux": "electron-packager ./ smo-rando --platform=linux --arch=x64 --overwrite --asar  --icon=logo.jpg --prune=true --out=build/v2.2.0"
+    "package-mac": "electron-packager ./ --overwrite --platform=darwin --asar --arch=x64 --icon=logo.jpg --out=build",
+    "package-win": "electron-packager ./ smo-rando --overwrite --asar --platform=win32 --arch=x64 --icon=logo.ico --out=build --version-string.CompanyName=RampantEpsilon --version-string.ProductName=\"Super Mario Odyssey Moon Randomizer v2.2.0\"",
+    "package-linux": "electron-packager ./ smo-rando --platform=linux --arch=x64 --overwrite --asar  --icon=logo.jpg --out=build"
   },
   "author": "Tom \"RampantEpsilon\" Ware",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^8.2.0",
-    "electron-packager": "^14.2.1",
-    "jquery": "^3.4.1",
-    "js-base64": "^2.5.1"
+    "electron": "^4.2.12"
   },
   "dependencies": {
-    "electron-packager": "^14.2.1",
     "jquery": "^3.4.1",
-    "js-base64": "^2.5.1"
+    "js-base64": "^2.5.2"
   }
 }
